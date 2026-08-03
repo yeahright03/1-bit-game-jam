@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bighksran4wcg"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://cckmxpsv3l8ho" path="res://assets/small_room.glb" id="2_0wfyh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -30,3 +31,6 @@ size = Vector3(30.1, 1, 27.6)
 
 [node name="ProtoController" parent="." unique_id=1883257602 instance=ExtResource("1_o5qli")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, -4.7000003)
+
+[node name="small_room2" parent="." unique_id=1350913658 instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8280773, 0.5, -3.1094582)
