@@ -22,13 +22,13 @@ extends CharacterBody3D
 ## Look around rotation speed.
 @export var look_speed : float = 0.002
 ## Normal speed.
-@export var base_speed : float = 7.0
+@export var base_speed : float = 5.0
 ## Speed of jump.
 @export var jump_velocity : float = 4.5
 ## How fast do we run?
 @export var sprint_speed : float = 10.0
 ## How fast do we crouch?
-@export var crouch_speed : float = 5.0
+@export var crouch_speed : float = 2.5
 ## How fast do we freefly?
 @export var freefly_speed : float = 25.0
 
@@ -54,6 +54,7 @@ var mouse_captured : bool = false
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
+var currently_crouching : bool = false
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
@@ -101,17 +102,28 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed(input_jump) and is_on_floor():
 			velocity.y = jump_velocity
 
-	# Modify speed based on sprinting
+	# Modify speed based on sprinting or crouching
 	if can_sprint and Input.is_action_pressed(input_sprint):
-			move_speed = sprint_speed
+		move_speed = sprint_speed
+	elif can_crouch and Input.is_action_pressed(input_crouch):
+		move_speed = crouch_speed
+		currently_crouching = true
 	else:
 		move_speed = base_speed
+		currently_crouching = false
 	
+	# Modify camera height and collider size based on if currently crouching
+	if currently_crouching and Input.is_action_just_pressed(input_crouch):
+		$Head.position.y -= .5
+	elif not currently_crouching and Input.is_action_just_released(input_crouch):
+		$Head.position.y += .5
+
 	# Modify speed based on crouching
-	if can_crouch and Input.is_action_just_pressed(input_crouch):
-			move_speed = crouch_speed
-	else:
-		move_speed = base_speed
+	#if can_crouch and Input.is_action_pressed(input_crouch):
+	#	move_speed = crouch_speed
+	#else:
+	#	move_speed = base_speed
+
 
 	# Apply desired movement to velocity
 	if can_move:
