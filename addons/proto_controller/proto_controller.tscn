@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bs72ogkvdd7d6"]
 
 [ext_resource type="Script" uid="uid://c3retjwtjby7r" path="res://addons/proto_controller/proto_controller.gd" id="1_ucva2"]
+[ext_resource type="PackedScene" uid="uid://m8rmn3ue0wqp" path="res://assets/weapons/Flyswatter2.glb" id="2_wr06p"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iof21"]
 albedo_color = Color(0.91806, 0.575202, 0.222449, 1)
@@ -15,6 +16,92 @@ height = 1.8
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uu07n"]
 size = Vector3(0.795, 0.3, 0.805)
+
+[sub_resource type="Animation" id="Animation_wr06p"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/WeaponPivot:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/WeaponPivot/Flyswatter2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.92212844, -0.9288757, -1.0356334)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/Camera3D/WeaponPivot/Flyswatter2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1.3668865, 0.005316483, 0.08373374)]
+}
+
+[sub_resource type="Animation" id="Animation_5hfox"]
+resource_name = "idle"
+length = 3.0000000000000004
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/Camera3D/WeaponPivot:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/Camera3D/WeaponPivot/Flyswatter2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(0.92212844, -0.9288757, -1.0356334), Vector3(0.92212844, -0.96633625, -1.0356334)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/Camera3D/WeaponPivot/Flyswatter2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(-2, -2),
+"update": 0,
+"values": [Vector3(1.3668865, 0.005316483, 0.08373374), Vector3(1.2683791, 0.389369, 0.47516412)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6dqce"]
+_data = {
+&"RESET": SubResource("Animation_wr06p"),
+&"idle": SubResource("Animation_5hfox")
+}
 
 [node name="ProtoController" type="CharacterBody3D" unique_id=1883257602]
 script = ExtResource("1_ucva2")
@@ -46,3 +133,17 @@ collide_with_areas = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1268009698]
+
+[node name="WeaponPivot" type="Node3D" parent="Head/Camera3D" unique_id=182316648]
+
+[node name="Flyswatter2" parent="Head/Camera3D/WeaponPivot" unique_id=654045013 instance=ExtResource("2_wr06p")]
+transform = Transform3D(0.99691725, -0.07844677, 0.0010765807, 0.016936243, 0.20179045, -0.979282, 0.07660416, 0.9762834, 0.20249678, 0.92212844, -0.9288757, -1.0356334)
+
+[node name="OmniLight3D" type="SpotLight3D" parent="Head" unique_id=1885893963]
+transform = Transform3D(0.90900326, 0, -0.41678903, 0.077125244, 0.98272985, 0.16820763, 0.40959102, -0.18504624, 0.89330465, 0.25137717, 0.14885211, -0.088504314)
+light_energy = 3.0
+spot_angle = 46.866093
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=398485080]
+libraries/ = SubResource("AnimationLibrary_6dqce")
+autoplay = &"idle"

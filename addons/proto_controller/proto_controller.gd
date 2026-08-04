@@ -60,6 +60,10 @@ var currently_crouching : bool = false
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
 
+func _process(delta):
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit()
+
 func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
