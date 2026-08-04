@@ -41,7 +41,7 @@ grow_vertical = 2
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1652050545]
 handle_input_locally = false
-size = Vector2i(1152, 648)
+size = Vector2i(1280, 720)
 render_target_update_mode = 4
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport" unique_id=1260574175]
@@ -78,6 +78,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.045053, 0, 2.8613863)
 [node name="window" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=1742197574]
 transparency = 1.0
 surface_material_override/0 = SubResource("StandardMaterial3D_0wfyh")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="SubViewportContainer/SubViewport" unique_id=1464131436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.683903, 3.5475628, 3.7987337)
+light_energy = 2.0
+shadow_enabled = true
 
 [editable path="SubViewportContainer/SubViewport/small_room"]
 [editable path="SubViewportContainer/SubViewport/small_room/small_room2"]
