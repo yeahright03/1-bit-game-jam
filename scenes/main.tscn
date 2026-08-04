@@ -24,7 +24,7 @@ environment = SubResource("Environment_sugp2")
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 14.22883, 0)
 shadow_enabled = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=141068408]
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=141068408 groups=["map"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 use_collision = true
 size = Vector3(30.1, 1, 27.6)
@@ -36,4 +36,14 @@ base_speed = 4.0
 sprint_speed = 8.0
 
 [node name="small_room2" parent="." unique_id=1350913658 instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8280773, 0.5, -3.1094582)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.598001, 0.4999981, 3.740527)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1568011344 groups=["map"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6940918, 2.4101715, -2.491455)
+use_collision = true
+size = Vector3(6.3881836, 1, 5.98291)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=2010578401 groups=["map"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6940918, 2.075155, 3.6569867)
+use_collision = true
+size = Vector3(6.3881836, 1, 5.98291)

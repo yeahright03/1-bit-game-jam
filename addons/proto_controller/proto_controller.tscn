@@ -13,6 +13,9 @@ height = 1.8
 radius = 0.4
 height = 1.8
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_uu07n"]
+size = Vector3(0.795, 0.3, 0.805)
+
 [node name="ProtoController" type="CharacterBody3D" unique_id=1883257602]
 script = ExtResource("1_ucva2")
 can_sprint = true
@@ -22,10 +25,10 @@ input_right = "move_right"
 input_forward = "move_up"
 input_back = "move_down"
 input_jump = "jump"
-input_crouch = "crouch"
 
 [node name="Mesh" type="MeshInstance3D" parent="." unique_id=747161910]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+visible = false
 material_override = SubResource("StandardMaterial3D_iof21")
 cast_shadow = 0
 mesh = SubResource("CapsuleMesh_ucva2")
@@ -33,6 +36,11 @@ mesh = SubResource("CapsuleMesh_ucva2")
 [node name="Collider" type="CollisionShape3D" parent="." unique_id=886211632]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
 shape = SubResource("CapsuleShape3D_iof21")
+
+[node name="ShapeCast3D" type="ShapeCast3D" parent="Collider" unique_id=685262367]
+shape = SubResource("BoxShape3D_uu07n")
+target_position = Vector3(0, 0.808, 0)
+collide_with_areas = true
 
 [node name="Head" type="Node3D" parent="." unique_id=1863383626]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
