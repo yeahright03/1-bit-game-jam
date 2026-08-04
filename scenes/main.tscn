@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://vhfxovrm3xa1" path="res://scenes/small_room.tscn" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://c2ad4uv8u15ue" path="res://assets/shaders_textures/palette_mono.png" id="2_tefeu"]
 [ext_resource type="Texture2D" uid="uid://cfyg75fa8ygx1" path="res://assets/shaders_textures/bayer2tile16.png" id="3_o6xl0"]
-[ext_resource type="PackedScene" uid="uid://m8rmn3ue0wqp" path="res://assets/weapons/Flyswatter2.glb" id="6_tefeu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uu07n"]
 shader = ExtResource("1_tbgi4")
@@ -76,11 +75,7 @@ size = Vector3(6.3881836, 1, 5.98291)
 [node name="small_room" parent="SubViewportContainer/SubViewport" unique_id=656216685 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.045053, 0, 2.8613863)
 
-<<<<<<< Updated upstream
 [node name="window" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=733537232]
-=======
-[node name="window" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=2114855085]
->>>>>>> Stashed changes
 transparency = 1.0
 surface_material_override/0 = SubResource("StandardMaterial3D_0wfyh")
 
@@ -88,9 +83,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_0wfyh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.683903, 3.5475628, 3.7987337)
 light_energy = 2.0
 shadow_enabled = true
-
-[node name="Flyswatter2" parent="." unique_id=654045013 instance=ExtResource("6_tefeu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.478817, 0.03668247, 3.7818565)
 
 [editable path="SubViewportContainer/SubViewport/small_room"]
 [editable path="SubViewportContainer/SubViewport/small_room/small_room2"]
