@@ -118,11 +118,11 @@ func _physics_process(delta: float) -> void:
 	
 	# Modify camera height and collider size based on if currently crouching
 	if currently_crouching and Input.is_action_just_pressed(input_crouch):
-		$Head.position.y -= 1
-		$Collider.shape.height -= .5
-	elif not currently_crouching and Input.is_action_just_released(input_crouch) and not $Collider/ShapeCast3D.is_colliding():
-		$Head.position.y += 1
-		$Collider.shape.height += .5
+		head.position.y -= 1
+		collider.shape.height -= .5
+	elif not currently_crouching and Input.is_action_just_released(input_crouch):
+		head.position.y += 1
+		collider.shape.height += .5
 
 	# Modify speed based on crouching
 	#if can_crouch and Input.is_action_pressed(input_crouch):

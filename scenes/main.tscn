@@ -75,7 +75,7 @@ size = Vector3(6.3881836, 1, 5.98291)
 [node name="small_room" parent="SubViewportContainer/SubViewport" unique_id=656216685 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.045053, 0, 2.8613863)
 
-[node name="window" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=733537232]
+[node name="window" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=1020990938]
 transparency = 1.0
 surface_material_override/0 = SubResource("StandardMaterial3D_0wfyh")
 
