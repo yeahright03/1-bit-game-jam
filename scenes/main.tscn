@@ -1,7 +1,19 @@
 [gd_scene format=3 uid="uid://bighksran4wcg"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_o5qli"]
-[ext_resource type="PackedScene" uid="uid://cckmxpsv3l8ho" path="res://assets/small_room.glb" id="2_0wfyh"]
+[ext_resource type="Shader" uid="uid://dske138voidgj" path="res://shader/dither.gdshader" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://vhfxovrm3xa1" path="res://scenes/small_room.tscn" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://c2ad4uv8u15ue" path="res://assets/shaders_textures/palette_mono.png" id="2_tefeu"]
+[ext_resource type="Texture2D" uid="uid://cfyg75fa8ygx1" path="res://assets/shaders_textures/bayer2tile16.png" id="3_o6xl0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uu07n"]
+shader = ExtResource("1_tbgi4")
+shader_parameter/u_dither_tex = ExtResource("3_o6xl0")
+shader_parameter/u_color_tex = ExtResource("2_tefeu")
+shader_parameter/u_bit_depth = 32
+shader_parameter/u_contrast = 5.105
+shader_parameter/u_offset = 0.0
+shader_parameter/u_dither_size = 2
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -15,35 +27,57 @@ background_mode = 2
 sky = SubResource("Sky_0wfyh")
 glow_enabled = true
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wfyh"]
+
 [node name="Main" type="Node3D" unique_id=159095663]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1260574175]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=244097791]
+material = SubResource("ShaderMaterial_uu07n")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1652050545]
+handle_input_locally = false
+size = Vector2i(1152, 648)
+render_target_update_mode = 4
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport" unique_id=1260574175]
 environment = SubResource("Environment_sugp2")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1428243273]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=1428243273]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 14.22883, 0)
 shadow_enabled = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=141068408 groups=["map"]]
+[node name="CSGBox3D" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=141068408]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 use_collision = true
 size = Vector3(30.1, 1, 27.6)
 
-[node name="ProtoController" parent="." unique_id=1883257602 instance=ExtResource("1_o5qli")]
+[node name="ProtoController" parent="SubViewportContainer/SubViewport" unique_id=1883257602 instance=ExtResource("1_o5qli")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0, -4.7000003)
 can_crouch = true
 base_speed = 4.0
 sprint_speed = 8.0
 
-[node name="small_room2" parent="." unique_id=1350913658 instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.598001, 0.4999981, 3.740527)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=1568011344 groups=["map"]]
+[node name="CSGBox3D2" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=1568011344]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6940918, 2.4101715, -2.491455)
 use_collision = true
 size = Vector3(6.3881836, 1, 5.98291)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=2010578401 groups=["map"]]
+[node name="CSGBox3D3" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=2010578401]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6940918, 2.075155, 3.6569867)
 use_collision = true
 size = Vector3(6.3881836, 1, 5.98291)
+
+[node name="small_room" parent="SubViewportContainer/SubViewport" unique_id=656216685 instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.045053, 0, 2.8613863)
+
+[node name="window" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=1742197574]
+transparency = 1.0
+surface_material_override/0 = SubResource("StandardMaterial3D_0wfyh")
+
+[editable path="SubViewportContainer/SubViewport/small_room"]
+[editable path="SubViewportContainer/SubViewport/small_room/small_room2"]

@@ -39,7 +39,22 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:shelf": {
+"generate/physics": true
+},
+"PATH:small_room": {
+"generate/physics": true
+},
+"PATH:walkway_cutout": {
+"import/skip_import": true
+},
+"PATH:window_cutout": {
+"import/skip_import": true
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
 gltf/texture_map_mode=1

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://vhfxovrm3xa1"]
+
+[ext_resource type="PackedScene" uid="uid://cckmxpsv3l8ho" path="res://assets/small_room.glb" id="1_mw5xm"]
+
+[node name="small_room" type="Node3D" unique_id=656216685]
+
+[node name="small_room2" parent="." unique_id=342954935 instance=ExtResource("1_mw5xm")]
+
+[editable path="small_room2"]
