@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://vhfxovrm3xa1" path="res://scenes/small_room.tscn" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://c2ad4uv8u15ue" path="res://assets/shaders_textures/palette_mono.png" id="2_tefeu"]
 [ext_resource type="Texture2D" uid="uid://cfyg75fa8ygx1" path="res://assets/shaders_textures/bayer2tile16.png" id="3_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://ben3xs3ntv5qi" path="res://assets/bug_patch/bug_patch.tscn" id="6_tefeu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uu07n"]
 shader = ExtResource("1_tbgi4")
@@ -24,10 +25,11 @@ sky_material = SubResource("ProceduralSkyMaterial_o5qli")
 
 [sub_resource type="Environment" id="Environment_sugp2"]
 background_mode = 2
+background_color = Color(0.31925523, 0.31925526, 0.31925526, 1)
 sky = SubResource("Sky_0wfyh")
 glow_enabled = true
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wfyh"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbgi4"]
 
 [node name="Main" type="Node3D" unique_id=159095663]
 
@@ -75,14 +77,38 @@ size = Vector3(6.3881836, 1, 5.98291)
 [node name="small_room" parent="SubViewportContainer/SubViewport" unique_id=656216685 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.045053, 0, 2.8613863)
 
-[node name="window" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=1020990938]
+[node name="window" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=103805295]
 transparency = 1.0
-surface_material_override/0 = SubResource("StandardMaterial3D_0wfyh")
+surface_material_override/0 = SubResource("StandardMaterial3D_tbgi4")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="SubViewportContainer/SubViewport" unique_id=1464131436]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.683903, 3.5475628, 3.7987337)
 light_energy = 2.0
 shadow_enabled = true
+
+[node name="bugs_piles" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1855470228]
+
+[node name="bug_patch" parent="SubViewportContainer/SubViewport/bugs_piles" unique_id=209888864 instance=ExtResource("6_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.720705, 0, 3)
+
+[node name="bug_patch2" parent="SubViewportContainer/SubViewport/bugs_piles" unique_id=1224976926 instance=ExtResource("6_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.982262, 0, 6.4767675)
+
+[node name="bug_patch3" parent="SubViewportContainer/SubViewport/bugs_piles" unique_id=878554886 instance=ExtResource("6_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.929224, 0.06798351, -2.7096746)
+
+[node name="bug_patch4" parent="SubViewportContainer/SubViewport/bugs_piles" unique_id=1188540446 instance=ExtResource("6_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.6179743, 0.5, -11.107364)
+
+[node name="bug_patch5" parent="SubViewportContainer/SubViewport/bugs_piles" unique_id=1112097692 instance=ExtResource("6_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.147333, 0.5, -11.077776)
+
+[node name="bug_patch6" parent="SubViewportContainer/SubViewport/bugs_piles" unique_id=906341462 instance=ExtResource("6_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.639007, 0.5, -11.071269)
+
+[node name="bug_patch7" parent="SubViewportContainer/SubViewport/bugs_piles" unique_id=825939359 instance=ExtResource("6_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.594472, 0.49999905, -6.944149)
+debug_text = true
 
 [editable path="SubViewportContainer/SubViewport/small_room"]
 [editable path="SubViewportContainer/SubViewport/small_room/small_room2"]
