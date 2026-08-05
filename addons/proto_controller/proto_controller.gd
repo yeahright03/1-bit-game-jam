@@ -17,6 +17,8 @@ extends CharacterBody3D
 @export var can_crouch : bool = false
 ## Can we press to enter freefly mode (noclip)?
 @export var can_freefly : bool = false
+## Can the player attack?
+@export var anim_player: AnimationPlayer = $AnimationPlayer
 
 @export_group("Speeds")
 ## Look around rotation speed.
@@ -50,19 +52,26 @@ extends CharacterBody3D
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
 
+@export var input_attack : String = "attack"
+
 var mouse_captured : bool = false
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
 var currently_crouching : bool = false
+var already_hit : bool = false
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
+@onready var hitbox: Area3D = $Head/Camera3D/WeaponPivot/Flyswatter2/Hitbox
 
 func _process(delta):
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
+	if Input.is_action_just_pressed("attack"):
+		anim_player.play("attack")
+		hitbox.monitoring = true 
 
 func _ready() -> void:
 	check_input_mappings()
@@ -209,3 +218,16 @@ func check_input_mappings():
 	if can_freefly and not InputMap.has_action(input_freefly):
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
+
+## Is enemy hit?
+func _on_hitbox_area_entered(area: Area3D) -> void:
+	if area.is_in_group("enemy")  and not already_hit:
+		already_hit = true
+		print("enemy hit")
+
+## Is the weapon in idle?
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "attack":
+		anim_player.play("idle")
+		already_hit = false
+		hitbox.monitoring = false
