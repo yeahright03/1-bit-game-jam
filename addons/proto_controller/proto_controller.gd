@@ -219,15 +219,17 @@ func check_input_mappings():
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
 
-## Is enemy hit?
-func _on_hitbox_area_entered(area: Area3D) -> void:
-	if area.is_in_group("enemy")  and not already_hit:
-		already_hit = true
-		print("enemy hit")
-
 ## Is the weapon in idle?
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "attack":
 		anim_player.play("idle")
 		already_hit = false
 		hitbox.monitoring = false
+
+
+func _on_hitbox_body_entered(body: StaticBody3D) -> void:
+	if body.is_in_group("enemy") and not already_hit:
+		var enemy : Node3D = body.get_parent()
+		enemy.swat()
+		already_hit = true
+		print("enemy hit")

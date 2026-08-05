@@ -254,7 +254,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 [node name="WeaponPivot" type="Node3D" parent="Head/Camera3D" unique_id=182316648]
 
 [node name="Flyswatter2" parent="Head/Camera3D/WeaponPivot" unique_id=654045013 instance=ExtResource("2_wr06p")]
-transform = Transform3D(0.99691665, -0.07844678, 0.0010765803, 0.016936231, 0.2017905, -0.9792816, 0.07660411, 0.97628355, 0.20249669, 0.92212844, -0.9288757, -1.0356334)
+transform = Transform3D(0.99691665, -0.07844678, 0.0010765803, 0.016936231, 0.2017905, -0.97928154, 0.07660411, 0.97628355, 0.20249668, 0.92212844, -0.9288757, -1.0356334)
 
 [node name="Plane_001" parent="Head/Camera3D/WeaponPivot/Flyswatter2" index="0" unique_id=1489283347]
 mesh = SubResource("ArrayMesh_6dqce")
@@ -278,7 +278,7 @@ spot_angle = 46.866093
 libraries/ = SubResource("AnimationLibrary_6dqce")
 playback_default_blend_time = 0.1
 
-[connection signal="area_entered" from="Head/Camera3D/WeaponPivot/Flyswatter2/Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="Head/Camera3D/WeaponPivot/Flyswatter2/Hitbox" to="." method="_on_hitbox_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
 [editable path="Head/Camera3D/WeaponPivot/Flyswatter2"]

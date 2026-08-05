@@ -54,7 +54,7 @@ _data = {
 &"moving_bugs": SubResource("Animation_ig44c")
 }
 
-[node name="bug_patch" type="Node3D" unique_id=209888864 groups=["bug_patch"]]
+[node name="bug_patch" type="Node3D" unique_id=209888864]
 script = ExtResource("1_ig44c")
 
 [node name="scaling" type="Node3D" parent="." unique_id=1377670906]
@@ -62,7 +62,7 @@ script = ExtResource("1_ig44c")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="scaling" unique_id=39972765]
 mesh = SubResource("SphereMesh_uu07n")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1095435756]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1095435756 groups=["enemy"]]
 
 [node name="hitbox" type="CollisionShape3D" parent="StaticBody3D" unique_id=1562406476]
 shape = SubResource("BoxShape3D_ngoxy")
