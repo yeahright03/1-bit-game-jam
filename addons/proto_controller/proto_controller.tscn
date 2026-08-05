@@ -22,6 +22,9 @@ resource_name = "Material.002"
 cull_mode = 2
 albedo_color = Color(0.30000034, 0.30000034, 0.30000034, 1)
 roughness = 0.5
+emission_enabled = true
+emission = Color(0.2760652, 0.27606523, 0.27606523, 1)
+emission_energy_multiplier = 2.0
 use_z_clip_scale = true
 z_clip_scale = 0.5
 use_fov_override = true
@@ -65,6 +68,10 @@ resource_name = "Material.001"
 cull_mode = 2
 albedo_color = Color(0.30000034, 0.30000034, 0.30000034, 1)
 roughness = 0.5
+emission_enabled = true
+emission = Color(0.2556589, 0.25565875, 0.25565884, 1)
+emission_energy_multiplier = 2.0
+ao_light_affect = 0.65
 use_z_clip_scale = true
 z_clip_scale = 0.5
 use_fov_override = true
@@ -268,11 +275,6 @@ monitoring = false
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Camera3D/WeaponPivot/Flyswatter2/Hitbox" unique_id=190531891]
 transform = Transform3D(1, -1.8626451e-09, 2.2351742e-08, 2.1606684e-07, -0.041875392, -0.99913055, -3.259629e-08, 0.99912435, -0.041875705, 2.3841858e-07, 0.03113687, -0.74290895)
 shape = SubResource("CylinderShape3D_yjtbe")
-
-[node name="OmniLight3D" type="SpotLight3D" parent="Head" unique_id=1885893963]
-transform = Transform3D(0.90900326, 0, -0.41678903, 0.077125244, 0.98272985, 0.16820763, 0.40959102, -0.18504624, 0.89330465, 0.25137717, 0.14885211, -0.088504314)
-light_energy = 3.0
-spot_angle = 46.866093
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=398485080]
 libraries/ = SubResource("AnimationLibrary_6dqce")

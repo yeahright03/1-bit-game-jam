@@ -12,7 +12,7 @@ shader = ExtResource("1_tbgi4")
 shader_parameter/u_dither_tex = ExtResource("3_o6xl0")
 shader_parameter/u_color_tex = ExtResource("2_tefeu")
 shader_parameter/u_bit_depth = 32
-shader_parameter/u_contrast = 5.105
+shader_parameter/u_contrast = 5.5
 shader_parameter/u_offset = 0.0
 shader_parameter/u_dither_size = 2
 
