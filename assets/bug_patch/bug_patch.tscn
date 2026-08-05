@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://ben3xs3ntv5qi"]
+
+[ext_resource type="Texture2D" uid="uid://ddltos6v48eif" path="res://assets/bug_patch/bug_pile_normal.png" id="1_am8i2"]
+[ext_resource type="Script" uid="uid://dqe0okqed0d10" path="res://assets/bug_patch/bug_patch.gd" id="1_ig44c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ui8hm"]
+normal_enabled = true
+normal_texture = ExtResource("1_am8i2")
+uv1_offset = Vector3(1, 1, 0)
+
+[sub_resource type="SphereMesh" id="SphereMesh_uu07n"]
+material = SubResource("StandardMaterial3D_ui8hm")
+radius = 0.57
+radial_segments = 10
+rings = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngoxy"]
+
+[sub_resource type="Animation" id="Animation_am8i2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:mesh:material:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ig44c"]
+resource_name = "moving_bugs"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:mesh:material:uv1_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vy4ou"]
+_data = {
+&"RESET": SubResource("Animation_am8i2"),
+&"moving_bugs": SubResource("Animation_ig44c")
+}
+
+[node name="bug_patch" type="Node3D" unique_id=209888864 groups=["bug_patch"]]
+script = ExtResource("1_ig44c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=39972765]
+mesh = SubResource("SphereMesh_uu07n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1095435756]
+
+[node name="hitbox" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1562406476]
+shape = SubResource("BoxShape3D_ngoxy")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=12431480]
+libraries/ = SubResource("AnimationLibrary_vy4ou")
+autoplay = &"moving_bugs"
