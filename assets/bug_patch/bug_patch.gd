@@ -34,6 +34,7 @@ func _unhandled_key_input(_event: InputEvent) -> void:
 
 # the function is used to damage the bug patch and to decrease its size whenever it takes damage
 func swat():
+	await get_tree().create_timer(.5).timeout
 	health -= 1
 	var decrease_size : Vector3 = Vector3(size_decrease_rate, size_decrease_rate, size_decrease_rate)
 	scaling_node.scale -= decrease_size
