@@ -42,58 +42,76 @@ materials/extract_path=""
 _subresources={
 "nodes": {
 "PATH:box": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:box_001": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:box_002": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_001": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_002": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_003": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_004": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_005": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_006": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_007": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_008": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_009": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_010": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_011": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_012": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_013": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_014": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:pallet_cutout": {
 "import/skip_import": true
@@ -105,10 +123,12 @@ _subresources={
 "import/skip_import": true
 },
 "PATH:shelf": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:small_room": {
-"generate/physics": true
+"generate/physics": true,
+"physics/mask": 0
 },
 "PATH:walkway_cutout": {
 "import/skip_import": true
