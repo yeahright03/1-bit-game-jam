@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c2ad4uv8u15ue" path="res://assets/shaders_textures/palette_mono.png" id="2_tefeu"]
 [ext_resource type="Texture2D" uid="uid://cfyg75fa8ygx1" path="res://assets/shaders_textures/bayer2tile16.png" id="3_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://ben3xs3ntv5qi" path="res://assets/bug_patch/bug_patch.tscn" id="6_tefeu"]
+[ext_resource type="PackedScene" uid="uid://v6epnmseyg5i" path="res://assets/bug_rat/bug_rat.tscn" id="7_o6xl0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uu07n"]
 shader = ExtResource("1_tbgi4")
@@ -56,6 +57,7 @@ shadow_enabled = true
 [node name="CSGBox3D" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=141068408]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 use_collision = true
+collision_mask = 0
 size = Vector3(30.1, 1, 27.6)
 
 [node name="ProtoController" parent="SubViewportContainer/SubViewport" unique_id=1883257602 instance=ExtResource("1_o5qli")]
@@ -67,17 +69,19 @@ sprint_speed = 8.0
 [node name="CSGBox3D2" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=1568011344]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6940918, 2.4101715, -2.491455)
 use_collision = true
+collision_mask = 0
 size = Vector3(6.3881836, 1, 5.98291)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=2010578401]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6940918, 2.075155, 3.6569867)
 use_collision = true
+collision_mask = 0
 size = Vector3(6.3881836, 1, 5.98291)
 
 [node name="small_room" parent="SubViewportContainer/SubViewport" unique_id=656216685 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.045053, 0, 2.8613863)
 
-[node name="window" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=625833941]
+[node name="window" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=1818986309]
 transparency = 1.0
 surface_material_override/0 = SubResource("StandardMaterial3D_tbgi4")
 
@@ -109,6 +113,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.639007, 0.5, -11.071269)
 [node name="bug_patch7" parent="SubViewportContainer/SubViewport/bugs_piles" unique_id=825939359 instance=ExtResource("6_tefeu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.594472, 0.49999905, -6.944149)
 debug_text = true
+
+[node name="bug_rats" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=856455688]
+
+[node name="bug_rat" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=380991678 instance=ExtResource("7_o6xl0")]
+transform = Transform3D(0.5160363, 0, -0.8565667, 0, 1, 0, 0.8565667, 0, 0.5160363, 17.248457, 0.9377279, 2.046575)
 
 [editable path="SubViewportContainer/SubViewport/small_room"]
 [editable path="SubViewportContainer/SubViewport/small_room/small_room2"]
