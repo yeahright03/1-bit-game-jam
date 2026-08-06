@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dnhnwig50ni47"
-path="res://.godot/imported/small_room.blend-1bd3171ae3757e3ccb6eae5467fdd406.scn"
+uid="uid://cwff3b3qiriwo"
+path="res://.godot/imported/bug.blend-d3ffe4d8d3efd24a72b9c9eccd46e96d.scn"
 
 [deps]
 
-source_file="res://blender/small_room.blend"
-dest_files=["res://.godot/imported/small_room.blend-1bd3171ae3757e3ccb6eae5467fdd406.scn"]
+source_file="res://blender/enemies/bug.blend"
+dest_files=["res://.godot/imported/bug.blend-d3ffe4d8d3efd24a72b9c9eccd46e96d.scn"]
 
 [params]
 

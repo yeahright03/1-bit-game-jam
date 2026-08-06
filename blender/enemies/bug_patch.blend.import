@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://co5gsb1ryausi"
-path="res://.godot/imported/bug_patch.blend-da3430a34584ad322336197ab91dfebc.scn"
+path="res://.godot/imported/bug_patch.blend-3e183f9abbfae92c1ffb76b53a411c0b.scn"
 
 [deps]
 
-source_file="res://blender/bug_patch.blend"
-dest_files=["res://.godot/imported/bug_patch.blend-da3430a34584ad322336197ab91dfebc.scn"]
+source_file="res://blender/enemies/bug_patch.blend"
+dest_files=["res://.godot/imported/bug_patch.blend-3e183f9abbfae92c1ffb76b53a411c0b.scn"]
 
 [params]
 
