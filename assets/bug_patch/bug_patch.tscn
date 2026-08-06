@@ -21,7 +21,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("scaling/MeshInstance3D:mesh:material:uv1_offset")
+tracks/0/path = NodePath("scaling_node/MeshInstance3D:mesh:material:uv1_offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -38,7 +38,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("scaling/MeshInstance3D:mesh:material:uv1_offset")
+tracks/0/path = NodePath("scaling_node/MeshInstance3D:mesh:material:uv1_offset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -57,9 +57,9 @@ _data = {
 [node name="bug_patch" type="Node3D" unique_id=209888864]
 script = ExtResource("1_ig44c")
 
-[node name="scaling" type="Node3D" parent="." unique_id=1377670906]
+[node name="scaling_node" type="Node3D" parent="." unique_id=1377670906]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="scaling" unique_id=39972765]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="scaling_node" unique_id=39972765]
 mesh = SubResource("SphereMesh_uu07n")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1095435756 groups=["enemy"]]
