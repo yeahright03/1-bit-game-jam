@@ -51,7 +51,7 @@ extends CharacterBody3D
 @export var input_crouch : String = "crouch"
 ## Name of Input Action to toggle freefly mode.
 @export var input_freefly : String = "freefly"
-
+## Name of Input Action to toggle Attack
 @export var input_attack : String = "attack"
 
 var mouse_captured : bool = false
@@ -226,7 +226,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		already_hit = false
 		hitbox.monitoring = false
 
-
+## Is the enemy hit?
 func _on_hitbox_body_entered(body: StaticBody3D) -> void:
 	if body.is_in_group("enemy") and not already_hit:
 		var enemy : Node3D = body.get_parent()
