@@ -229,7 +229,7 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 ## Is the enemy hit?
 func _on_hitbox_body_entered(body: StaticBody3D) -> void:
 	if body.is_in_group("enemy") and not already_hit:
-		var enemy : Node3D = body.get_parent()
+		var enemy = body.get_parent()
 		enemy.swat()
 		already_hit = true
 		print("enemy hit")

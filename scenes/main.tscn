@@ -31,6 +31,13 @@ background_color = Color(0.31925523, 0.31925526, 0.31925526, 1)
 sky = SubResource("Sky_0wfyh")
 glow_enabled = true
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_g5u87"]
+vertices = PackedVector3Array(24.323635, 0.019996643, -4.3886137, 23.823635, 0.019996643, -5.8886137, 23.573635, 0.019996643, -4.3886137, 16.823635, 0.019996643, -2.8886137, 16.823635, 0.019996643, 1.3613863, 17.573635, 0.019996643, 1.1113863, 18.323635, 0.019996643, -3.3886137, 31.323635, 0.019996643, -0.3886137, 31.323635, 0.019996643, -1.6386137, 25.073635, 0.019996643, -1.6386137, 22.823635, 0.019996643, -0.3886137, 18.573635, 0.019996643, -4.3886137, 22.573635, 0.019996643, 0.6113863, 24.823635, 0.019996643, -2.8886137, 31.323635, 0.019996643, -3.1386137, 31.323635, 0.019996643, -4.3886137, 16.823635, 0.49999642, -4.3886137, 16.823635, 0.49999642, -3.3886137, 17.323635, 0.49999642, -4.1386137, 15.323635, 0.019996643, 8.611386, 15.323635, 0.019996643, 8.861386, 16.573635, 0.019996643, 8.861386, 17.323635, 0.019996643, 8.111386, 22.823635, 0.019996643, 3.8613863, 22.573635, 0.019996643, 5.6113863, 31.323635, 0.019996643, 5.3613863, 31.323635, 0.019996643, 3.8613863, 16.823635, 0.019996643, 10.111386, 18.573635, 0.019996643, 10.111386, 18.323635, 0.019996643, 9.361386, 31.323635, 0.019996643, 10.111386, 31.323635, 0.019996643, 9.611386, 22.823635, 0.019996643, 9.611386, 20.823635, 0.019996643, 10.111386, 21.073635, 0.019996643, 9.111386, 22.823635, 0.019996643, 8.111386, 19.573635, 0.019996643, 8.611386, 17.323635, 0.019996643, 6.8613863, 17.323635, 0.019996643, 3.8613863, 16.823635, 0.019996643, 3.3613863, 16.823635, 0.019996643, 6.6113863, 31.323635, 0.019996643, 2.3613863, 31.323635, 0.019996643, 1.1113863, 22.823635, 0.019996643, 1.1113863, 22.573635, 0.019996643, 2.6113863, 18.573635, 0.019996643, 3.3613863, 31.323635, 0.019996643, 8.111386, 31.323635, 0.019996643, 6.6113863, 22.823635, 0.019996643, 6.6113863, 13.823635, -2.5400033, 8.361386, 15.073635, -2.5400033, 8.111386, 13.823635, -2.5400033, 7.6113863, -43.426365, -2.5400033, 3.3613863, 13.823635, -2.5400033, 3.3613863, -43.426365, -2.5400033, 100.61139, 13.823635, -2.5400033, 100.61139, 13.823635, 0.009996653, 9.111386, 13.823635, 0.009996653, 8.361386, 13.073635, 0.009996653, 19.111385, 13.823635, 0.009996653, 18.861385, 13.823635, 0.009996653, 33.861385, 13.823635, 0.009996653, 30.611385, 13.073635, 0.009996653, 30.361385, -42.676365, 0.009996653, 28.611385, -42.926365, 0.009996653, 34.361385, 13.073635, 0.009996653, 34.361385, -42.676365, 0.009996653, 22.361385, -43.426365, 0.009996653, 22.611385, -43.426365, 0.009996653, 28.361385, -42.676365, 0.009996653, 11.111386, -43.426365, 0.009996653, 3.3613863, -43.426365, 0.009996653, 10.861386, 13.823635, 0.009996653, 3.3613863, -42.676365, 0.009996653, 39.611385, 13.323635, 0.009996653, 39.611385, -43.426365, 0.009996653, 40.111385, -43.426365, 0.009996653, 45.111385, 13.073635, 0.009996653, 45.111385, -43.426365, 0.009996653, 65.86139, -42.676365, 0.009996653, 66.36139, 13.823635, 0.009996653, 66.36139, 13.823635, 0.009996653, 45.611385, 13.073635, 0.009996653, 69.36139, 13.823635, 0.009996653, 68.86139, -42.926365, 0.009996653, 69.36139, -43.426365, 0.009996653, 90.36139, -42.926365, 0.10999656, 90.61139, -41.926365, 0.10999656, 90.61139, -41.176365, 0.009996653, 90.36139, -40.676365, 0.009996653, 88.86139, -43.426365, 0.009996653, 88.86139, -42.676365, 0.009996653, 77.36139, -40.426365, 0.009996653, 87.61139, -33.926365, 0.009996653, 96.36139, 13.073635, 0.009996653, 80.36139, -33.926365, 0.009996653, 97.11139, -34.426365, 0.25999665, 97.36139, -34.426365, 0.25999665, 99.61139, -33.926365, 0.009996653, 99.86139, 13.073635, 0.009996653, 95.36139, -34.426365, 0.009996653, 98.48639, 13.823635, 0.009996653, 100.61139, 13.823635, 0.009996653, 95.61139, -33.926365, 0.009996653, 100.61139, -43.426365, 0.009996653, 77.61139, -43.426365, 0.009996653, 87.36139, -40.926365, 0.10999656, 90.86139, 13.073635, 0.009996653, 84.11139, -34.676365, 0.25999665, 96.11139, -35.718033, 0.009996653, 95.23639, 13.823635, 0.009996653, 83.86139, 13.823635, 0.009996653, 80.61139, -41.676365, 0.10999656, 91.36139, -43.426365, 0.10999656, 91.36139, -43.426365, 0.25999665, 96.11139, -42.676365, 0.25999665, 96.11139, -43.426365, 0.009996653, 94.92389, -42.426365, 0.009996653, 100.61139, -35.176365, 0.25999665, 100.61139, -35.176365, 0.25999665, 99.86139, -36.626366, 0.009996653, 100.01139, -36.626366, 0.009996653, 100.61139, -43.426365, 0.25999665, 97.36139, -43.426365, 0.25999665, 99.61139, -42.676365, 0.25999665, 99.61139, -42.426365, 0.009996653, 97.11139, -43.426365, 0.009996653, 98.48639, -35.176365, 0.25999665, 96.36139, -36.626366, 0.009996653, 96.51139, -40.446327, 0.009996653, 95.869354, -40.451366, 0.009996653, 92.83639, -35.176365, 0.25999665, 97.11139, -34.801365, 0.009996653, 98.36139, -36.626366, 0.009996653, 97.11139, -35.946327, 0.009996653, 98.869354, -40.451366, 0.009996653, 98.83639)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 6), PackedInt32Array(8, 7, 9), PackedInt32Array(9, 7, 10), PackedInt32Array(10, 12, 2), PackedInt32Array(2, 12, 11), PackedInt32Array(11, 12, 6), PackedInt32Array(6, 12, 5), PackedInt32Array(14, 13, 15), PackedInt32Array(15, 13, 0), PackedInt32Array(0, 13, 2), PackedInt32Array(2, 13, 9), PackedInt32Array(2, 9, 10), PackedInt32Array(18, 17, 16), PackedInt32Array(20, 19, 21), PackedInt32Array(21, 19, 22), PackedInt32Array(26, 25, 23), PackedInt32Array(23, 25, 24), PackedInt32Array(28, 27, 29), PackedInt32Array(29, 27, 21), PackedInt32Array(29, 21, 22), PackedInt32Array(31, 30, 32), PackedInt32Array(32, 30, 33), PackedInt32Array(33, 34, 32), PackedInt32Array(32, 34, 35), PackedInt32Array(29, 22, 36), PackedInt32Array(36, 22, 37), PackedInt32Array(40, 39, 38), PackedInt32Array(42, 41, 43), PackedInt32Array(43, 41, 44), PackedInt32Array(40, 38, 37), PackedInt32Array(37, 38, 45), PackedInt32Array(23, 24, 44), PackedInt32Array(44, 24, 34), PackedInt32Array(36, 37, 34), PackedInt32Array(34, 37, 45), PackedInt32Array(34, 45, 44), PackedInt32Array(44, 45, 43), PackedInt32Array(43, 45, 12), PackedInt32Array(12, 45, 5), PackedInt32Array(48, 47, 35), PackedInt32Array(35, 47, 46), PackedInt32Array(48, 35, 24), PackedInt32Array(24, 35, 34), PackedInt32Array(50, 49, 51), PackedInt32Array(51, 49, 52), PackedInt32Array(52, 53, 51), PackedInt32Array(55, 54, 49), PackedInt32Array(49, 54, 52), PackedInt32Array(20, 56, 19), PackedInt32Array(19, 56, 57), PackedInt32Array(56, 59, 58), PackedInt32Array(61, 60, 62), PackedInt32Array(62, 60, 65), PackedInt32Array(62, 65, 63), PackedInt32Array(63, 65, 64), PackedInt32Array(57, 56, 58), PackedInt32Array(67, 66, 68), PackedInt32Array(68, 66, 63), PackedInt32Array(63, 66, 62), PackedInt32Array(62, 66, 58), PackedInt32Array(58, 66, 69), PackedInt32Array(71, 70, 69), PackedInt32Array(69, 70, 72), PackedInt32Array(69, 72, 57), PackedInt32Array(69, 57, 58), PackedInt32Array(64, 65, 73), PackedInt32Array(73, 65, 74), PackedInt32Array(75, 73, 76), PackedInt32Array(76, 73, 77), PackedInt32Array(77, 73, 74), PackedInt32Array(81, 80, 77), PackedInt32Array(77, 80, 79), PackedInt32Array(77, 79, 78), PackedInt32Array(77, 78, 76), PackedInt32Array(83, 82, 80), PackedInt32Array(80, 82, 79), PackedInt32Array(79, 82, 84), PackedInt32Array(86, 85, 87), PackedInt32Array(87, 85, 88), PackedInt32Array(88, 85, 90), PackedInt32Array(88, 90, 89), PackedInt32Array(91, 84, 92), PackedInt32Array(92, 84, 93), PackedInt32Array(93, 84, 94), PackedInt32Array(94, 84, 82), PackedInt32Array(96, 95, 100), PackedInt32Array(100, 95, 97), PackedInt32Array(97, 95, 98), PackedInt32Array(98, 95, 99), PackedInt32Array(102, 101, 99), PackedInt32Array(99, 101, 98), PackedInt32Array(98, 101, 103), PackedInt32Array(104, 91, 105), PackedInt32Array(105, 91, 92), PackedInt32Array(106, 88, 89), PackedInt32Array(95, 93, 99), PackedInt32Array(99, 93, 107), PackedInt32Array(108, 109, 93), PackedInt32Array(93, 109, 106), PackedInt32Array(93, 106, 89), PackedInt32Array(93, 89, 92), PackedInt32Array(110, 107, 111), PackedInt32Array(111, 107, 94), PackedInt32Array(94, 107, 93), PackedInt32Array(87, 112, 86), PackedInt32Array(86, 112, 113), PackedInt32Array(113, 112, 116), PackedInt32Array(116, 112, 114), PackedInt32Array(114, 112, 115), PackedInt32Array(119, 118, 120), PackedInt32Array(120, 118, 121), PackedInt32Array(120, 121, 117), PackedInt32Array(123, 126, 124), PackedInt32Array(124, 126, 122), PackedInt32Array(124, 122, 125), PackedInt32Array(127, 109, 108), PackedInt32Array(109, 130, 106), PackedInt32Array(106, 130, 112), PackedInt32Array(112, 130, 115), PackedInt32Array(115, 129, 125), PackedInt32Array(125, 129, 128), PackedInt32Array(128, 109, 127), PackedInt32Array(109, 129, 130), PackedInt32Array(130, 129, 115), PackedInt32Array(129, 109, 128), PackedInt32Array(97, 132, 100), PackedInt32Array(100, 132, 96), PackedInt32Array(96, 132, 131), PackedInt32Array(124, 135, 117), PackedInt32Array(117, 135, 120), PackedInt32Array(120, 134, 119), PackedInt32Array(119, 132, 97), PackedInt32Array(132, 134, 131), PackedInt32Array(131, 134, 133), PackedInt32Array(133, 135, 125), PackedInt32Array(125, 135, 124), PackedInt32Array(135, 133, 120), PackedInt32Array(134, 132, 119), PackedInt32Array(120, 133, 134), PackedInt32Array(127, 131, 128), PackedInt32Array(128, 131, 133), PackedInt32Array(128, 133, 125)]
+cell_height = 0.01
+agent_height = 0.5
+agent_radius = 0.2
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbgi4"]
 
 [node name="Main" type="Node3D" unique_id=159095663]
@@ -79,18 +86,48 @@ use_collision = true
 collision_mask = 0
 size = Vector3(6.3881836, 1, 5.98291)
 
-[node name="small_room" parent="SubViewportContainer/SubViewport" unique_id=656216685 instance=ExtResource("2_0wfyh")]
+[node name="CSGBox3D4" type="CSGBox3D" parent="SubViewportContainer/SubViewport" unique_id=1542841064]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.645054, 1.5, -14.638612)
+use_collision = true
+collision_mask = 0
+size = Vector3(3, 3, 1)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="SubViewportContainer/SubViewport" unique_id=1302044107]
+navigation_mesh = SubResource("NavigationMesh_g5u87")
+
+[node name="warehouse-scale-test2" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=1543602824 instance=ExtResource("8_tipki")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -24.2, -3.56, 52.01)
+
+[node name="small_room" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=656216685 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.045053, 0, 2.8613863)
 
-[node name="window" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=2098953630]
+[node name="window" parent="SubViewportContainer/SubViewport/NavigationRegion3D/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=2098953630]
 transparency = 1.0
 surface_material_override/0 = SubResource("StandardMaterial3D_tbgi4")
 
-[node name="box" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="3" unique_id=1807182942]
+[node name="box" parent="SubViewportContainer/SubViewport/NavigationRegion3D/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="3" unique_id=1807182942]
 transform = Transform3D(0.12728941, 0, -0.99186563, 0, 1, 0, 0.99186563, 0, 0.12728941, -6.9678974, 0.19000006, -7.1854005)
 
-[node name="box_001" parent="SubViewportContainer/SubViewport/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="4" unique_id=1757376774]
+[node name="box_001" parent="SubViewportContainer/SubViewport/NavigationRegion3D/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="4" unique_id=1757376774]
 transform = Transform3D(-0.8310255, 0, -0.55623424, 0, 1, 0, 0.55623424, 0, -0.8310255, -7.1295223, 0.19000006, -6.461011)
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=263060517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.04505, 0.65220976, -6.1386137)
+height = 5.0
+vertices = PackedVector3Array(-0.09881973, 0, 0.014606476, -0.060577393, 0, 17.89888, -17.876534, 0, 17.909145, -17.92256, 0, 0.114154816)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=838576061]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.289896, 0)
+height = 30.7
+vertices = PackedVector3Array(-44.521835, 0, 2.388901, -44.521835, 0, 101.793396, 14.802767, 0, 101.793396, 15.060234, 0, 1.9978104)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle3D3" type="NavigationObstacle3D" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=2116031263]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.565, 0)
+height = 10.3
+vertices = PackedVector3Array(-46.156982, 0, 90.79589, -30, 0, 92, -30, 0, 102, -30.01238, 0, 105.87028, -51.24662, 0, 105.88537, -51.194183, 0, 95.385445)
+affect_navigation_mesh = true
 
 [node name="OmniLight3D" type="OmniLight3D" parent="SubViewportContainer/SubViewport" unique_id=1464131436]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.683903, 3.5475628, 3.7987337)
@@ -119,28 +156,168 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 48.4
 
 [node name="bug_rats" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=856455688]
 
-[node name="bug_rat" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=380991678 instance=ExtResource("7_o6xl0")]
+[node name="bug_rat" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=380991678 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
 transform = Transform3D(0.5160363, 0, -0.8565667, 0, 1, 0, 0.8565667, 0, 0.5160363, 17.248457, 0.9377279, 2.046575)
 debug_text = true
+nav_map = NodePath("../../NavigationRegion3D")
 
-[node name="bug_rat2" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=1676372820 instance=ExtResource("7_o6xl0")]
+[node name="bug_rat2" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=1676372820 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.30091, 0.10413569, 4.627046)
 debug_text = true
+nav_map = NodePath("../../NavigationRegion3D")
 
-[node name="bug_rat3" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=418406795 instance=ExtResource("7_o6xl0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 27.234398, 0.13451713, -20.142578)
+[node name="bug_rat3" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=1900116657 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.760231, 0.13451809, -8.194927)
 debug_text = true
+nav_map = NodePath("../../NavigationRegion3D")
+disable_movement = true
 
-[node name="bug_rat4" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=797576566 instance=ExtResource("7_o6xl0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 27.234398, 0.13451713, -21.142578)
-debug_text = true
+[node name="navmesh_test" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1379559416]
 
-[node name="bug_rat5" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=1115200670 instance=ExtResource("7_o6xl0")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 27.234398, 0.13451713, -22.142578)
-debug_text = true
+[node name="bug_rat3" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=378461974 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9280758, 0.14842415, 13.194908)
+nav_map = NodePath("../../NavigationRegion3D")
 
-[node name="warehouse-scale-test2" parent="SubViewportContainer/SubViewport" unique_id=1543602824 instance=ExtResource("8_tipki")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -24.2, -3.56, 52.01)
+[node name="bug_rat4" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1100978855 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9280758, 0.14842415, 13.194908)
+nav_map = NodePath("../../NavigationRegion3D")
 
-[editable path="SubViewportContainer/SubViewport/small_room"]
-[editable path="SubViewportContainer/SubViewport/small_room/small_room2"]
+[node name="bug_rat5" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1187854805 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 13.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat6" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=75095015 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9280758, 0.14842415, 14.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat7" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=330043104 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9280758, 0.14842415, 14.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat8" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1752839315 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 14.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat9" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=818010559 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9280758, 0.14842415, 15.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat10" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=2083221683 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9280758, 0.14842415, 15.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat11" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=2069270523 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 15.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat12" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=70809828 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9280758, 0.14842415, 16.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat13" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=751552697 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9280758, 0.14842415, 16.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat14" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1162980257 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 16.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat15" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=2100143280 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9280758, 0.14842415, 17.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat16" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1029024112 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9280758, 0.14842415, 17.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat17" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=46179837 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 17.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat18" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=658090462 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9280758, 0.14842415, 18.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat19" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1787368044 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9280758, 0.14842415, 18.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat20" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1279619871 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 18.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat21" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=677622800 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 13.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat22" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=2033189470 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 13.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat23" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=2122959414 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 13.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat24" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=279410383 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 14.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat25" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=139604830 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 14.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat26" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1158585749 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 14.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat27" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=999556785 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 15.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat28" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1546050931 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 15.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat29" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1352839355 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 15.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat30" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=673392684 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 16.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat31" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=604547804 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 16.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat32" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1639347577 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 16.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat33" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=928520513 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 17.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat34" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1438816119 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 17.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat35" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1042699823 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 17.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat36" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=758480744 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 18.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat37" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1811014717 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 18.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat38" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=373835604 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 18.194908)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[editable path="SubViewportContainer/SubViewport/NavigationRegion3D/warehouse-scale-test2"]
+[editable path="SubViewportContainer/SubViewport/NavigationRegion3D/small_room"]
+[editable path="SubViewportContainer/SubViewport/NavigationRegion3D/small_room/small_room2"]

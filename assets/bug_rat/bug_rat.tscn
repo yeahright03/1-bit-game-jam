@@ -2,18 +2,30 @@
 
 [ext_resource type="Script" uid="uid://d1orh7bdjdbyw" path="res://assets/bug_rat/bug_rat.gd" id="1_gx2me"]
 [ext_resource type="PackedScene" uid="uid://r3q8l0r3iubv" path="res://assets/bug_rat/bug_rat.glb" id="1_ngq20"]
-[ext_resource type="Material" uid="uid://cxetf6uy6vnpi" path="res://assets/bug_rat/bug_rat.tres" id="2_yp2bs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yp2bs"]
+resource_local_to_scene = true
+albedo_color = Color(0.78352344, 0.7835234, 0.7835234, 1)
+emission_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g5u87"]
 size = Vector3(0.46929932, 0.30151367, 0.5128174)
 
-[node name="bug_rat" type="Node3D" unique_id=380991678]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gsw53"]
+radius = 0.16583252
+height = 0.33166504
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eb6dy"]
+points = PackedVector3Array(0, 0, 0, 0.5, 0.5, 1, 0.5, 0, 1, -0.5, 0, 1, -0.5, 0.5, 1)
+
+[node name="bug_rat" type="CharacterBody3D" unique_id=1900116657]
+collision_layer = 4
 script = ExtResource("1_gx2me")
 
 [node name="scaling_node" parent="." unique_id=1467040500 instance=ExtResource("1_ngq20")]
 
 [node name="bug" parent="scaling_node" index="0" unique_id=639397978]
-surface_material_override/0 = ExtResource("2_yp2bs")
+surface_material_override/0 = SubResource("StandardMaterial3D_yp2bs")
 
 [node name="Skeleton3D" parent="scaling_node/bug/tail_armature" parent_id_path=PackedInt32Array(1467040500, 658147478) index="0" unique_id=1802546837]
 bones/0/rotation = Quaternion(3.770314e-08, 1.8591535e-09, -0.04925047, 0.99878645)
@@ -23,10 +35,10 @@ bones/3/rotation = Quaternion(-1.0020802e-16, -1.3905728e-15, 0.31030336, 0.9506
 bones/4/rotation = Quaternion(1.4045141e-15, -3.6705842e-15, 0.4147121, 0.9099527)
 
 [node name="tail" parent="scaling_node/bug/tail_armature/Skeleton3D" index="0" unique_id=1876253715]
-surface_material_override/0 = ExtResource("2_yp2bs")
+surface_material_override/0 = SubResource("StandardMaterial3D_yp2bs")
 
 [node name="antennas" parent="scaling_node" index="1" unique_id=2143746496]
-surface_material_override/0 = ExtResource("2_yp2bs")
+surface_material_override/0 = SubResource("StandardMaterial3D_yp2bs")
 
 [node name="AnimationPlayer" parent="scaling_node" index="2" unique_id=580239947]
 autoplay = &"tail_armatureAction"
@@ -38,5 +50,32 @@ collision_mask = 0
 [node name="hitbox" type="CollisionShape3D" parent="StaticBody3D" unique_id=898477834]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018005371, -0.0010986328, 0.09576416)
 shape = SubResource("BoxShape3D_g5u87")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1634153494]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017028809, 0)
+shape = SubResource("CapsuleShape3D_gsw53")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=338983768]
+
+[node name="vision_mechanics" type="Node3D" parent="." unique_id=573952178]
+
+[node name="vision_area" type="Area3D" parent="vision_mechanics" unique_id=530340552]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="vision_cone" type="CollisionShape3D" parent="vision_mechanics/vision_area" unique_id=1827451101]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_eb6dy")
+
+[node name="vision_line" type="RayCast3D" parent="vision_mechanics" unique_id=2034221150]
+target_position = Vector3(0, 0, -50)
+collision_mask = 3
+
+[node name="vision_timer" type="Timer" parent="vision_mechanics" unique_id=1858783934]
+wait_time = 0.25
+autostart = true
+
+[connection signal="timeout" from="vision_mechanics/vision_timer" to="." method="_on_vision_timer_timeout"]
 
 [editable path="scaling_node"]
