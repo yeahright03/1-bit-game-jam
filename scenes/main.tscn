@@ -117,14 +117,27 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 48.4
 [node name="bug_patch6" parent="SubViewportContainer/SubViewport/bugs_piles" unique_id=906341462 instance=ExtResource("6_tefeu")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 48.416325, 0.5, -27.827621)
 
-[node name="bug_patch7" parent="SubViewportContainer/SubViewport/bugs_piles" unique_id=825939359 instance=ExtResource("6_tefeu")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 44.289204, 0.49999905, -32.78309)
-debug_text = true
-
 [node name="bug_rats" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=856455688]
 
 [node name="bug_rat" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=380991678 instance=ExtResource("7_o6xl0")]
 transform = Transform3D(0.5160363, 0, -0.8565667, 0, 1, 0, 0.8565667, 0, 0.5160363, 17.248457, 0.9377279, 2.046575)
+debug_text = true
+
+[node name="bug_rat2" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=1676372820 instance=ExtResource("7_o6xl0")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 23.30091, 0.10413569, 4.627046)
+debug_text = true
+
+[node name="bug_rat3" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=418406795 instance=ExtResource("7_o6xl0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 27.234398, 0.13451713, -20.142578)
+debug_text = true
+
+[node name="bug_rat4" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=797576566 instance=ExtResource("7_o6xl0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 27.234398, 0.13451713, -21.142578)
+debug_text = true
+
+[node name="bug_rat5" parent="SubViewportContainer/SubViewport/bug_rats" unique_id=1115200670 instance=ExtResource("7_o6xl0")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 27.234398, 0.13451713, -22.142578)
+debug_text = true
 
 [node name="warehouse-scale-test2" parent="SubViewportContainer/SubViewport" unique_id=1543602824 instance=ExtResource("8_tipki")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -24.2, -3.56, 52.01)

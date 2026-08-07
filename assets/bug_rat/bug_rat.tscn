@@ -1,29 +1,42 @@
 [gd_scene format=3 uid="uid://v6epnmseyg5i"]
 
+[ext_resource type="Script" uid="uid://d1orh7bdjdbyw" path="res://assets/bug_rat/bug_rat.gd" id="1_gx2me"]
 [ext_resource type="PackedScene" uid="uid://r3q8l0r3iubv" path="res://assets/bug_rat/bug_rat.glb" id="1_ngq20"]
 [ext_resource type="Material" uid="uid://cxetf6uy6vnpi" path="res://assets/bug_rat/bug_rat.tres" id="2_yp2bs"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g5u87"]
+size = Vector3(0.46929932, 0.30151367, 0.5128174)
+
 [node name="bug_rat" type="Node3D" unique_id=380991678]
+script = ExtResource("1_gx2me")
 
-[node name="bug_rat" parent="." unique_id=1467040500 instance=ExtResource("1_ngq20")]
+[node name="scaling_node" parent="." unique_id=1467040500 instance=ExtResource("1_ngq20")]
 
-[node name="bug" parent="bug_rat" index="0" unique_id=13081606]
+[node name="bug" parent="scaling_node" index="0" unique_id=639397978]
 surface_material_override/0 = ExtResource("2_yp2bs")
 
-[node name="Skeleton3D" parent="bug_rat/bug/tail_armature" parent_id_path=PackedInt32Array(1467040500, 1329449222) index="0" unique_id=2093825364]
+[node name="Skeleton3D" parent="scaling_node/bug/tail_armature" parent_id_path=PackedInt32Array(1467040500, 658147478) index="0" unique_id=1802546837]
 bones/0/rotation = Quaternion(3.770314e-08, 1.8591535e-09, -0.04925047, 0.99878645)
 bones/1/rotation = Quaternion(0, 4.477031e-16, -0.12680069, 0.9919282)
 bones/2/rotation = Quaternion(1.7907113e-16, -4.066188e-16, -0.03099887, 0.9995194)
 bones/3/rotation = Quaternion(-1.0020802e-16, -1.3905728e-15, 0.31030336, 0.9506376)
 bones/4/rotation = Quaternion(1.4045141e-15, -3.6705842e-15, 0.4147121, 0.9099527)
 
-[node name="tail" parent="bug_rat/bug/tail_armature/Skeleton3D" index="0" unique_id=2069075469]
+[node name="tail" parent="scaling_node/bug/tail_armature/Skeleton3D" index="0" unique_id=1876253715]
 surface_material_override/0 = ExtResource("2_yp2bs")
 
-[node name="antennas" parent="bug_rat" index="1" unique_id=839148784]
+[node name="antennas" parent="scaling_node" index="1" unique_id=2143746496]
 surface_material_override/0 = ExtResource("2_yp2bs")
 
-[node name="AnimationPlayer" parent="bug_rat" index="2" unique_id=2081516310]
+[node name="AnimationPlayer" parent="scaling_node" index="2" unique_id=580239947]
 autoplay = &"tail_armatureAction"
 
-[editable path="bug_rat"]
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1184050296 groups=["enemy"]]
+collision_layer = 4
+collision_mask = 0
+
+[node name="hitbox" type="CollisionShape3D" parent="StaticBody3D" unique_id=898477834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018005371, -0.0010986328, 0.09576416)
+shape = SubResource("BoxShape3D_g5u87")
+
+[editable path="scaling_node"]
