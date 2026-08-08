@@ -80,9 +80,10 @@ func _process(delta):
 		hitbox.monitoring = true 
 
 func _ready() -> void:
+	add_to_group('player')
 	check_input_mappings()
-	look_rotation.y = rotation.y
-	look_rotation.x = head.rotation.x
+	#look_rotation.y = rotation.y
+	#look_rotation.x = head.rotation.x
 	time_since_damage.wait_time = invincibility_time
 	time_since_damage.one_shot = true
 

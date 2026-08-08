@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://c3rdneyos1fth"]
+
+[ext_resource type="Script" uid="uid://ddprv1evve2ei" path="res://scripts/game_controller.gd" id="1_vc4nx"]
+[ext_resource type="Script" uid="uid://db7emy02he3dk" path="res://scripts/splash_screen_manager.gd" id="2_ts4rt"]
+
+[node name="game_controller" type="Node" unique_id=932502289]
+script = ExtResource("1_vc4nx")
+
+[node name="world_3d" type="Node3D" parent="." unique_id=985561865]
+
+[node name="world_2d" type="Node2D" parent="." unique_id=1645385804]
+
+[node name="gui" type="Control" parent="." unique_id=1586315325]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="splash_screen_manager" type="Control" parent="gui" unique_id=74772076]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_ts4rt")

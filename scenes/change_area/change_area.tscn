@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://crq8c7obnscni"]
+
+[ext_resource type="Script" uid="uid://hyotjh8gwbhj" path="res://scenes/change_area/change_area.gd" id="1_yvfkx"]
+
+[node name="change_area" type="Area3D" unique_id=1581934678]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_yvfkx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -6,7 +6,7 @@ signal died
 # enable to view the debug text
 @export var debug_text : bool = false
 
-@export var max_health : int = 5
+@export var max_health : int = 3
 @export var min_health : int = 2
 var health : int
 
