@@ -19,7 +19,7 @@ height = 0.33166504
 points = PackedVector3Array(0, 0, 0, 1, 0.5, 1, 1, -1, 1, -1, -1, 1, -1, 0.5, 1)
 
 [node name="bug_rat" type="CharacterBody3D" unique_id=1900116657]
-collision_layer = 4
+collision_layer = 0
 script = ExtResource("1_gx2me")
 
 [node name="scaling_node" parent="." unique_id=1467040500 instance=ExtResource("1_ngq20")]

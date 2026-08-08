@@ -85,7 +85,7 @@ func swat():
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor() and not disable_movement:
-		velocity.y -= 10
+		velocity += get_gravity() * delta
 
 	if has_target and not disable_movement:
 		nav_agent.target_position = target_pos

@@ -5,6 +5,7 @@
 
 extends CharacterBody3D
 
+@export_group("Movement Modifiers")
 ## Can we move around?
 @export var can_move : bool = true
 ## Are we affected by gravity?
@@ -58,11 +59,18 @@ var move_speed : float = 0.0
 var freeflying : bool = false
 var currently_crouching : bool = false
 
+@export_group("Health Modifiers")
+@export var health : float = 5.0
+@export var health_regen : float = 0.2
+var invincibility_time : float = 1.0
+
 ## IMPORTANT REFERENCES
-@onready var head: Node3D = $Head
-@onready var collider: CollisionShape3D = $Collider
-@onready var hitbox: Area3D = $Head/Camera3D/WeaponPivot/Flyswatter2/Hitbox
-@onready var anim_player: AnimationPlayer = $AnimationPlayer
+@onready var head : Node3D = $Head
+@onready var collider : CollisionShape3D = $Collider
+@onready var hitbox : Area3D = $Head/Camera3D/WeaponPivot/Flyswatter2/Hitbox
+@onready var anim_player : AnimationPlayer = $AnimationPlayer
+@onready var camera : Camera3D = $Head/Camera3D
+@onready var time_since_damage : Timer = $time_since_damage
 
 func _process(delta):
 	if Input.is_action_just_pressed("quit"):
@@ -75,6 +83,8 @@ func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
+	time_since_damage.wait_time = invincibility_time
+	time_since_damage.one_shot = true
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
@@ -82,6 +92,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		capture_mouse()
 	if Input.is_key_pressed(KEY_ESCAPE):
 		release_mouse()
+	if Input.is_key_pressed(KEY_L):
+		taking_damage(1)
 	
 	# Look around
 	if mouse_captured and event is InputEventMouseMotion:
@@ -95,6 +107,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			disable_freefly()
 
 func _physics_process(delta: float) -> void:
+	if health < 5.0:
+		health += health_regen
 	# If freeflying, handle freefly and nothing else
 	if can_freefly and freeflying:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
@@ -145,6 +159,15 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = 0
 		velocity.y = 0
+
+	for index in range(get_slide_collision_count()):
+		var collision = get_slide_collision(index)
+
+		if collision.get_collider() == null:
+			continue
+
+		if collision.get_collider().is_in_group("enemy"):
+			taking_damage(1)
 	
 	# Use velocity to actually move
 	move_and_slide()
@@ -220,10 +243,21 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 ## Is the enemy hit?
 func _on_hitbox_body_entered(body: Node3D) -> void:
 	await get_tree().create_timer(.5).timeout
-	if body != CharacterBody3D:
+	if body != CharacterBody3D: 
 		var hitbox : StaticBody3D = $body/StaticBody3D
 		if body != null:
 			if body.is_in_group('enemy'):
 				var enemy = body.get_parent().get_parent()
 				enemy.swat()
 				print("enemy hit")
+
+func taking_damage(damage_taken: float = 1.0) -> void:
+	if time_since_damage.is_stopped():
+		var random_offset : float = randf_range(0.1, 0.3)
+		camera.rotation.z += random_offset
+		await get_tree().create_timer(0.05).timeout
+		camera.rotation.z -= 2 * random_offset
+		await get_tree().create_timer(0.05).timeout
+		camera.rotation.z += random_offset
+		time_since_damage.start()
+		health -= damage_taken
