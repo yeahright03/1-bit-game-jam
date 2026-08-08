@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*uid://kpeqq3o6uf1s"
+TravelManager="*uid://kpeqq3o6uf1s"
 
 [display]
 

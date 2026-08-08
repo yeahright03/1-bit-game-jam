@@ -1,12 +1,12 @@
 extends Area3D
 
-@export var current_area_type : Global.area_type
-@export var change_area_type : Global.area_type
+@export var current_area_type : TravelManager.area_type
+@export var change_area_type : TravelManager.area_type
 
 func _ready() -> void:
 	add_to_group('change_area')
 
-	if Global.last_area == change_area_type:
+	if TravelManager.last_area == change_area_type:
 		_set_player_position()
 
 func _set_player_position() -> void:
@@ -22,6 +22,6 @@ func _set_player_position() -> void:
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group('player'):
-		Global.change_area(current_area_type)
+		TravelManager.change_area(current_area_type)
 		
-		get_tree().change_scene_to_file.call_deferred(Global.area_dict[change_area_type])
+		get_tree().change_scene_to_file.call_deferred(TravelManager.area_dict[change_area_type])
