@@ -101,14 +101,14 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -24.
 [node name="small_room" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=656216685 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.045053, 0, 2.8613863)
 
-[node name="window" parent="SubViewportContainer/SubViewport/NavigationRegion3D/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=2098953630]
+[node name="window" parent="SubViewportContainer/SubViewport/NavigationRegion3D/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="2" unique_id=978388354]
 transparency = 1.0
 surface_material_override/0 = SubResource("StandardMaterial3D_tbgi4")
 
-[node name="box" parent="SubViewportContainer/SubViewport/NavigationRegion3D/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="3" unique_id=1807182942]
+[node name="box" parent="SubViewportContainer/SubViewport/NavigationRegion3D/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="3" unique_id=1138144150]
 transform = Transform3D(0.12728941, 0, -0.99186563, 0, 1, 0, 0.99186563, 0, 0.12728941, -6.9678974, 0.19000006, -7.1854005)
 
-[node name="box_001" parent="SubViewportContainer/SubViewport/NavigationRegion3D/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="4" unique_id=1757376774]
+[node name="box_001" parent="SubViewportContainer/SubViewport/NavigationRegion3D/small_room/small_room2" parent_id_path=PackedInt32Array(656216685, 342954935) index="4" unique_id=703583678]
 transform = Transform3D(-0.8310255, 0, -0.55623424, 0, 1, 0, 0.55623424, 0, -0.8310255, -7.1295223, 0.19000006, -6.461011)
 
 [node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=263060517]
