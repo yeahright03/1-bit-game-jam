@@ -27,14 +27,7 @@ script = ExtResource("1_gx2me")
 [node name="bug" parent="scaling_node" index="0" unique_id=13081606]
 surface_material_override/0 = SubResource("StandardMaterial3D_yp2bs")
 
-[node name="Skeleton3D" parent="scaling_node/bug/tail_armature" parent_id_path=PackedInt32Array(1467040500, 1329449222) index="0" unique_id=2093825364]
-bones/0/rotation = Quaternion(3.770314e-08, 1.8591535e-09, -0.04925047, 0.99878645)
-bones/1/rotation = Quaternion(0, 4.477031e-16, -0.12680069, 0.9919282)
-bones/2/rotation = Quaternion(1.7907113e-16, -4.066188e-16, -0.03099887, 0.9995194)
-bones/3/rotation = Quaternion(-1.0020802e-16, -1.3905728e-15, 0.31030336, 0.9506376)
-bones/4/rotation = Quaternion(1.4045141e-15, -3.6705842e-15, 0.4147121, 0.9099527)
-
-[node name="tail" parent="scaling_node/bug/tail_armature/Skeleton3D" index="0" unique_id=2069075469]
+[node name="tail" parent="scaling_node/bug/tail_armature/Skeleton3D" parent_id_path=PackedInt32Array(1467040500, 2093825364) index="0" unique_id=2069075469]
 surface_material_override/0 = SubResource("StandardMaterial3D_yp2bs")
 
 [node name="antennas" parent="scaling_node" index="1" unique_id=839148784]
@@ -43,11 +36,13 @@ surface_material_override/0 = SubResource("StandardMaterial3D_yp2bs")
 [node name="AnimationPlayer" parent="scaling_node" index="2" unique_id=2081516310]
 autoplay = &"tail_armatureAction"
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1184050296 groups=["enemy"]]
+[node name="Node3D" type="Node3D" parent="." unique_id=1555381416]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Node3D" unique_id=1184050296 groups=["enemy"]]
 collision_layer = 4
 collision_mask = 0
 
-[node name="hitbox" type="CollisionShape3D" parent="StaticBody3D" unique_id=898477834]
+[node name="hitbox" type="CollisionShape3D" parent="Node3D/StaticBody3D" unique_id=898477834]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018005371, -0.0010986328, 0.09576416)
 shape = SubResource("BoxShape3D_g5u87")
 

@@ -218,10 +218,12 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 		hitbox.monitoring = false
 
 ## Is the enemy hit?
-func _on_hitbox_body_entered(body: StaticBody3D) -> void:
+func _on_hitbox_body_entered(body: Node3D) -> void:
 	await get_tree().create_timer(.5).timeout
-	if body != null:
-		if body.is_in_group('enemy'):
-			var enemy = body.get_parent()
-			enemy.swat()
-			print("enemy hit")
+	if body != CharacterBody3D:
+		var hitbox : StaticBody3D = $body/StaticBody3D
+		if body != null:
+			if body.is_in_group('enemy'):
+				var enemy = body.get_parent().get_parent()
+				enemy.swat()
+				print("enemy hit")
