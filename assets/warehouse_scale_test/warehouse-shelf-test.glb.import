@@ -1,0 +1,338 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://42fpauufcke1"
+path="res://.godot/imported/warehouse-shelf-test.glb-fa2f3343e6255af73c3049f9c50080af.scn"
+
+[deps]
+
+source_file="res://assets/warehouse_scale_test/warehouse-shelf-test.glb"
+dest_files=["res://.godot/imported/warehouse-shelf-test.glb-fa2f3343e6255af73c3049f9c50080af.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"nodes": {
+"PATH:Plane": {
+"import/skip_import": true
+},
+"PATH:ceiling_lamps": {
+"physics/mask": 0
+},
+"PATH:corner_office": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:forklift": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:forklift_003": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:garage_door": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:garage_door_001": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:garage_door_002": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:garage_door_003": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:garage_door_004": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:garage_door_005": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:garage_door_006": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:openbox": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:openbox_001": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:openbox_002": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:openbox_003": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:openbox_004": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:openbox_005": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:packed_pallet_3_5_006": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:packed_pallet_3_5_007": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_002": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_003": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_012": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_013": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_014": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_015": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_016": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_017": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_018": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_019": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_020": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_021": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_022": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_004/box_023": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_001": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_002": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_003": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_004": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_005": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_006": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_007": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_008": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_009": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_010": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_011": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_005/box_024": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_025": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_026": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_027": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_028": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_029": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_030": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_031": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_032": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_033": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_034": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_035": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_006/box_036": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:pallet_013": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:shelf_floor_stackable": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:shelf_floor_stackable_001": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:shelf_floor_stackable_002": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:shelf_floor_stackable_003": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:shelf_floor_stackable_004": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:shelf_floor_stackable_005": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:shelf_floor_stackable_006": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:shelf_floor_stackable_007": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:shelf_floor_stackable_008": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:shelf_floor_stackable_009": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:warehouse_building": {
+"generate/physics": true,
+"physics/mask": 0
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1
+gltf/texture_map_mode=1

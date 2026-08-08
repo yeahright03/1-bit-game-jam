@@ -15,11 +15,17 @@ var health : int
 var size : float
 var size_decrease_rate : float
 
+# time enemy is invincible after being hit
+@export var invincibility_time : float = 0.9
+@onready var time_since_damage : Timer = $time_since_damage
+
 @onready var scaling_node : Node3D = $scaling_node
 
 
 # establishes the values for the bug patch
 func _ready() -> void:
+	time_since_damage.wait_time = invincibility_time
+	time_since_damage.one_shot = true
 	health = randi_range(max_health, min_health)
 	size = randf_range(max_size, min_size)
 	scaling_node.scale *= size
@@ -33,17 +39,21 @@ func _unhandled_key_input(_event: InputEvent) -> void:
 	if Input.is_key_pressed(KEY_ENTER):
 		self.swat()
 
+
 # the function is used to damage the bug patch and to decrease its size whenever it takes damage
 func swat():
-	await get_tree().create_timer(.5).timeout
-	health -= 1
-	var decrease_size : Vector3 = Vector3(size_decrease_rate, size_decrease_rate, size_decrease_rate)
-	scaling_node.scale -= decrease_size
-	swatted.emit()
-	if debug_text:
-		print('%s took damage! Current health: %s' % [self.name, health])
-	if health == 0:
-		queue_free()
-		died.emit()
+	if time_since_damage.is_stopped():
+		health -= 1
+		time_since_damage.start()
 		if debug_text:
-			print('%s died!' % self.name)
+			print('Recently damaged: True')
+		var decrease_size : Vector3 = Vector3(size_decrease_rate, size_decrease_rate, size_decrease_rate)
+		scaling_node.scale -= decrease_size
+		swatted.emit()
+		if debug_text:
+			print('%s took damage! Current health: %s' % [self.name, health])
+		if health == 0:
+			queue_free()
+			died.emit()
+			if debug_text:
+				print('%s died!' % self.name)

@@ -17,8 +17,6 @@ extends CharacterBody3D
 @export var can_crouch : bool = false
 ## Can we press to enter freefly mode (noclip)?
 @export var can_freefly : bool = false
-## Can the player attack?
-@export var anim_player: AnimationPlayer = $AnimationPlayer
 
 @export_group("Speeds")
 ## Look around rotation speed.
@@ -59,12 +57,12 @@ var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
 var currently_crouching : bool = false
-var already_hit : bool = false
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
 @onready var hitbox: Area3D = $Head/Camera3D/WeaponPivot/Flyswatter2/Hitbox
+@onready var anim_player: AnimationPlayer = $AnimationPlayer
 
 func _process(delta):
 	if Input.is_action_just_pressed("quit"):
@@ -132,12 +130,6 @@ func _physics_process(delta: float) -> void:
 	elif not currently_crouching and Input.is_action_just_released(input_crouch):
 		head.position.y += 1
 		collider.shape.height += .5
-
-	# Modify speed based on crouching
-	#if can_crouch and Input.is_action_pressed(input_crouch):
-	#	move_speed = crouch_speed
-	#else:
-	#	move_speed = base_speed
 
 
 	# Apply desired movement to velocity
@@ -223,13 +215,13 @@ func check_input_mappings():
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "attack":
 		anim_player.play("idle")
-		already_hit = false
 		hitbox.monitoring = false
 
 ## Is the enemy hit?
 func _on_hitbox_body_entered(body: StaticBody3D) -> void:
-	if body.is_in_group("enemy") and not already_hit:
-		var enemy = body.get_parent()
-		enemy.swat()
-		already_hit = true
-		print("enemy hit")
+	await get_tree().create_timer(.5).timeout
+	if body != null:
+		if body.is_in_group('enemy'):
+			var enemy = body.get_parent()
+			enemy.swat()
+			print("enemy hit")

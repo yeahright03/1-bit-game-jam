@@ -26,6 +26,10 @@ var nav_mesh : NavigationMesh
 var random_locations : PackedVector3Array
 var location_array_range : int
 
+# time enemy is invincible after being hit
+@export var invincibility_time : float = 0.9
+@onready var time_since_damage : Timer = $time_since_damage
+
 @export var disable_movement : bool = false
 
 @onready var scaling_node : Node3D = $scaling_node
@@ -38,6 +42,8 @@ var location_array_range : int
 
 # establishes the values for the bug patch
 func _ready() -> void:
+	time_since_damage.wait_time = invincibility_time
+	time_since_damage.one_shot = true
 	vision_cone.scale *= vision_range
 	health = randi_range(max_health, min_health)
 	size = randf_range(max_size, min_size)
@@ -62,19 +68,20 @@ func _unhandled_key_input(_event: InputEvent) -> void:
 
 # the function is used to damage and flash the bug upon getting hit
 func swat():
-	await get_tree().create_timer(.5).timeout
-	health -= 1
-	bug_color.emission = Color(1, 1, 1, 1)
-	await get_tree().create_timer(.1).timeout
-	bug_color.emission = Color(0, 0, 0, 1)
-	swatted.emit()
-	if debug_text:
-		print('%s took damage! Current health: %s' % [self.name, health])
-	if health == 0:
-		queue_free()
-		died.emit()
+	if time_since_damage.is_stopped():
+		health -= 1
+		time_since_damage.start()
+		bug_color.emission = Color(1, 1, 1, 1)
+		await get_tree().create_timer(.1).timeout
+		bug_color.emission = Color(0, 0, 0, 1)
+		swatted.emit()
 		if debug_text:
-			print('%s died!' % self.name)
+			print('%s took damage! Current health: %s' % [self.name, health])
+		if health == 0:
+			queue_free()
+			died.emit()
+			if debug_text:
+				print('%s died!' % self.name)
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor() and not disable_movement:

@@ -72,3 +72,5 @@ shape = SubResource("BoxShape3D_ngoxy")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=12431480]
 libraries/ = SubResource("AnimationLibrary_vy4ou")
 autoplay = &"moving_bugs"
+
+[node name="time_since_damage" type="Timer" parent="." unique_id=1396082200]
