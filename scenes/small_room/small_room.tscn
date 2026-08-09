@@ -44,7 +44,7 @@ render_target_update_mode = 4
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.4846847, 0.46250135, 2.4726536)
 
 [node name="small_room2" parent="SubViewportContainer/SubViewport" unique_id=57912361 instance=ExtResource("6_l3hdx")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5862746, 0, -0.5862746)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="change_area" parent="SubViewportContainer/SubViewport" unique_id=1581934678 instance=ExtResource("7_e0gue")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5862746, 0, -0.5862746)
@@ -71,11 +71,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0019344091, 0, -7.2455554)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="SubViewportContainer/SubViewport" unique_id=516297581]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.58627456, 3.7757504, 1.7588239)
-omni_range = 10.0
+omni_range = 11.033537
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=2068992618]
 transform = Transform3D(-4.222196e-08, -0.25881904, 0.9659258, -1.131334e-08, 0.9659258, 0.25881904, -1, 0, -4.371139e-08, 12.677788, 2, 0)
-light_energy = 0.1
+light_energy = 0.0
 
 [node name="enemies" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=410006878]
 
@@ -89,6 +89,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2980275, 0.17780274, -3.53
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3552094, 0.12010014, 3.6718287)
 
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("9_n3gnb")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=831153251]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 6.600132, 3.8498693, 4.018303)
+spot_angle = 24.269156
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=1933232138]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.4869084, 3.1174397, 6.4579587)
+spot_range = 3.7927935
+spot_angle = 50.39074
+
+[node name="Task_Light" type="Node3D" parent="." unique_id=375243059]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Task_Light" unique_id=1525999831]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5.946953, 1.0001769, 3.9392023)
+spot_angle = 25.769487
 
 [connection signal="player_died" from="SubViewportContainer/SubViewport/ProtoController" to="." method="_on_proto_controller_player_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/enemies/bug_patch" to="." method="_on_bug_patch_died"]
