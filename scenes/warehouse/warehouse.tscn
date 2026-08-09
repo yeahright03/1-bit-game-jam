@@ -27,7 +27,7 @@ polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 3), PackedInt32Arr
 size = Vector3(1, 1, 0.7658844)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_okyww"]
-size = Vector3(1.5800781, 1, 2.1619873)
+size = Vector3(1.4819336, 3.429016, 1.7015991)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yjtbe"]
 transparency = 1
@@ -82,23 +82,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.787476, 8.880512, 8.255359
 collision_mask = 2
 
 [node name="fuse_box" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Area3D" unique_id=1187653020]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29003906, 0, -0.0713501)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2921906, 1.214508, 5.8175497)
 shape = SubResource("BoxShape3D_okyww")
 
 [node name="enemies" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=793827652]
 
-[node name="bug_rat" parent="SubViewportContainer/SubViewport/enemies" unique_id=1900116657 instance=ExtResource("8_bo5w6")]
+[node name="bug_rat" parent="SubViewportContainer/SubViewport/enemies" unique_id=1900116657 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
+nav_map = NodePath("../../NavigationRegion3D")
 
-[node name="bug_rat2" parent="SubViewportContainer/SubViewport/enemies" unique_id=794553947 instance=ExtResource("8_bo5w6")]
+[node name="bug_rat2" parent="SubViewportContainer/SubViewport/enemies" unique_id=794553947 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.7104387, 3.6944547, 0.3923267)
+nav_map = NodePath("../../NavigationRegion3D")
 
-[node name="bug_rat3" parent="SubViewportContainer/SubViewport/enemies" unique_id=337396820 instance=ExtResource("8_bo5w6")]
+[node name="bug_rat3" parent="SubViewportContainer/SubViewport/enemies" unique_id=337396820 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.86224, 3.694454, -33.508316)
+nav_map = NodePath("../../NavigationRegion3D")
 
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("7_okyww")]
 
 [node name="Lights" type="Node3D" parent="." unique_id=1169765752]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -42.469, 31.87649, -34.506203)
+visible = false
 
 [node name="SpotLight3D27" type="SpotLight3D" parent="Lights" unique_id=2098621995]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.245285, -48.58632, -1.6337509)
@@ -295,9 +299,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.794685, 5.3041935, -36.76
 light_energy = 0.5
 omni_range = 3.369135
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=888215809]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.61773, 12.004193, 14.530521)
-omni_range = 2.8
+[node name="OmniLight3D2" type="SpotLight3D" parent="." unique_id=1726707996]
+transform = Transform3D(-4.371139e-08, 0.16032648, -0.98706406, 0, 0.98706406, 0.16032648, 1, 7.008093e-09, -4.3145942e-08, 39.766617, 11.650028, 14.016409)
+spot_range = 10.868293
+spot_angle = 29.061937
 
 [node name="Stair_Box" type="CSGBox3D" parent="." unique_id=1352827538]
 transform = Transform3D(0.725511, -0.68821055, 0, 0.68821055, 0.725511, 0, 0, 0, 1, 37.737774, 5.2387366, 17.772026)
