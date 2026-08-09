@@ -171,7 +171,8 @@ func _physics_process(delta: float) -> void:
 		if collision.get_collider() == null:
 			continue
 
-		if collision.get_collider().is_in_group("enemy"):
+		if collision.get_collider().is_in_group("enemy") and time_since_damage.is_stopped():
+			time_since_damage.start()
 			taking_damage(1)
 	
 	# Use velocity to actually move
@@ -257,17 +258,15 @@ func _on_hitbox_body_entered(body: Node3D) -> void:
 				print("enemy hit")
 
 func taking_damage(damage_taken: float = 1.0) -> void:
-	if time_since_damage.is_stopped():
-		var random_offset : float = randf_range(0.1, 0.3)
-		camera.rotation.z += random_offset
-		await get_tree().create_timer(0.05).timeout
-		camera.rotation.z -= 2 * random_offset
-		await get_tree().create_timer(0.05).timeout
-		camera.rotation.z += random_offset
-		time_since_damage.start()
-		health -= damage_taken
-		if health < 0:
-			player_died.emit()
+	var random_offset : float = randf_range(0.1, 0.3)
+	camera.rotation.z += random_offset
+	await get_tree().create_timer(0.05).timeout
+	camera.rotation.z -= 2 * random_offset
+	await get_tree().create_timer(0.05).timeout
+	camera.rotation.z += random_offset
+	health -= damage_taken
+	if health < 0:
+		player_died.emit()
 
 
 func _on_healing_interval_timeout() -> void:
