@@ -69,4 +69,5 @@ shape = SubResource("BoxShape3D_uu07n")
 
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("5_xqwp8")]
 
+[connection signal="player_died" from="SubViewportContainer/SubViewport/ProtoController" to="." method="_on_proto_controller_player_died"]
 [connection signal="body_entered" from="SubViewportContainer/SubViewport/Area3D" to="." method="_on_area_3d_body_entered"]

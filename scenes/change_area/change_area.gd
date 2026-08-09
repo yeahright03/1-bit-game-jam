@@ -17,8 +17,11 @@ func _set_player_position() -> void:
 	var target_position = player.global_position - global_position.direction_to($Marker3D.global_position)
 	target_position.y = player.global_position.y
 
-	#player.look_at(target_position)
+	player.look_at(target_position)
 	player.global_position = $Marker3D.global_position
+	player.capture_mouse()
+	var mouse_position = get_viewport().get_mouse_position()
+	player.rotate_look(mouse_position)
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group('player'):

@@ -90,6 +90,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3552094, 0.12010014, 3.6718
 
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("9_n3gnb")]
 
+[connection signal="player_died" from="SubViewportContainer/SubViewport/ProtoController" to="." method="_on_proto_controller_player_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/enemies/bug_patch" to="." method="_on_bug_patch_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/enemies/bug_patch2" to="." method="_on_bug_patch_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/enemies/bug_patch3" to="." method="_on_bug_patch_died"]

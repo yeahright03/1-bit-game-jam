@@ -5,6 +5,8 @@
 
 extends CharacterBody3D
 
+signal player_died
+
 @export_group("Movement Modifiers")
 ## Can we move around?
 @export var can_move : bool = true
@@ -61,8 +63,9 @@ var currently_crouching : bool = false
 
 @export_group("Health Modifiers")
 @export var health : float = 5.0
-@export var health_regen : float = 0.2
-var invincibility_time : float = 1.0
+@export var health_regen : float = 0.1
+@export var healing_interval : float = 1.0
+@export var invincibility_time : float = 0.5
 
 ## IMPORTANT REFERENCES
 @onready var head : Node3D = $Head
@@ -71,6 +74,7 @@ var invincibility_time : float = 1.0
 @onready var anim_player : AnimationPlayer = $AnimationPlayer
 @onready var camera : Camera3D = $Head/Camera3D
 @onready var time_since_damage : Timer = $time_since_damage
+@onready var healing_interval_timer : Timer = $healing_interval
 
 func _process(delta):
 	if Input.is_action_just_pressed("quit"):
@@ -84,6 +88,7 @@ func _ready() -> void:
 	check_input_mappings()
 	look_rotation.y = rotation.y
 	look_rotation.x = head.rotation.x
+	healing_interval_timer.wait_time = healing_interval
 	time_since_damage.wait_time = invincibility_time
 	time_since_damage.one_shot = true
 
@@ -108,8 +113,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			disable_freefly()
 
 func _physics_process(delta: float) -> void:
-	if health < 5.0:
-		health += health_regen
+	print(health)
 	# If freeflying, handle freefly and nothing else
 	if can_freefly and freeflying:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
@@ -262,3 +266,10 @@ func taking_damage(damage_taken: float = 1.0) -> void:
 		camera.rotation.z += random_offset
 		time_since_damage.start()
 		health -= damage_taken
+		if health < 0:
+			player_died.emit()
+
+
+func _on_healing_interval_timeout() -> void:
+	if health < 5:
+		health += health_regen
