@@ -23,8 +23,17 @@ func _set_player_position() -> void:
 	#var mouse_position := InputEventMouseMotion.position
 	player.rotate_look(Vector2($Marker3D.global_position.x, $Marker3D.global_position.z))
 
+	player.health = Game.health_transfer
+	#player.global_rotation = Game.rotation_transfer
+	print('transferred health %s' % player.health)
+	#print('transferred rotation %s' % player.global_rotation)
+
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group('player'):
 		TravelManager.change_area(current_area_type)
+		Game.health_transfer = body.health
+		#Game.rotation_transfer = body.global_rotation
+		print('initial health %s' % Game.health_transfer)
+		#print('initial rotation %s' % Game.rotation_transfer)
 		
 		get_tree().change_scene_to_file.call_deferred(TravelManager.area_dict[change_area_type])

@@ -91,6 +91,8 @@ func _ready() -> void:
 	healing_interval_timer.wait_time = healing_interval
 	time_since_damage.wait_time = invincibility_time
 	time_since_damage.one_shot = true
+	anim_player.play("idle")
+	hitbox.monitoring = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	# Mouse capturing
@@ -113,7 +115,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			disable_freefly()
 
 func _physics_process(delta: float) -> void:
-	print(health)
 	# If freeflying, handle freefly and nothing else
 	if can_freefly and freeflying:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
@@ -270,5 +271,6 @@ func taking_damage(damage_taken: float = 1.0) -> void:
 
 
 func _on_healing_interval_timeout() -> void:
+	print(health)
 	if health < 5:
 		health += health_regen

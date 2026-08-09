@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 signal swatted
-signal died
+signal died(bug_rat_name)
 
 enum agression_state {ROAMING, RETREAT, AGRESSIVE}
 var state : agression_state = agression_state.ROAMING
@@ -87,7 +87,7 @@ func swat():
 			print('%s took damage! Current health: %s' % [self.name, health])
 		if health == 0:
 			queue_free()
-			died.emit()
+			died.emit(self.name)
 			if debug_text:
 				print('%s died!' % self.name)
 
@@ -139,7 +139,7 @@ func _on_vision_timer_timeout() -> void:
 				var vector_to_player : Vector3 = Vector3(player_position - self.position).normalized()
 				var front_vector : Vector3 = Vector3(marker.global_position - self.position).normalized()
 				var angle : float = front_vector.dot(vector_to_player)
-				print(angle)
+				#print(angle)
 				vision_line.look_at(player_position, Vector3.UP)
 				vision_line.force_raycast_update()
 

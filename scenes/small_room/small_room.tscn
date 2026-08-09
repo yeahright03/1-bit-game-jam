@@ -84,13 +84,13 @@ light_energy = 0.0
 [node name="enemies" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=410006878]
 
 [node name="bug_patch" parent="SubViewportContainer/SubViewport/enemies" unique_id=209888864 instance=ExtResource("8_wa8l2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07268047, 0.2708727, -0.81558037)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42135477, 0.2708727, 1.5390453)
 
 [node name="bug_patch2" parent="SubViewportContainer/SubViewport/enemies" unique_id=1167465526 instance=ExtResource("8_wa8l2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2980275, 0.17780274, -2.1114335)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.267424, 0.13122761, 5.5064692)
 
 [node name="bug_patch3" parent="SubViewportContainer/SubViewport/enemies" unique_id=1387332164 instance=ExtResource("8_wa8l2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.34572, 0.12010014, 3.6718287)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.716504, 0.12010014, 4.246484)
 
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("9_n3gnb")]
 

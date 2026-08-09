@@ -9,7 +9,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if Game.quest1_patch:
+	if Game.quests_done == 0 and not Game.quest1_patch:
+		quest_text.text = 'Boss wants you to do something,\ngo see him by his door'
+	elif Game.quest1_patch:
 		if Game.patches_killed < 3:
 			quest_text.text = 'Current task:\nRemove bug nests: %s/3' % Game.patches_killed
 		elif Game.patches_killed == 3:
