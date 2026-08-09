@@ -48,11 +48,11 @@ func _ready() -> void:
 	health = randi_range(max_health, min_health)
 	size = randf_range(max_size, min_size)
 	scaling_node.scale *= size
-	nav_mesh  = nav_map.navigation_mesh
-	random_locations = nav_mesh.get_vertices()
-	location_array_range = random_locations.size()
-	has_target = true
-	target_pos = Vector3(random_locations.get(randi_range(0, location_array_range - 1)))
+	#nav_mesh  = nav_map.navigation_mesh
+	#random_locations = nav_mesh.get_vertices()
+	#location_array_range = random_locations.size()
+	#has_target = true
+	#target_pos = Vector3(random_locations.get(randi_range(0, location_array_range - 1)))
 	if debug_text:
 		print('%s:\nHealth: %s\nSize: %s' % [self.name, health, size])
 

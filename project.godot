@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 TravelManager="*uid://kpeqq3o6uf1s"
+GlobalController="*uid://c1ixkk317nx48"
+Game="*uid://byy0gw8hntwe0"
 
 [display]
 

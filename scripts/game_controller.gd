@@ -9,7 +9,7 @@ var current_2d_scene
 var current_gui_scene
 
 func _ready() -> void:
-    Global.game_controller = self
+    GlobalController.game_controller = self
     current_gui_scene = $gui/splash_screen_manager
 
 func change_gui_scene(new_scene : String, delete : bool = true, keep_running : bool = false) -> void:
@@ -50,4 +50,4 @@ func change_2d_scene(new_scene : String, delete : bool = true, keep_running : bo
 
 func _unhandled_input(event: InputEvent) -> void:
     if event.is_pressed():
-        Global.game_controller.change_gui_scene('res://user_interface/scenes/main_menu.tscn')
+        GlobalController.game_controller.change_gui_scene('res://user_interface/scenes/main_menu.tscn')

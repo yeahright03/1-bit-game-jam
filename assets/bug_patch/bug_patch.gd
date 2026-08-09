@@ -1,7 +1,7 @@
 extends Node3D
 
 signal swatted
-signal died
+signal died(patch_name)
 
 # enable to view the debug text
 @export var debug_text : bool = false
@@ -54,6 +54,6 @@ func swat():
 			print('%s took damage! Current health: %s' % [self.name, health])
 		if health == 0:
 			queue_free()
-			died.emit()
+			died.emit(self.name)
 			if debug_text:
 				print('%s died!' % self.name)

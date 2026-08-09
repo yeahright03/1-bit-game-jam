@@ -82,8 +82,8 @@ func _process(delta):
 func _ready() -> void:
 	add_to_group('player')
 	check_input_mappings()
-	#look_rotation.y = rotation.y
-	#look_rotation.x = head.rotation.x
+	look_rotation.y = rotation.y
+	look_rotation.x = head.rotation.x
 	time_since_damage.wait_time = invincibility_time
 	time_since_damage.one_shot = true
 
@@ -139,10 +139,10 @@ func _physics_process(delta: float) -> void:
 		currently_crouching = false
 	
 	# Modify camera height and collider size based on if currently crouching
-	if currently_crouching and Input.is_action_just_pressed(input_crouch):
+	if can_crouch and currently_crouching and Input.is_action_just_pressed(input_crouch):
 		head.position.y -= 1
 		collider.shape.height -= .5
-	elif not currently_crouching and Input.is_action_just_released(input_crouch):
+	elif can_crouch and not currently_crouching and Input.is_action_just_released(input_crouch):
 		head.position.y += 1
 		collider.shape.height += .5
 

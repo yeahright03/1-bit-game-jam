@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dphofgooqbyjx"]
+
+[ext_resource type="Script" uid="uid://b4jydjlt6dp7g" path="res://scenes/spawn/spawn.gd" id="1_husmh"]
+[ext_resource type="Shader" uid="uid://dske138voidgj" path="res://shader/dither.gdshader" id="2_qtpfl"]
+[ext_resource type="Texture2D" uid="uid://c2ad4uv8u15ue" path="res://assets/shaders_textures/palette_mono.png" id="3_eia12"]
+[ext_resource type="Texture2D" uid="uid://cfyg75fa8ygx1" path="res://assets/shaders_textures/bayer2tile16.png" id="4_htq4a"]
+[ext_resource type="PackedScene" uid="uid://dxpwykxtuvf6o" path="res://scenes/quests/quests.tscn" id="5_xqwp8"]
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="6_nwhky"]
+[ext_resource type="PackedScene" uid="uid://kp8crwd0nlks" path="res://assets/SpawnRoom.glb" id="7_rpbbo"]
+[ext_resource type="PackedScene" uid="uid://crq8c7obnscni" path="res://scenes/change_area/change_area.tscn" id="8_w3d1c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_auw1c"]
+shader = ExtResource("2_qtpfl")
+shader_parameter/u_dither_tex = ExtResource("4_htq4a")
+shader_parameter/u_color_tex = ExtResource("3_eia12")
+shader_parameter/u_bit_depth = 32
+shader_parameter/u_contrast = 5.5
+shader_parameter/u_offset = 0.0
+shader_parameter/u_dither_size = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g5u87"]
+size = Vector3(1.9785156, 1, 1.4315186)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uu07n"]
+size = Vector3(1.5800781, 1, 2.1619873)
+
+[node name="spawn" type="Node3D" unique_id=1324516433]
+script = ExtResource("1_husmh")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=498916306]
+material = SubResource("ShaderMaterial_auw1c")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=2112473615]
+handle_input_locally = false
+size = Vector2i(1280, 720)
+render_target_update_mode = 4
+
+[node name="ProtoController" parent="SubViewportContainer/SubViewport" unique_id=1883257602 instance=ExtResource("6_nwhky")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.610844, 1.4434967, -0.3848232)
+
+[node name="SpawnRoom" parent="SubViewportContainer/SubViewport" unique_id=484448062 instance=ExtResource("7_rpbbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029132366, -0.019004822, 0.0111989975)
+
+[node name="change_area" parent="SubViewportContainer/SubViewport" unique_id=1581934678 instance=ExtResource("8_w3d1c")]
+change_area_type = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/change_area" unique_id=1211869542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0106326, 1.5284872, -7.307848)
+shape = SubResource("BoxShape3D_g5u87")
+
+[node name="Marker3D" type="Marker3D" parent="SubViewportContainer/SubViewport/change_area" unique_id=196727617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.011, 1.0103073, -5.7358565)
+
+[node name="WorldEnvironment" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=1965215875]
+transform = Transform3D(-3.090862e-08, 0.70710677, -0.70710677, 3.090862e-08, 0.70710677, 0.70710677, 1, 0, -4.371139e-08, -21.31771, 18.414701, 0)
+
+[node name="Area3D" type="Area3D" parent="SubViewportContainer/SubViewport" unique_id=781458123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 0)
+collision_mask = 2
+
+[node name="boss_act" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Area3D" unique_id=759139089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29003906, 0, -0.0713501)
+shape = SubResource("BoxShape3D_uu07n")
+
+[node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("5_xqwp8")]
+
+[connection signal="body_entered" from="SubViewportContainer/SubViewport/Area3D" to="." method="_on_area_3d_body_entered"]
