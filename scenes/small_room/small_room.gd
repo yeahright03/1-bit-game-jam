@@ -18,3 +18,8 @@ func _on_bug_patch_died(patch_name : Variant) -> void:
 			child.process_mode = Node.PROCESS_MODE_DISABLED
 	Game.patches_killed += 1
 	print(Game.patches_killed)
+
+
+func _on_proto_controller_player_died() -> void:
+	Game.reset_everything()
+	get_tree().change_scene_to_file('res://scenes/spawn/spawn.tscn')
