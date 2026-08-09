@@ -38,6 +38,10 @@ cell_height = 0.05
 agent_height = 0.5
 agent_radius = 0.2
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yjtbe"]
+transparency = 1
+albedo_color = Color(0.012617188, 0.012617188, 0.012617188, 0)
+
 [node name="Main" type="Node3D" unique_id=159095663]
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=244097791]
@@ -175,138 +179,6 @@ nav_map = NodePath("../../NavigationRegion3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 13.194908)
 nav_map = NodePath("../../NavigationRegion3D")
 
-[node name="bug_rat6" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=75095015 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9280758, 0.14842415, 14.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat7" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=330043104 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9280758, 0.14842415, 14.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat8" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1752839315 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 14.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat9" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=818010559 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9280758, 0.14842415, 15.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat10" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=2083221683 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9280758, 0.14842415, 15.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat11" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=2069270523 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 15.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat12" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=70809828 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9280758, 0.14842415, 16.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat13" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=751552697 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9280758, 0.14842415, 16.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat14" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1162980257 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 16.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat15" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=2100143280 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9280758, 0.14842415, 17.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat16" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1029024112 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9280758, 0.14842415, 17.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat17" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=46179837 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 17.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat18" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=658090462 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9280758, 0.14842415, 18.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat19" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1787368044 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9280758, 0.14842415, 18.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat20" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1279619871 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9280758, 0.14842415, 18.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat21" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=677622800 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 13.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat22" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=2033189470 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 13.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat23" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=2122959414 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 13.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat24" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=279410383 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 14.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat25" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=139604830 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 14.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat26" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1158585749 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 14.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat27" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=999556785 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 15.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat28" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1546050931 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 15.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat29" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1352839355 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 15.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat30" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=673392684 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 16.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat31" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=604547804 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 16.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat32" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1639347577 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 16.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat33" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=928520513 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 17.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat34" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1438816119 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 17.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat35" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1042699823 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 17.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat36" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=758480744 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.928076, 0.14842415, 18.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat37" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=1811014717 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.928076, 0.14842415, 18.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
-[node name="bug_rat38" parent="SubViewportContainer/SubViewport/navmesh_test" unique_id=373835604 node_paths=PackedStringArray("nav_map") instance=ExtResource("7_o6xl0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.928076, 0.14842415, 18.194908)
-nav_map = NodePath("../../NavigationRegion3D")
-
 [node name="OmniLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport" unique_id=2070541380]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 10.000874, 27.788671, 21.741009)
 light_energy = 100.0
@@ -324,3 +196,12 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 10.0
 light_energy = 100.0
 spot_range = 28.0
 spot_angle = 11.022256
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1316069363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.54606, 0, 86.555115)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Area3D" unique_id=151372316]
+transform = Transform3D(1.4901167e-08, -7.450584e-09, -0.99999994, 0.7059514, 0.7082607, 6.1725737e-16, 0.7082607, -0.7059514, -3.4525467e-17, 1.148365, 1.9729196, 3.045044)
+use_collision = true
+size = Vector3(8.342072, 1, 3.0568848)
+material = SubResource("StandardMaterial3D_yjtbe")

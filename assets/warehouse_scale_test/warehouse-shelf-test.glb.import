@@ -41,7 +41,22 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:Cube_002": {
+"generate/physics": true
+},
+"PATH:Cube_004": {
+"generate/physics": true
+},
+"PATH:Cube_005": {
+"generate/physics": true
+},
+"PATH:Door_Interactable": {
+"generate/physics": true
+},
 "PATH:Plane": {
+"import/skip_import": true
+},
+"PATH:Stair_Box": {
 "import/skip_import": true
 },
 "PATH:ceiling_lamps": {
@@ -55,9 +70,48 @@ _subresources={
 "generate/physics": true,
 "physics/mask": 0
 },
+"PATH:forklift_001": {
+"generate/physics": true
+},
+"PATH:forklift_002": {
+"generate/physics": true
+},
 "PATH:forklift_003": {
 "generate/physics": true,
 "physics/mask": 0
+},
+"PATH:forklift_004": {
+"generate/physics": true
+},
+"PATH:forklift_005": {
+"generate/physics": true
+},
+"PATH:forklift_006": {
+"generate/physics": true
+},
+"PATH:forklift_007": {
+"generate/physics": true
+},
+"PATH:forklift_008": {
+"generate/physics": true
+},
+"PATH:forklift_009": {
+"generate/physics": true
+},
+"PATH:forklift_010": {
+"generate/physics": true
+},
+"PATH:forklift_011": {
+"generate/physics": true
+},
+"PATH:forklift_012": {
+"generate/physics": true
+},
+"PATH:forklift_013": {
+"generate/physics": true
+},
+"PATH:forklift_014": {
+"generate/physics": true
 },
 "PATH:garage_door": {
 "generate/physics": true,
@@ -111,6 +165,162 @@ _subresources={
 "generate/physics": true,
 "physics/mask": 0
 },
+"PATH:openbox_006": {
+"generate/physics": true
+},
+"PATH:openbox_007": {
+"generate/physics": true
+},
+"PATH:openbox_008": {
+"generate/physics": true
+},
+"PATH:openbox_009": {
+"generate/physics": true
+},
+"PATH:openbox_010": {
+"generate/physics": true
+},
+"PATH:openbox_011": {
+"generate/physics": true
+},
+"PATH:openbox_012": {
+"generate/physics": true
+},
+"PATH:openbox_013": {
+"generate/physics": true
+},
+"PATH:openbox_014": {
+"generate/physics": true
+},
+"PATH:openbox_015": {
+"generate/physics": true
+},
+"PATH:openbox_016": {
+"generate/physics": true
+},
+"PATH:openbox_017": {
+"generate/physics": true
+},
+"PATH:openbox_018": {
+"generate/physics": true
+},
+"PATH:openbox_019": {
+"generate/physics": true
+},
+"PATH:openbox_020": {
+"generate/physics": true
+},
+"PATH:openbox_021": {
+"generate/physics": true
+},
+"PATH:openbox_022": {
+"generate/physics": true
+},
+"PATH:openbox_023": {
+"generate/physics": true
+},
+"PATH:openbox_024": {
+"generate/physics": true
+},
+"PATH:packed_pallet_1_5_001": {
+"generate/physics": true
+},
+"PATH:packed_pallet_1_5_002": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_001": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_002": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_003": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_004": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_005": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_006": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_007": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_008": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_009": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_010": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_011": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_012": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_013": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_014": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_015": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_016": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_017": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_018": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_019": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_020": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_021": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_022": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_023": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_024": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_025": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_026": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_027": {
+"generate/physics": true
+},
+"PATH:packed_pallet_2_5_028": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_001": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_002": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_003": {
+"generate/physics": true
+},
 "PATH:packed_pallet_3_5_006": {
 "generate/physics": true,
 "physics/mask": 0
@@ -118,6 +328,159 @@ _subresources={
 "PATH:packed_pallet_3_5_007": {
 "generate/physics": true,
 "physics/mask": 0
+},
+"PATH:packed_pallet_3_5_024": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_025": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_029": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_030": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_048": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_049": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_060": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_061": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_065": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_075": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_077": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_083": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_092": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_095": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_102": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_103": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_120": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_121": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_128": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_131": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_136": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_137": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_138": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_139": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_140": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_141": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_142": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_143": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_144": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_145": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_146": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_147": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_148": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_149": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5_150": {
+"generate/physics": true
+},
+"PATH:packed_pallet_4_5_001": {
+"generate/physics": true
+},
+"PATH:packed_pallet_4_5_002": {
+"generate/physics": true
+},
+"PATH:packed_pallet_4_5_003": {
+"generate/physics": true
+},
+"PATH:packed_pallet_4_5_004": {
+"generate/physics": true
+},
+"PATH:packed_pallet_4_5_005": {
+"generate/physics": true
+},
+"PATH:packed_pallet_4_5_006": {
+"generate/physics": true
+},
+"PATH:packed_pallet_5_5_001": {
+"generate/physics": true
+},
+"PATH:packed_pallet_5_5_002": {
+"generate/physics": true
+},
+"PATH:packed_pallet_5_5_003": {
+"generate/physics": true
+},
+"PATH:packed_pallet_5_5_004": {
+"generate/physics": true
+},
+"PATH:packed_pallet_5_5_005": {
+"generate/physics": true
+},
+"PATH:packed_pallet_5_5_006": {
+"generate/physics": true
+},
+"PATH:packed_pallet_5_5_007": {
+"generate/physics": true
+},
+"PATH:packed_pallet_5_5_008": {
+"generate/physics": true
+},
+"PATH:packet_pallet_normal_001": {
+"generate/physics": true
+},
+"PATH:pallet_001": {
+"generate/physics": true
 },
 "PATH:pallet_002": {
 "generate/physics": true,
@@ -183,116 +546,42 @@ _subresources={
 "generate/physics": true,
 "physics/mask": 0
 },
-"PATH:pallet_005/box_001": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_005/box_002": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_005/box_003": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_005/box_004": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_005/box_005": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_005/box_006": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_005/box_007": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_005/box_008": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_005/box_009": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_005/box_010": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_005/box_011": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_005/box_024": {
-"generate/physics": true,
-"physics/mask": 0
-},
 "PATH:pallet_006": {
 "generate/physics": true,
 "physics/mask": 0
 },
-"PATH:pallet_006/box_025": {
-"generate/physics": true,
-"physics/mask": 0
+"PATH:pallet_007": {
+"generate/physics": true
 },
-"PATH:pallet_006/box_026": {
-"generate/physics": true,
-"physics/mask": 0
+"PATH:pallet_008": {
+"generate/physics": true
 },
-"PATH:pallet_006/box_027": {
-"generate/physics": true,
-"physics/mask": 0
+"PATH:pallet_009": {
+"generate/physics": true
 },
-"PATH:pallet_006/box_028": {
-"generate/physics": true,
-"physics/mask": 0
+"PATH:pallet_010": {
+"generate/physics": true
 },
-"PATH:pallet_006/box_029": {
-"generate/physics": true,
-"physics/mask": 0
+"PATH:pallet_011": {
+"generate/physics": true
 },
-"PATH:pallet_006/box_030": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_006/box_031": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_006/box_032": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_006/box_033": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_006/box_034": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_006/box_035": {
-"generate/physics": true,
-"physics/mask": 0
-},
-"PATH:pallet_006/box_036": {
-"generate/physics": true,
-"physics/mask": 0
+"PATH:pallet_012": {
+"generate/physics": true
 },
 "PATH:pallet_013": {
 "generate/physics": true,
 "physics/mask": 0
 },
+"PATH:pallet_014": {
+"generate/physics": true
+},
+"PATH:pallet_015": {
+"generate/physics": true
+},
 "PATH:shelf_floor_stackable": {
-"generate/physics": true,
 "physics/mask": 0
 },
 "PATH:shelf_floor_stackable_001": {
-"generate/physics": true,
 "physics/mask": 0
 },
 "PATH:shelf_floor_stackable_002": {
