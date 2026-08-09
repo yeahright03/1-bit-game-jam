@@ -53,6 +53,18 @@ _subresources={
 "generate/physics": true,
 "physics/mask": 0
 },
+"PATH:box_014": {
+"generate/physics": true
+},
+"PATH:box_015": {
+"generate/physics": true
+},
+"PATH:box_016": {
+"generate/physics": true
+},
+"PATH:packed_pallet_3_5": {
+"generate/physics": true
+},
 "PATH:pallet": {
 "generate/physics": true,
 "physics/mask": 0
@@ -113,14 +125,44 @@ _subresources={
 "generate/physics": true,
 "physics/mask": 0
 },
-"PATH:pallet_cutout": {
-"import/skip_import": true
+"PATH:pallet_015": {
+"generate/physics": true
 },
-"PATH:pallet_cutout2": {
-"import/skip_import": true
+"PATH:pallet_015/box_003": {
+"generate/physics": true
 },
-"PATH:pallet_cutout3": {
-"import/skip_import": true
+"PATH:pallet_015/box_004": {
+"generate/physics": true
+},
+"PATH:pallet_015/box_005": {
+"generate/physics": true
+},
+"PATH:pallet_015/box_006": {
+"generate/physics": true
+},
+"PATH:pallet_015/box_007": {
+"generate/physics": true
+},
+"PATH:pallet_015/box_008": {
+"generate/physics": true
+},
+"PATH:pallet_015/box_009": {
+"generate/physics": true
+},
+"PATH:pallet_015/box_010": {
+"generate/physics": true
+},
+"PATH:pallet_015/box_011": {
+"generate/physics": true
+},
+"PATH:pallet_015/box_012": {
+"generate/physics": true
+},
+"PATH:pallet_015/box_013": {
+"generate/physics": true
+},
+"PATH:pallet_016": {
+"generate/physics": true
 },
 "PATH:shelf": {
 "generate/physics": true,
@@ -129,12 +171,6 @@ _subresources={
 "PATH:small_room": {
 "generate/physics": true,
 "physics/mask": 0
-},
-"PATH:walkway_cutout": {
-"import/skip_import": true
-},
-"PATH:window_cutout": {
-"import/skip_import": true
 }
 }
 }
