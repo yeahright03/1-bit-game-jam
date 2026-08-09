@@ -3,6 +3,9 @@ extends CharacterBody3D
 signal swatted
 signal died
 
+enum agression_state {ROAMING, RETREAT, AGRESSIVE}
+var state : agression_state = agression_state.ROAMING
+
 # enable to view the debug text
 @export var debug_text : bool = false
 
@@ -21,10 +24,14 @@ var target_pos : Vector3
 var has_target : bool = false
 var nav_server : RID = get_rid()
 @export var speed : float = 6.0
+@export var agressive_speed_modifier : float = 2.0
+@export var retreat_speed_modifier : float = 1.5
 @export var nav_map : NavigationRegion3D
 var nav_mesh : NavigationMesh
 var random_locations : PackedVector3Array
 var location_array_range : int
+var player_position : Vector3
+@export var retreat_range : float = 25.0
 
 # time enemy is invincible after being hit
 @export var invincibility_time : float = 0.9
@@ -38,6 +45,8 @@ var location_array_range : int
 @onready var vision_cone : CollisionShape3D = $vision_mechanics/vision_area/vision_cone
 @onready var vision_line : RayCast3D = $vision_mechanics/vision_line
 @onready var vision_area : Area3D = $vision_mechanics/vision_area
+@onready var vision_timer : Timer = $vision_mechanics/vision_timer
+@onready var marker : Marker3D = $Marker3D
 
 
 # establishes the values for the bug patch
@@ -45,14 +54,13 @@ func _ready() -> void:
 	time_since_damage.wait_time = invincibility_time
 	time_since_damage.one_shot = true
 	vision_cone.scale *= vision_range
+	nav_mesh  = nav_map.navigation_mesh
+	random_locations = nav_mesh.get_vertices()
+	location_array_range = random_locations.size()
+	state = agression_state.ROAMING
 	health = randi_range(max_health, min_health)
 	size = randf_range(max_size, min_size)
 	scaling_node.scale *= size
-	#nav_mesh  = nav_map.navigation_mesh
-	#random_locations = nav_mesh.get_vertices()
-	#location_array_range = random_locations.size()
-	#has_target = true
-	#target_pos = Vector3(random_locations.get(randi_range(0, location_array_range - 1)))
 	if debug_text:
 		print('%s:\nHealth: %s\nSize: %s' % [self.name, health, size])
 
@@ -91,9 +99,25 @@ func _physics_process(delta: float) -> void:
 		nav_agent.target_position = target_pos
 		var next_path_pos := nav_agent.get_next_path_position()
 		var direction := global_position.direction_to(next_path_pos)
-		velocity = direction * speed
+		if state == agression_state.ROAMING:
+			velocity = direction * speed
+		elif state == agression_state.RETREAT:
+			velocity = direction * speed * retreat_speed_modifier
+		elif state == agression_state.AGRESSIVE:
+			velocity = direction * speed * agressive_speed_modifier
 
-		if nav_agent.is_navigation_finished():
+		if nav_agent.is_navigation_finished() and state == agression_state.AGRESSIVE:
+			vision_timer.stop()
+			state = agression_state.RETREAT
+			has_target = true
+			while true:
+				target_pos = Vector3(random_locations.get(randi_range(0, location_array_range - 1)))
+				if target_pos.distance_to(self.position) < retreat_range:
+					break
+		elif nav_agent.is_navigation_finished():
+			if state == agression_state.RETREAT:
+				vision_timer.start()
+				state = agression_state.ROAMING
 			has_target = false
 			velocity = Vector3.ZERO
 
@@ -111,18 +135,29 @@ func _on_vision_timer_timeout() -> void:
 	if overlaps.size() > 0:
 		for overlap in overlaps:
 			if overlap.name == 'ProtoController':
-				var player_position = overlap.global_transform.origin
+				player_position = overlap.global_transform.origin
+				var vector_to_player : Vector3 = Vector3(player_position - self.position).normalized()
+				var front_vector : Vector3 = Vector3(marker.global_position - self.position).normalized()
+				var angle : float = front_vector.dot(vector_to_player)
+				print(angle)
 				vision_line.look_at(player_position, Vector3.UP)
 				vision_line.force_raycast_update()
 
-				if vision_line.is_colliding():
+				if vision_line.is_colliding() and angle > 0:
 					var collider = vision_line.get_collider()
 
 					if collider.name == 'ProtoController':
 						print('%s sees the player!' % self.name)
+						state = agression_state.AGRESSIVE
 						has_target = true
 						target_pos = player_position
 					else:
 						print('%s DO NOT see the player!' % self.name)
 			if overlap.name == null:
 				continue
+
+
+func _on_roam_timer_timeout() -> void:
+	if state == agression_state.ROAMING:
+		has_target = true
+		target_pos = Vector3(random_locations.get(randi_range(0, location_array_range - 1)))

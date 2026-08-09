@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://drya3fcdfeyxu"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_wfohb"]
+[ext_resource type="PackedScene" uid="uid://v6epnmseyg5i" path="res://assets/bug_rat/bug_rat.tscn" id="2_8smfe"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_uu07n"]
+vertices = PackedVector3Array(-1, 0.52, -7.75, 0, 0.52, -8, 0, 0.52, -10, -4, 0.52, -3, -3.75, 0.52, -2.25, -1, 0.52, -2.5, -10, 0.52, -0.5, -6, 0.52, -0.5, -5.75, 0.52, -3, -10, 0.52, -10, 1.25, 0.52, -7.75, 1.25, 0.52, -2.75, 4, 0.52, -2.5, 4.25, 0.52, -3, 6, 0.52, -3, 6.25, 0.52, -1.25, 9, 0.52, -1.5, 9, 0.52, -10, -3.75, 0.52, 1.5, -1, 0.52, 1.75, -0.75, 0.52, 1, -0.75, 0.52, -1.75, 1, 0.52, 1, 1.25, 0.52, 1.75, 4, 0.52, 1.5, 0.75, 0.52, -1.75, 1.25, 0.52, 6.75, 0, 0.52, 7.25, 0, 0.52, 9, 4.25, 0.52, 2.25, 6.25, 0.52, 1.75, 9, 0.52, 9, 5.75, 0.52, 2.25, -1, 0.52, 7, -4.25, 0.52, 2.25, -5.75, 0.52, 2.25, -10, 0.52, 9)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 0), PackedInt32Array(8, 7, 6), PackedInt32Array(0, 8, 2), PackedInt32Array(2, 8, 9), PackedInt32Array(9, 8, 6), PackedInt32Array(0, 3, 8), PackedInt32Array(10, 1, 2), PackedInt32Array(12, 11, 13), PackedInt32Array(13, 11, 10), PackedInt32Array(16, 15, 14), PackedInt32Array(10, 2, 14), PackedInt32Array(14, 2, 16), PackedInt32Array(16, 2, 17), PackedInt32Array(14, 13, 10), PackedInt32Array(5, 21, 4), PackedInt32Array(4, 21, 20), PackedInt32Array(4, 20, 19), PackedInt32Array(4, 19, 18), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 25), PackedInt32Array(24, 25, 11), PackedInt32Array(24, 11, 12), PackedInt32Array(21, 25, 20), PackedInt32Array(20, 25, 22), PackedInt32Array(27, 26, 28), PackedInt32Array(24, 29, 23), PackedInt32Array(23, 29, 26), PackedInt32Array(15, 16, 30), PackedInt32Array(30, 16, 31), PackedInt32Array(32, 30, 31), PackedInt32Array(29, 32, 26), PackedInt32Array(26, 32, 28), PackedInt32Array(28, 32, 31), PackedInt32Array(33, 27, 28), PackedInt32Array(18, 19, 34), PackedInt32Array(34, 19, 33), PackedInt32Array(35, 6, 7), PackedInt32Array(33, 28, 35), PackedInt32Array(35, 28, 36), PackedInt32Array(35, 36, 6), PackedInt32Array(35, 34, 33)]
+cell_height = 0.01
+
+[node name="agression_state_test" type="Node3D" unique_id=56422452]
+
+[node name="ProtoController" parent="." unique_id=1883257602 instance=ExtResource("1_wfohb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 6)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=2035807777]
+navigation_mesh = SubResource("NavigationMesh_uu07n")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1164483077]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, -0.5)
+use_collision = true
+collision_mask = 0
+size = Vector3(20, 1, 20)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="NavigationRegion3D" unique_id=116145469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 4)
+use_collision = true
+collision_mask = 0
+size = Vector3(1, 2, 5)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1859212652]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -5)
+use_collision = true
+collision_mask = 0
+size = Vector3(1, 2, 5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1669913096]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1.5, -0.5)
+use_collision = true
+collision_mask = 0
+size = Vector3(1, 2, 4)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="NavigationRegion3D" unique_id=125026854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, -0.5)
+use_collision = true
+collision_mask = 0
+size = Vector3(1, 2, 4)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1183948948]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 9, 0)
+
+[node name="bug_rat" parent="." unique_id=1900116657 node_paths=PackedStringArray("nav_map") instance=ExtResource("2_8smfe")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -5.2167273, 0.6345169, 5.0298967)
+debug_text = false
+max_health = 3
+min_health = 2
+max_size = 2.0
+min_size = 1.0
+vision_range = 10.0
+speed = 6.0
+agressive_speed_modifier = 1.5
+retreat_speed_modifier = 1.5
+nav_map = NodePath("../NavigationRegion3D")
+retreat_range = 25.0
+invincibility_time = 0.9
+disable_movement = false

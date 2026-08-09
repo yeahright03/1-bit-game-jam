@@ -9,18 +9,30 @@ albedo_color = Color(0.78352344, 0.7835234, 0.7835234, 1)
 emission_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_g5u87"]
-size = Vector3(0.46929932, 0.30151367, 0.5128174)
+size = Vector3(0.69496155, 0.4416504, 0.7809143)
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gsw53"]
 radius = 0.16583252
 height = 0.33166504
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eb6dy"]
-points = PackedVector3Array(0, 0, 0, 1, 0.5, 1, 1, -1, 1, -1, -1, 1, -1, 0.5, 1)
+[sub_resource type="SphereShape3D" id="SphereShape3D_ngoxy"]
+radius = 1.0
 
 [node name="bug_rat" type="CharacterBody3D" unique_id=1900116657]
 collision_layer = 0
 script = ExtResource("1_gx2me")
+debug_text = null
+max_health = null
+min_health = null
+max_size = null
+min_size = null
+vision_range = null
+speed = null
+agressive_speed_modifier = null
+retreat_speed_modifier = null
+retreat_range = null
+invincibility_time = null
+disable_movement = null
 
 [node name="scaling_node" parent="." unique_id=1467040500 instance=ExtResource("1_ngq20")]
 
@@ -43,7 +55,7 @@ collision_layer = 4
 collision_mask = 0
 
 [node name="hitbox" type="CollisionShape3D" parent="Node3D/StaticBody3D" unique_id=898477834]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0018005371, -0.0010986328, 0.09576416)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0029067993, 0.06896973, 0.059951782)
 shape = SubResource("BoxShape3D_g5u87")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1634153494]
@@ -59,9 +71,8 @@ collision_layer = 0
 collision_mask = 2
 monitorable = false
 
-[node name="vision_cone" type="CollisionShape3D" parent="vision_mechanics/vision_area" unique_id=1827451101]
-transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_eb6dy")
+[node name="vision_cone" type="CollisionShape3D" parent="vision_mechanics/vision_area" unique_id=769326744]
+shape = SubResource("SphereShape3D_ngoxy")
 
 [node name="vision_line" type="RayCast3D" parent="vision_mechanics" unique_id=2034221150]
 target_position = Vector3(0, 0, -50)
@@ -73,6 +84,14 @@ autostart = true
 
 [node name="time_since_damage" type="Timer" parent="." unique_id=458226426]
 
+[node name="roam_timer" type="Timer" parent="." unique_id=499670768]
+wait_time = 5.0
+autostart = true
+
+[node name="Marker3D" type="Marker3D" parent="." unique_id=732009402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
 [connection signal="timeout" from="vision_mechanics/vision_timer" to="." method="_on_vision_timer_timeout"]
+[connection signal="timeout" from="roam_timer" to="." method="_on_roam_timer_timeout"]
 
 [editable path="scaling_node"]
