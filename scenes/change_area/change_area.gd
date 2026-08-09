@@ -20,8 +20,8 @@ func _set_player_position() -> void:
 	player.look_at(target_position)
 	player.global_position = $Marker3D.global_position
 	player.capture_mouse()
-	var mouse_position = get_viewport().get_mouse_position()
-	player.rotate_look(mouse_position)
+	#var mouse_position := InputEventMouseMotion.position
+	player.rotate_look(Vector2($Marker3D.global_position.x, $Marker3D.global_position.z))
 
 func _on_body_entered(body: Node3D) -> void:
 	if body.is_in_group('player'):

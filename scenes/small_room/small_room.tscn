@@ -51,7 +51,7 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.4
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="change_area" parent="SubViewportContainer/SubViewport" unique_id=1581934678 instance=ExtResource("7_e0gue")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5862746, 0, -0.5862746)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 current_area_type = 1
 change_area_type = 2
 
@@ -63,7 +63,7 @@ shape = SubResource("BoxShape3D_g5u87")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.485667, 0, 5.863088)
 
 [node name="change_area2" parent="SubViewportContainer/SubViewport" unique_id=1963659836 instance=ExtResource("7_e0gue")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5862746, 0, -0.5862746)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 current_area_type = 1
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/change_area2" unique_id=1466934633]
