@@ -71,7 +71,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -8.494133)
 shape = SubResource("BoxShape3D_4flmn")
 
 [node name="Marker3D" type="Marker3D" parent="SubViewportContainer/SubViewport/change_area2" unique_id=450107197]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0019344091, 0, -7.2455554)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0019344616, 0, -6.046239)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="SubViewportContainer/SubViewport" unique_id=516297581]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.58627456, 3.7757504, 1.7588239)

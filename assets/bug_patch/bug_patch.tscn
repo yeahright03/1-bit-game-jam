@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://ddltos6v48eif" path="res://assets/bug_patch/bug_pile_normal.png" id="1_am8i2"]
 [ext_resource type="Script" uid="uid://dqe0okqed0d10" path="res://assets/bug_patch/bug_patch.gd" id="1_ig44c"]
+[ext_resource type="AudioStream" uid="uid://bgshla7gddm14" path="res://sounds/bug_patch1.mp3" id="3_u6itm"]
+[ext_resource type="AudioStream" uid="uid://dsknxyrhcs265" path="res://sounds/bug_patch2.mp3" id="4_4gjn8"]
+[ext_resource type="AudioStream" uid="uid://dm41l21w31g72" path="res://sounds/bug_patch3.mp3" id="5_nejva"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ui8hm"]
 normal_enabled = true
@@ -54,6 +57,13 @@ _data = {
 &"moving_bugs": SubResource("Animation_ig44c")
 }
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yjtbe"]
+random_pitch = 1.0717734
+streams_count = 3
+stream_0/stream = ExtResource("3_u6itm")
+stream_1/stream = ExtResource("4_4gjn8")
+stream_2/stream = ExtResource("5_nejva")
+
 [node name="bug_patch" type="Node3D" unique_id=209888864]
 script = ExtResource("1_ig44c")
 max_health = 3
@@ -78,3 +88,6 @@ libraries/ = SubResource("AnimationLibrary_vy4ou")
 autoplay = &"moving_bugs"
 
 [node name="time_since_damage" type="Timer" parent="." unique_id=1396082200]
+
+[node name="Bug_Patch_Sound" type="AudioStreamPlayer" parent="." unique_id=642551771]
+stream = SubResource("AudioStreamRandomizer_yjtbe")

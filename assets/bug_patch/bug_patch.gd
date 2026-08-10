@@ -21,7 +21,7 @@ var size_decrease_rate : float
 @onready var time_since_damage : Timer = $time_since_damage
 
 @onready var scaling_node : Node3D = $scaling_node
-
+@onready var bug_patch_sound : AudioStreamPlayer = $Bug_Patch_sound
 
 # establishes the values for the bug patch
 func _ready() -> void:

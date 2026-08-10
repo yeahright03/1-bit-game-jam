@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dxpwykxtuvf6o" path="res://scenes/quests/quests.tscn" id="7_okyww"]
 [ext_resource type="PackedScene" uid="uid://v6epnmseyg5i" path="res://assets/bug_rat/bug_rat.tscn" id="8_bo5w6"]
 [ext_resource type="PackedScene" uid="uid://ben3xs3ntv5qi" path="res://assets/bug_patch/bug_patch.tscn" id="9_5jj4i"]
+[ext_resource type="AudioStream" uid="uid://hoq3gk0ilug5" path="res://sounds/boss1.mp3" id="11_tfmkl"]
+[ext_resource type="AudioStream" uid="uid://ca8doyxwm26jl" path="res://sounds/boss2.mp3" id="12_nnmgd"]
+[ext_resource type="AudioStream" uid="uid://gyg3b85xcy6e" path="res://sounds/boss3.mp3" id="13_mxex3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_uu07n"]
 shader = ExtResource("1_i8hea")
@@ -34,6 +37,13 @@ size = Vector3(1.4819336, 3.429016, 1.7015991)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yjtbe"]
 transparency = 1
 albedo_color = Color(1, 1, 1, 0)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yjtbe"]
+random_pitch = 1.0717734
+streams_count = 3
+stream_0/stream = ExtResource("11_tfmkl")
+stream_1/stream = ExtResource("12_nnmgd")
+stream_2/stream = ExtResource("13_mxex3")
 
 [node name="warehouse" type="Node3D" unique_id=805201340]
 script = ExtResource("1_haas8")
@@ -110,7 +120,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.27193, 3.5413628, -38.889
 shape = SubResource("BoxShape3D_g5u87")
 
 [node name="Marker3D" type="Marker3D" parent="SubViewportContainer/SubViewport/change_area" unique_id=1465079593]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.2, 3.541, -37.744133)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.74069, 3.541, -37.128864)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=1943277755]
 transform = Transform3D(-1, 0, 8.742278e-08, 4.371139e-08, 0.86602545, 0.5, -7.5710346e-08, 0.5, -0.86602545, 0, 18, -85.40646)
@@ -132,15 +142,51 @@ shape = SubResource("BoxShape3D_okyww")
 
 [node name="bug_rat" parent="SubViewportContainer/SubViewport/rats" unique_id=1900116657 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6295307, 0)
+debug_text = false
+max_health = 3
+min_health = 2
+max_size = 2.0
+min_size = 1.0
+vision_range = 10.0
+speed = 6.0
+agressive_speed_modifier = 2.0
+retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
+retreat_range = 25.0
+invincibility_time = 0.9
+disable_movement = false
 
 [node name="bug_rat2" parent="SubViewportContainer/SubViewport/rats" unique_id=794553947 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.61298, 3.6944547, -0.96980333)
+debug_text = false
+max_health = 3
+min_health = 2
+max_size = 2.0
+min_size = 1.0
+vision_range = 10.0
+speed = 6.0
+agressive_speed_modifier = 2.0
+retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
+retreat_range = 25.0
+invincibility_time = 0.9
+disable_movement = false
 
 [node name="bug_rat3" parent="SubViewportContainer/SubViewport/rats" unique_id=337396820 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.86224, 3.694454, -33.508316)
+debug_text = false
+max_health = 3
+min_health = 2
+max_size = 2.0
+min_size = 1.0
+vision_range = 10.0
+speed = 6.0
+agressive_speed_modifier = 2.0
+retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
+retreat_range = 25.0
+invincibility_time = 0.9
+disable_movement = false
 
 [node name="rats_and_patches" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1797767436]
 
@@ -155,15 +201,51 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.275948, 3.7081282, -8.021
 
 [node name="bug_rat" parent="SubViewportContainer/SubViewport/rats_and_patches" unique_id=1327090927 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.62073, 3.5844927, 16.532562)
+debug_text = false
+max_health = 3
+min_health = 2
+max_size = 2.0
+min_size = 1.0
+vision_range = 10.0
+speed = 6.0
+agressive_speed_modifier = 2.0
+retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
+retreat_range = 25.0
+invincibility_time = 0.9
+disable_movement = false
 
 [node name="bug_rat2" parent="SubViewportContainer/SubViewport/rats_and_patches" unique_id=1527457524 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.25518, 3.5844965, -11.971809)
+debug_text = false
+max_health = 3
+min_health = 2
+max_size = 2.0
+min_size = 1.0
+vision_range = 10.0
+speed = 6.0
+agressive_speed_modifier = 2.0
+retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
+retreat_range = 25.0
+invincibility_time = 0.9
+disable_movement = false
 
 [node name="bug_rat3" parent="SubViewportContainer/SubViewport/rats_and_patches" unique_id=1098341262 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.570377, 3.5844955, -33.512497)
+debug_text = false
+max_health = 3
+min_health = 2
+max_size = 2.0
+min_size = 1.0
+vision_range = 10.0
+speed = 6.0
+agressive_speed_modifier = 2.0
+retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
+retreat_range = 25.0
+invincibility_time = 0.9
+disable_movement = false
 
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("7_okyww")]
 
@@ -375,6 +457,10 @@ transform = Transform3D(0.725511, -0.68821055, 0, 0.68821055, 0.725511, 0, 0, 0,
 use_collision = true
 size = Vector3(9.020996, 1, 3.0401611)
 material = SubResource("StandardMaterial3D_yjtbe")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=444093014]
+stream = SubResource("AudioStreamRandomizer_yjtbe")
+volume_db = -7.0
 
 [connection signal="player_died" from="SubViewportContainer/SubViewport/ProtoController" to="." method="_on_proto_controller_player_died"]
 [connection signal="body_entered" from="SubViewportContainer/SubViewport/Area3D" to="." method="_on_area_3d_body_entered"]

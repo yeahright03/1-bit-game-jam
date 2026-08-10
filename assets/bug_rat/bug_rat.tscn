@@ -2,8 +2,11 @@
 
 [ext_resource type="Script" uid="uid://d1orh7bdjdbyw" path="res://assets/bug_rat/bug_rat.gd" id="1_gx2me"]
 [ext_resource type="PackedScene" uid="uid://r3q8l0r3iubv" path="res://assets/bug_rat/bug_rat.glb" id="1_ngq20"]
+[ext_resource type="AudioStream" uid="uid://dfs2ytcxiklw" path="res://sounds/bug_rat1.mp3" id="3_xw16o"]
+[ext_resource type="AudioStream" uid="uid://bnf6si54mmjt1" path="res://sounds/bug_rat2.mp3" id="4_0kyxx"]
+[ext_resource type="AudioStream" uid="uid://ca57ehcnvqgxk" path="res://sounds/bug_rat3.mp3" id="5_ver1c"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yp2bs"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ougbu"]
 resource_local_to_scene = true
 albedo_color = Color(0.78352344, 0.7835234, 0.7835234, 1)
 emission_enabled = true
@@ -17,6 +20,13 @@ height = 0.33166504
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ngoxy"]
 radius = 1.0
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_yjtbe"]
+random_pitch = 1.0717734
+streams_count = 3
+stream_0/stream = ExtResource("3_xw16o")
+stream_1/stream = ExtResource("4_0kyxx")
+stream_2/stream = ExtResource("5_ver1c")
 
 [node name="bug_rat" type="CharacterBody3D" unique_id=1900116657]
 collision_layer = 0
@@ -36,16 +46,16 @@ disable_movement = null
 
 [node name="scaling_node" parent="." unique_id=1467040500 instance=ExtResource("1_ngq20")]
 
-[node name="bug" parent="scaling_node" index="0" unique_id=13081606]
-surface_material_override/0 = SubResource("StandardMaterial3D_yp2bs")
+[node name="bug" parent="scaling_node" index="0" unique_id=285121212]
+surface_material_override/0 = SubResource("StandardMaterial3D_ougbu")
 
-[node name="tail" parent="scaling_node/bug/tail_armature/Skeleton3D" parent_id_path=PackedInt32Array(1467040500, 2093825364) index="0" unique_id=2069075469]
-surface_material_override/0 = SubResource("StandardMaterial3D_yp2bs")
+[node name="tail" parent="scaling_node/bug/tail_armature/Skeleton3D" parent_id_path=PackedInt32Array(1467040500, 1291994607) index="0" unique_id=710992468]
+surface_material_override/0 = SubResource("StandardMaterial3D_ougbu")
 
-[node name="antennas" parent="scaling_node" index="1" unique_id=839148784]
-surface_material_override/0 = SubResource("StandardMaterial3D_yp2bs")
+[node name="antennas" parent="scaling_node" index="1" unique_id=1195593882]
+surface_material_override/0 = SubResource("StandardMaterial3D_ougbu")
 
-[node name="AnimationPlayer" parent="scaling_node" index="2" unique_id=2081516310]
+[node name="AnimationPlayer" parent="scaling_node" index="2" unique_id=1026308406]
 autoplay = &"tail_armatureAction"
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1555381416]
@@ -90,6 +100,10 @@ autostart = true
 
 [node name="Marker3D" type="Marker3D" parent="." unique_id=732009402]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="Bug_Rat_Sound" type="AudioStreamPlayer" parent="." unique_id=1509276661]
+stream = SubResource("AudioStreamRandomizer_yjtbe")
+volume_db = -7.0
 
 [connection signal="timeout" from="vision_mechanics/vision_timer" to="." method="_on_vision_timer_timeout"]
 [connection signal="timeout" from="roam_timer" to="." method="_on_roam_timer_timeout"]
