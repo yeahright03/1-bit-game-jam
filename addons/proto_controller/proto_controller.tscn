@@ -279,6 +279,7 @@ transform = Transform3D(1.0000143, 3.8184226e-08, 1.4156103e-07, 1.7881393e-07, 
 shape = SubResource("BoxShape3D_a3uot")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Head" unique_id=1711269660]
+visible = false
 light_energy = 3.0
 spot_range = 22.89492
 spot_angle = 30.68195
