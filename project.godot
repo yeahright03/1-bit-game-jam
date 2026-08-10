@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 TravelManager="*uid://kpeqq3o6uf1s"
 GlobalController="*uid://c1ixkk317nx48"
 Game="*uid://byy0gw8hntwe0"
+DialogueManager="*uid://c3rodes2l3gxb"
 
 [display]
 
@@ -27,6 +28,10 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 
@@ -80,6 +85,10 @@ quit={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://dialouge/Main_Dialouge.dialogue", "res://dialouge/Task1.dialogue", "res://dialouge/Task2.dialogue", "res://dialouge/Task3.dialogue")
 
 [layer_names]
 

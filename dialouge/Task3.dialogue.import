@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cskox54al0wcn"
+path="res://.godot/imported/Task3.dialogue-f14d63e5516d4730c2329778aa6581e6.tres"
+
+[deps]
+
+source_file="res://dialouge/Task3.dialogue"
+dest_files=["res://.godot/imported/Task3.dialogue-f14d63e5516d4730c2329778aa6581e6.tres"]
+
+[params]
+
+defaults=true
