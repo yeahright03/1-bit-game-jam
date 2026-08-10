@@ -77,7 +77,7 @@ var currently_crouching : bool = false
 @onready var healing_interval_timer : Timer = $healing_interval
 @onready var head_light : SpotLight3D = $Head/head_light
 @onready var hit_sound_effect : AudioStreamPlayer = $hit_sound_effect
-@onready var bug_patch_sound : AudioStreamPlayer = $Bug_Patch_sound
+
 
 func _process(delta):
 	if Input.is_action_just_pressed("quit"):

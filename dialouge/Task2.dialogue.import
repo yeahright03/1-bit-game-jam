@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://mr2fotvxnprk"
+path="res://.godot/imported/Task2.dialogue-cc850af4f90fcf9a48dea236be60b680.tres"
+
+[deps]
+
+source_file="res://dialouge/Task2.dialogue"
+dest_files=["res://.godot/imported/Task2.dialogue-cc850af4f90fcf9a48dea236be60b680.tres"]
+
+[params]
+
+defaults=true
