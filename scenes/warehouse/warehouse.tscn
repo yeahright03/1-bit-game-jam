@@ -63,6 +63,7 @@ render_target_update_mode = 4
 
 [node name="ProtoController" parent="SubViewportContainer/SubViewport" unique_id=1883257602 instance=ExtResource("4_bo5w6")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -43.393555, 4.022439, -31.258154)
+can_freefly = false
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="SubViewportContainer/SubViewport" unique_id=845562522]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.44797134, -0.10995865, -0.40400696)
@@ -142,51 +143,15 @@ shape = SubResource("BoxShape3D_okyww")
 
 [node name="bug_rat" parent="SubViewportContainer/SubViewport/rats" unique_id=1900116657 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.6295307, 0)
-debug_text = false
-max_health = 3
-min_health = 2
-max_size = 2.0
-min_size = 1.0
-vision_range = 10.0
-speed = 6.0
-agressive_speed_modifier = 2.0
-retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
-retreat_range = 25.0
-invincibility_time = 0.9
-disable_movement = false
 
 [node name="bug_rat2" parent="SubViewportContainer/SubViewport/rats" unique_id=794553947 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.61298, 3.6944547, -0.96980333)
-debug_text = false
-max_health = 3
-min_health = 2
-max_size = 2.0
-min_size = 1.0
-vision_range = 10.0
-speed = 6.0
-agressive_speed_modifier = 2.0
-retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
-retreat_range = 25.0
-invincibility_time = 0.9
-disable_movement = false
 
 [node name="bug_rat3" parent="SubViewportContainer/SubViewport/rats" unique_id=337396820 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.86224, 3.694454, -33.508316)
-debug_text = false
-max_health = 3
-min_health = 2
-max_size = 2.0
-min_size = 1.0
-vision_range = 10.0
-speed = 6.0
-agressive_speed_modifier = 2.0
-retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
-retreat_range = 25.0
-invincibility_time = 0.9
-disable_movement = false
 
 [node name="rats_and_patches" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1797767436]
 
@@ -201,51 +166,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.275948, 3.7081282, -8.021
 
 [node name="bug_rat" parent="SubViewportContainer/SubViewport/rats_and_patches" unique_id=1327090927 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.62073, 3.5844927, 16.532562)
-debug_text = false
-max_health = 3
-min_health = 2
-max_size = 2.0
-min_size = 1.0
-vision_range = 10.0
-speed = 6.0
-agressive_speed_modifier = 2.0
-retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
-retreat_range = 25.0
-invincibility_time = 0.9
-disable_movement = false
 
 [node name="bug_rat2" parent="SubViewportContainer/SubViewport/rats_and_patches" unique_id=1527457524 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.25518, 3.5844965, -11.971809)
-debug_text = false
-max_health = 3
-min_health = 2
-max_size = 2.0
-min_size = 1.0
-vision_range = 10.0
-speed = 6.0
-agressive_speed_modifier = 2.0
-retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
-retreat_range = 25.0
-invincibility_time = 0.9
-disable_movement = false
 
 [node name="bug_rat3" parent="SubViewportContainer/SubViewport/rats_and_patches" unique_id=1098341262 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.570377, 3.5844955, -33.512497)
-debug_text = false
-max_health = 3
-min_health = 2
-max_size = 2.0
-min_size = 1.0
-vision_range = 10.0
-speed = 6.0
-agressive_speed_modifier = 2.0
-retreat_speed_modifier = 1.5
 nav_map = NodePath("../../NavigationRegion3D")
-retreat_range = 25.0
-invincibility_time = 0.9
-disable_movement = false
 
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("7_okyww")]
 

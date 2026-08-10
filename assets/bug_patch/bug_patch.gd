@@ -39,13 +39,6 @@ func _ready() -> void:
 	if debug_text:
 		print('%s:\nHealth: %s\nSize: %s\nSize decrease rate: %s' % [self.name, health, size, size_decrease_rate])
 
-# REMOVE ON RELEASE
-# only for debug usage to test damage systems
-func _unhandled_key_input(_event: InputEvent) -> void:
-	if Input.is_key_pressed(KEY_ENTER):
-		self.swat()
-
-
 # the function is used to damage the bug patch and to decrease its size whenever it takes damage
 func swat():
 	if time_since_damage.is_stopped() and not invulnerability:

@@ -74,15 +74,6 @@ func _ready() -> void:
 	if debug_text:
 		print('%s:\nHealth: %s\nSize: %s' % [self.name, health, size])
 
-# REMOVE ON RELEASE
-# only for debug usage to test damage systems
-func _unhandled_key_input(_event: InputEvent) -> void:
-	if Input.is_key_pressed(KEY_ENTER):
-		self.swat()
-	if Input.is_key_pressed(KEY_N):
-		has_target = true
-		target_pos = Vector3(random_locations.get(randi_range(0, location_array_range - 1)))
-
 
 # the function is used to damage and flash the bug upon getting hit
 func swat():
