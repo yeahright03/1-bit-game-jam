@@ -40,6 +40,14 @@ func _process(_delta: float) -> void:
 		subviewport_container.material.set_shader_parameter('u_contrast', 10.0)
 	if player.health <= 1:
 		subviewport_container.material.set_shader_parameter('u_contrast', 40.0)
+	if Game.quest3_kill_rats and Game.quests_done == 3:
+		rats = bug_rats.get_children()
+		for rat in rats:
+			rat.queue_free()
+	if Game.quest4_patch_and_rats and Game.quests_done == 4:
+		rats_and_patches_collection = rats_and_patches.get_children()
+		for rat_and_patch in rats_and_patches_collection:
+			rat_and_patch.queue_free()
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	print('body detected')

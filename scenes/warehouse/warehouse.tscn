@@ -153,6 +153,18 @@ nav_map = NodePath("../../NavigationRegion3D")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.86224, 3.694454, -33.508316)
 nav_map = NodePath("../../NavigationRegion3D")
 
+[node name="bug_rat4" parent="SubViewportContainer/SubViewport/rats" unique_id=1033408204 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
+transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.25881907, 3.8237152, 3.694454, -11.193304)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat5" parent="SubViewportContainer/SubViewport/rats" unique_id=1487774686 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, -40.47285, 3.694454, -22.502003)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat6" parent="SubViewportContainer/SubViewport/rats" unique_id=1493268025 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
+transform = Transform3D(-0.8660253, 0, -0.50000006, 0, 1, 0, 0.50000006, 0, -0.8660253, 20.482552, 3.694454, -34.608982)
+nav_map = NodePath("../../NavigationRegion3D")
+
 [node name="rats_and_patches" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1797767436]
 
 [node name="bug_patch" parent="SubViewportContainer/SubViewport/rats_and_patches" unique_id=209888864 instance=ExtResource("9_5jj4i")]
@@ -174,6 +186,18 @@ nav_map = NodePath("../../NavigationRegion3D")
 
 [node name="bug_rat3" parent="SubViewportContainer/SubViewport/rats_and_patches" unique_id=1098341262 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.570377, 3.5844955, -33.512497)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat4" parent="SubViewportContainer/SubViewport/rats_and_patches" unique_id=48391528 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
+transform = Transform3D(0.25881907, 0, -0.9659258, 0, 1, 0, 0.9659258, 0, 0.25881907, 8.678429, 3.5844927, 0.5983391)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat5" parent="SubViewportContainer/SubViewport/rats_and_patches" unique_id=260477326 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
+transform = Transform3D(-0.9659258, 0, -0.25881904, 0, 1, 0, 0.25881904, 0, -0.9659258, -41.8992, 3.5844927, -25.6597)
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat6" parent="SubViewportContainer/SubViewport/rats_and_patches" unique_id=95137575 node_paths=PackedStringArray("nav_map") instance=ExtResource("8_bo5w6")]
+transform = Transform3D(-0.25881898, 0, -0.96592593, 0, 1, 0, 0.96592593, 0, -0.25881898, -11.469212, 3.5844927, -35.301018)
 nav_map = NodePath("../../NavigationRegion3D")
 
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("7_okyww")]
@@ -396,9 +420,15 @@ volume_db = -7.0
 [connection signal="died" from="SubViewportContainer/SubViewport/rats/bug_rat" to="." method="_on_bug_rat_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/rats/bug_rat2" to="." method="_on_bug_rat_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/rats/bug_rat3" to="." method="_on_bug_rat_died"]
+[connection signal="died" from="SubViewportContainer/SubViewport/rats/bug_rat4" to="." method="_on_bug_rat_died"]
+[connection signal="died" from="SubViewportContainer/SubViewport/rats/bug_rat5" to="." method="_on_bug_rat_died"]
+[connection signal="died" from="SubViewportContainer/SubViewport/rats/bug_rat6" to="." method="_on_bug_rat_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/rats_and_patches/bug_patch" to="." method="_on_bug_patch_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/rats_and_patches/bug_patch2" to="." method="_on_bug_patch_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/rats_and_patches/bug_patch3" to="." method="_on_bug_patch_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/rats_and_patches/bug_rat" to="." method="_on_bug_rat_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/rats_and_patches/bug_rat2" to="." method="_on_bug_rat_died"]
 [connection signal="died" from="SubViewportContainer/SubViewport/rats_and_patches/bug_rat3" to="." method="_on_bug_rat_died"]
+[connection signal="died" from="SubViewportContainer/SubViewport/rats_and_patches/bug_rat4" to="." method="_on_bug_rat_died"]
+[connection signal="died" from="SubViewportContainer/SubViewport/rats_and_patches/bug_rat5" to="." method="_on_bug_rat_died"]
+[connection signal="died" from="SubViewportContainer/SubViewport/rats_and_patches/bug_rat6" to="." method="_on_bug_rat_died"]

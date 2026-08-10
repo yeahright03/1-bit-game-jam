@@ -1,6 +1,6 @@
 extends Node
 
-var health_transfer : float = 0
+var health_transfer : float = 5.0
 var rotation_transfer : Vector3 = Vector3(0, 0, 0)
 
 var quest1_patch : bool = false
@@ -21,7 +21,7 @@ var quest4_patch_and_rats_already_killed : Array
 var quests_done : int = 0
 
 func reset_everything() -> void:
-    health_transfer = 0
+    health_transfer = 5.0
     rotation_transfer = Vector3(0, 0, 0)
 
     quest1_patch = false
