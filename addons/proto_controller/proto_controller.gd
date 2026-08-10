@@ -75,6 +75,7 @@ var currently_crouching : bool = false
 @onready var camera : Camera3D = $Head/Camera3D
 @onready var time_since_damage : Timer = $time_since_damage
 @onready var healing_interval_timer : Timer = $healing_interval
+@onready var head_light : SpotLight3D = $Head/head_light
 
 func _process(delta):
 	if Input.is_action_just_pressed("quit"):
@@ -165,6 +166,11 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = 0
 		velocity.y = 0
+
+	if Game.head_light_enabled:
+		head_light.visible = true
+	else:
+		head_light.visible = false
 
 	for index in range(get_slide_collision_count()):
 		var collision = get_slide_collision(index)

@@ -29,6 +29,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		elif Game.quests_done == 1:
 			Game.quest1_patch = false
 			Game.quest2_light_fuse = true
+			Game.head_light_enabled = true
 			print('activated quest 2')
 			print(Game.quest2_light_fuse)
 		elif Game.quests_done == 3:
