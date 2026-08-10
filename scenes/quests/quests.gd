@@ -18,7 +18,7 @@ func _process(_delta: float) -> void:
 			quest_text.text = 'Current task:\nGet back to boss'
 			Game.quests_done = 1
 	elif Game.quest2_light_fuse:
-		quest_text.text = 'Current task:\nTurn on the light breaker'
+		quest_text.text = 'Current task:\nTurn on the fuse box'
 		if Game.light_fuse_turned_on:
 			Game.quests_done = 2
 	elif Game.quest3_kill_rats:

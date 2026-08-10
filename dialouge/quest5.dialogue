@@ -1,6 +1,6 @@
 ~ start
 
 Boss: AAARGH!! THEY'RE EVERYWHERE!! HEEEELP!!
-Boss: IS THERE ANYONE THERE?! HELP ME!!
+Boss: IS THERE ANYONE THERE?! HELP ME!! [$> DialogueManager.dialogue_ended.emit()]
 
 => END

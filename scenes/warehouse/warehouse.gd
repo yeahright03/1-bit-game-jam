@@ -32,6 +32,7 @@ func _ready() -> void:
 				rat_and_patch.process_mode = Node.PROCESS_MODE_DISABLED
 		bug_rats.process_mode = Node.PROCESS_MODE_DISABLED
 		bug_rats.visible = false
+	DialogueManager.dialogue_ended.connect(player_movement_modifier.bind(true))
 
 func _process(_delta: float) -> void:
 	if player.health > 3:
@@ -52,6 +53,7 @@ func _process(_delta: float) -> void:
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	print('body detected')
 	if body.is_in_group('player'):
+		player_movement_modifier(false)
 		print('player detected')
 		if Game.quests_done == 1:
 			lights.visible = true
@@ -89,3 +91,8 @@ func _on_bug_patch_died(patch_name: Variant) -> void:
 func _on_proto_controller_player_died() -> void:
 	Game.reset_everything()
 	get_tree().change_scene_to_file('res://scenes/spawn/spawn.tscn')
+
+
+func player_movement_modifier(move_mode : bool) -> void:
+	player.can_move = move_mode
+	player.velocity = Vector3.ZERO

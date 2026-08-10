@@ -5,6 +5,7 @@ extends Node3D
 @onready var boss_door_hide : MeshInstance3D = $SubViewportContainer/SubViewport/NavigationRegion3D/SpawnRoom/BossDoor_hide
 @onready var exit_door_hide : MeshInstance3D = $SubViewportContainer/SubViewport/NavigationRegion3D/SpawnRoom/Exitdoor_hide
 var player : CharacterBody3D
+var dialogue_manager : DialogueManager = DialogueManager
 
 func _ready() -> void:
 	if Game.quests_done == 4:
@@ -15,6 +16,7 @@ func _ready() -> void:
 	player = get_tree().get_first_node_in_group('player')
 	if not Game.quest1_patch:
 		$Task_Light.visible = false
+	DialogueManager.dialogue_ended.connect(player_movement_modifier.bind(true))
 
 func _process(_delta: float) -> void:
 	if player.health > 3:
@@ -28,11 +30,12 @@ func _process(_delta: float) -> void:
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	print('body detected')
 	if body.is_in_group('player'):
+		player_movement_modifier(false)
 		print('player detected')
 		if Game.quests_done == 0:
 			Game.quest1_patch = true
 			$Task_Light.visible = true
-			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/quest1.dialogue"), "start")
+			DialogueManager.show_dialogue_balloon(load("res://dialouge/quest1.dialogue"), "start")
 			return
 			print('activated quest 1')
 			print(Game.quest1_patch)
@@ -75,3 +78,7 @@ func _on_area_3d_3_body_entered(body: Node3D) -> void:
 		print('player detected')
 		body.taking_damage(50)
 		Game.reset_everything()
+
+func player_movement_modifier(move_mode : bool) -> void:
+	player.can_move = move_mode
+	player.velocity = Vector3.ZERO
