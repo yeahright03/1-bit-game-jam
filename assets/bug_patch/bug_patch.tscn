@@ -91,3 +91,9 @@ autoplay = &"moving_bugs"
 
 [node name="Bug_Patch_Sound" type="AudioStreamPlayer" parent="." unique_id=642551771]
 stream = SubResource("AudioStreamRandomizer_yjtbe")
+volume_db = -10.0
+
+[node name="sound_effect_timer" type="Timer" parent="." unique_id=229922762]
+one_shot = true
+
+[connection signal="timeout" from="sound_effect_timer" to="." method="_on_sound_effect_timer_timeout"]

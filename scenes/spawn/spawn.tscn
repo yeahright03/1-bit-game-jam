@@ -111,112 +111,138 @@ shape = SubResource("BoxShape3D_uu07n")
 [node name="bug_patch" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=209888864 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5788391, 1.1850603, -6.1001296)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch2" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1789254092 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42658722, 1.1850603, -6.1001296)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch3" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1173469513 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.009373, 1.1850598, -6.648872)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch4" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=2024595750 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.72744477, 1.690632, -6.77868)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch5" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=836264623 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5502903, 1.690632, -6.4276834)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch6" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1354418642 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02957797, 1.690632, -6.4841003)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch7" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=939959944 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11619282, 2.2832417, -7.0413184)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch8" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=607675841 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1478205, 2.097309, -7.0043173)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch9" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1307000447 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7961724, 2.4252038, -7.1596055)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch10" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1390488583 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6919751, 2.1108997, -6.97319)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch11" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1392009977 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6919751, 2.7653048, -7.3627687)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch12" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=19867038 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89815426, 3.0311081, -7.516198)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch13" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=862308222 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18842214, 2.9263551, -7.293654)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch14" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1634430218 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.193858, 2.3078976, -4.7643905)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch15" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1984716984 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.041647, 1.1850603, 2.290957)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch16" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1735198968 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8113117, 1.1850603, 1.3433231)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch17" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1888461319 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3161206, 1.1850601, 1.965305)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch18" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1834152417 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6717963, 1.6901397, 1.8514224)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch19" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=313243836 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.880107, 1.1850601, 4.1892743)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_patch20" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1522056714 instance=ExtResource("8_eia12")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.864341, 1.18506, 2.9978833)
 invulnerability = true
+disable_sound = true
 
 [node name="bug_rat" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1900116657 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(-3.7855173e-08, 0.5, 0.8660254, 2.1855694e-08, 0.8660254, -0.5, -1, 0, -4.371139e-08, -2.6815405, 2.4048262, -4.954817)
 nav_map = NodePath("../../NavigationRegion3D")
 disable_movement = true
+disable_sound = true
 
 [node name="bug_rat2" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1702286979 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 2.7725947, 2.2945366, 4.801691)
 nav_map = NodePath("../../NavigationRegion3D")
 disable_movement = true
+disable_sound = true
 
 [node name="bug_rat3" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1836157733 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(-0.70710677, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.70710677, 4.4880834, 1.1598831, -3.7582905)
 nav_map = NodePath("../../NavigationRegion3D")
 disable_movement = true
+disable_sound = true
 
 [node name="bug_rat4" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=902611517 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(0.8660254, 0, -0.49999988, 0, 1, 0, 0.49999988, 0, 0.8660254, -3.4916978, 1.1598827, -2.9982324)
 nav_map = NodePath("../../NavigationRegion3D")
 disable_movement = true
+disable_sound = true
 
 [node name="bug_rat5" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1323368380 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, 0.99999994, -2.4916978, 1.1598827, -2.9982324)
 nav_map = NodePath("../../NavigationRegion3D")
 disable_movement = true
+disable_sound = true
 
 [node name="bug_rat6" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1139303963 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(0.86602527, 0, 0.5, 0, 1, 0, -0.5, 0, 0.86602527, -1.4916978, 1.1598827, -2.9982324)
 nav_map = NodePath("../../NavigationRegion3D")
 disable_movement = true
+disable_sound = true
 
 [node name="Area3D2" type="Area3D" parent="SubViewportContainer/SubViewport" unique_id=1322482473]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.461341, 1, 0)
@@ -230,6 +256,8 @@ shape = SubResource("BoxShape3D_ngoxy")
 
 [node name="bug_patch" parent="SubViewportContainer/SubViewport/boss_room" unique_id=1816002285 instance=ExtResource("8_eia12")]
 transform = Transform3D(9.045, 0, 0, 0, 9.045, 0, 0, 0, 9.045, 12.7113285, 1.9727459, 0)
+invulnerability = true
+disable_sound = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport/boss_room" unique_id=1325011217]
 transform = Transform3D(-2.1855687e-08, 0.86602557, -0.49999994, 3.7855173e-08, 0.49999994, 0.86602557, 1, 2.4903173e-15, -4.3711395e-08, 7, 6, 0)
@@ -238,18 +266,28 @@ transform = Transform3D(-2.1855687e-08, 0.86602557, -0.49999994, 3.7855173e-08, 
 
 [node name="bug_patch" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=705604168 instance=ExtResource("8_eia12")]
 transform = Transform3D(3.76, 0, 0, 0, 3.76, 0, 0, 0, 3.76, 4.43997, 1.4809952, 44.242496)
+invulnerability = true
+disable_sound = true
 
 [node name="bug_patch2" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1627487818 instance=ExtResource("8_eia12")]
 transform = Transform3D(3.76, 0, 0, 0, 3.76, 0, 0, 0, 3.76, -4.769388, 1.4809961, 34.614883)
+invulnerability = true
+disable_sound = true
 
 [node name="bug_patch3" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1519612431 instance=ExtResource("8_eia12")]
 transform = Transform3D(5.6, 0, 0, 0, 5.6, 0, 0, 0, 5.6, -4.769388, 1.4809961, 29.484404)
+invulnerability = true
+disable_sound = true
 
 [node name="bug_patch4" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1439293036 instance=ExtResource("8_eia12")]
 transform = Transform3D(4.325, 0, 0, 0, 4.325, 0, 0, 0, 4.325, 5.230612, 1.4809961, 24.568651)
+invulnerability = true
+disable_sound = true
 
 [node name="bug_patch5" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=338076632 instance=ExtResource("8_eia12")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.641461, 1.4809961, 25.484404)
+invulnerability = true
+disable_sound = true
 
 [node name="bug_rat" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=470399421 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(0.79119223, 0, 0.61156756, 0, 1, 0, -0.61156756, 0, 0.79119223, 4.266585, 1.0970348, 39.429634)
@@ -257,6 +295,7 @@ roam_timer_time = 0.3
 max_size = 5.0
 min_size = 2.0
 nav_map = NodePath("../../NavigationRegion3D")
+disable_sound = true
 
 [node name="bug_rat2" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=19144578 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(0.38595328, 0, -0.9225184, 0, 1, 0, 0.9225184, 0, 0.38595328, -4.319225, 1.0970348, 22.30203)
@@ -264,6 +303,7 @@ roam_timer_time = 0.3
 max_size = 5.0
 min_size = 2.0
 nav_map = NodePath("../../NavigationRegion3D")
+disable_sound = true
 
 [node name="bug_rat7" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1220965471 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(0.99190104, 0, -0.1270138, 0, 1, 0, 0.1270138, 0, 0.99190104, -0.31922483, 1.0970348, 27.30203)
@@ -271,6 +311,7 @@ roam_timer_time = 0.3
 max_size = 5.0
 min_size = 2.0
 nav_map = NodePath("../../NavigationRegion3D")
+disable_sound = true
 
 [node name="bug_rat9" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1812181671 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(0.7911923, 0, 0.6115676, 0, 1, 0, -0.6115676, 0, 0.7911923, 3.6807752, 1.0970348, 29.30203)
@@ -278,6 +319,7 @@ roam_timer_time = 0.3
 max_size = 5.0
 min_size = 2.0
 nav_map = NodePath("../../NavigationRegion3D")
+disable_sound = true
 
 [node name="bug_rat8" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1971782820 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(0.7911923, 0, 0.6115676, 0, 1, 0, -0.6115676, 0, 0.7911923, 0.68077517, 1.0970348, 20.30203)
@@ -285,6 +327,7 @@ roam_timer_time = 0.3
 max_size = 5.0
 min_size = 2.0
 nav_map = NodePath("../../NavigationRegion3D")
+disable_sound = true
 
 [node name="bug_rat5" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=158435071 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(-0.6115676, 0, 0.79119223, 0, 1, 0, -0.79119223, 0, -0.6115676, 3.8833823, 1.0970348, 17.338057)
@@ -292,6 +335,7 @@ roam_timer_time = 0.3
 max_size = 5.0
 min_size = 2.0
 nav_map = NodePath("../../NavigationRegion3D")
+disable_sound = true
 
 [node name="bug_rat3" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1208177118 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(-0.3859532, 0, 0.92251843, 0, 1, 0, -0.92251843, 0, -0.3859532, 4.2229714, 1.0970348, 33.18863)
@@ -299,6 +343,7 @@ roam_timer_time = 0.3
 max_size = 5.0
 min_size = 2.0
 nav_map = NodePath("../../NavigationRegion3D")
+disable_sound = true
 
 [node name="bug_rat4" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1176713027 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(0.92522913, 0, -0.3794089, 0, 1, 0, 0.3794089, 0, 0.92522913, -4.343062, 1.0970348, 42.297413)
@@ -306,6 +351,7 @@ roam_timer_time = 0.3
 max_size = 5.0
 min_size = 2.0
 nav_map = NodePath("../../NavigationRegion3D")
+disable_sound = true
 
 [node name="bug_rat6" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=301396289 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
 transform = Transform3D(0.9225184, 0, 0.3859532, 0, 1, 0, -0.3859532, 0, 0.9225184, -0.34306192, 1.0970348, 42.297413)
@@ -313,6 +359,7 @@ roam_timer_time = 0.3
 max_size = 5.0
 min_size = 2.0
 nav_map = NodePath("../../NavigationRegion3D")
+disable_sound = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1377771675]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 11, 16.10921)
