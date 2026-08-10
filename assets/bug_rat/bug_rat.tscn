@@ -31,18 +31,6 @@ stream_2/stream = ExtResource("5_ver1c")
 [node name="bug_rat" type="CharacterBody3D" unique_id=1900116657]
 collision_layer = 0
 script = ExtResource("1_gx2me")
-debug_text = null
-max_health = null
-min_health = null
-max_size = null
-min_size = null
-vision_range = null
-speed = null
-agressive_speed_modifier = null
-retreat_speed_modifier = null
-retreat_range = null
-invincibility_time = null
-disable_movement = null
 
 [node name="scaling_node" parent="." unique_id=1467040500 instance=ExtResource("1_ngq20")]
 

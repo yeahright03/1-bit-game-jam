@@ -41,6 +41,13 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:BossDoor_hide": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:Circle": {
+"physics/mask": 0
+},
 "PATH:Cone": {
 "generate/physics": true,
 "physics/mask": 0
@@ -66,23 +73,24 @@ _subresources={
 "physics/mask": 0
 },
 "PATH:Cube_005": {
-"generate/physics": true,
 "physics/mask": 0
 },
 "PATH:Cube_007": {
-"generate/physics": true,
 "physics/mask": 0
 },
 "PATH:Cube_008": {
 "generate/physics": true,
 "physics/mask": 0
 },
-"PATH:Cube_010": {
+"PATH:Cube_009": {
 "generate/physics": true,
 "physics/mask": 0
 },
 "PATH:Cube_011": {
 "generate/physics": true,
+"physics/mask": 0
+},
+"PATH:Cube_012": {
 "physics/mask": 0
 },
 "PATH:Cube_013": {
@@ -97,8 +105,45 @@ _subresources={
 "generate/physics": true,
 "physics/mask": 0
 },
-"PATH:Cube_020": {
+"PATH:Cube_016": {
 "generate/physics": true,
+"physics/mask": 0
+},
+"PATH:Cube_017": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:Cube_018": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:Cube_019": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:Cube_021": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:Cube_022": {
+"physics/mask": 0
+},
+"PATH:Cube_023": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:Exitdoor_hide": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:Exitdoor_hide_001": {
+"generate/physics": true,
+"physics/mask": 0
+},
+"PATH:Text": {
+"physics/mask": 0
+},
+"PATH:Text_001": {
 "physics/mask": 0
 },
 "PATH:forklift": {

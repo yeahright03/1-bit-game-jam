@@ -2,9 +2,13 @@ extends Node3D
 
 @onready var subviewport_container : SubViewportContainer = $SubViewportContainer
 @onready var end_enemies : Node3D = $SubViewportContainer/SubViewport/end_enemies
+@onready var boss_door_hide : MeshInstance3D = $SubViewportContainer/SubViewport/NavigationRegion3D/SpawnRoom/BossDoor_hide
+@onready var exit_door_hide : MeshInstance3D = $SubViewportContainer/SubViewport/NavigationRegion3D/SpawnRoom/Exitdoor_hide
 var player : CharacterBody3D
 
 func _ready() -> void:
+	if Game.quests_done == 4:
+		boss_door_hide.visible = false
 	if not Game.quest5_escape:
 		end_enemies.process_mode = Node.PROCESS_MODE_DISABLED
 		end_enemies.visible = false
@@ -51,7 +55,15 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		elif Game.quests_done == 4:
 			Game.quest4_patch_and_rats = false
 			Game.quest5_escape = true
+			exit_door_hide.visible = false
+			exit_door_hide.process_mode = Node.PROCESS_MODE_DISABLED
 			end_enemies.visible = true
 			end_enemies.process_mode = Node.PROCESS_MODE_INHERIT
 			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/quest5.dialogue"), "start")
 			return
+			print('activated quest 5')
+
+
+func _on_proto_controller_player_died() -> void:
+	Game.reset_everything()
+	get_tree().change_scene_to_file('res://scenes/spawn/spawn.tscn')
