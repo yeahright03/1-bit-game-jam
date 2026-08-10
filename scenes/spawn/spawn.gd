@@ -73,5 +73,5 @@ func _on_area_3d_3_body_entered(body: Node3D) -> void:
 	print('body detected')
 	if body.is_in_group('player'):
 		print('player detected')
+		body.taking_damage(50)
 		Game.reset_everything()
-		get_tree().change_scene_to_file('res://scenes/spawn/spawn.tscn')

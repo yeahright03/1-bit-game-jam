@@ -385,7 +385,8 @@ spot_angle = 30.380383
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("5_xqwp8")]
 
 [node name="Area3D3" type="Area3D" parent="SubViewportContainer/SubViewport" unique_id=882139394]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 38.951504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 37.489754)
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Area3D3" unique_id=1354853130]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
