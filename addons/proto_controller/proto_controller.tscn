@@ -261,12 +261,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 [node name="WeaponPivot" type="Node3D" parent="Head/Camera3D" unique_id=182316648]
 
 [node name="Flyswatter2" parent="Head/Camera3D/WeaponPivot" unique_id=654045013 instance=ExtResource("2_wr06p")]
-transform = Transform3D(0.99691665, -0.07844678, 0.0010765798, 0.016936231, 0.2017905, -0.9792811, 0.07660411, 0.97628355, 0.2024966, 0.92212844, -0.9288757, -1.0356334)
+transform = Transform3D(0.99691665, -0.07844678, 0.0010765797, 0.016936231, 0.2017905, -0.97928107, 0.07660411, 0.97628355, 0.20249659, 0.92212844, -0.9288757, -1.0356334)
 
-[node name="Plane_001" parent="Head/Camera3D/WeaponPivot/Flyswatter2" index="0" unique_id=1489283347]
+[node name="Plane_001" parent="Head/Camera3D/WeaponPivot/Flyswatter2" index="0" unique_id=886313795]
 mesh = SubResource("ArrayMesh_6dqce")
 
-[node name="Plane" parent="Head/Camera3D/WeaponPivot/Flyswatter2/Plane_001" index="0" unique_id=546500912]
+[node name="Plane" parent="Head/Camera3D/WeaponPivot/Flyswatter2/Plane_001" index="0" unique_id=204877020]
 mesh = SubResource("ArrayMesh_h60nn")
 
 [node name="Hitbox" type="Area3D" parent="Head/Camera3D/WeaponPivot/Flyswatter2" unique_id=831816292]
@@ -278,8 +278,7 @@ monitoring = false
 transform = Transform3D(1.0000143, 3.8184226e-08, 1.4156103e-07, 1.7881393e-07, -0.041874662, -0.9991459, -3.4458935e-08, 0.9991388, -0.041876107, -0.19287324, 0.008341014, -0.19901109)
 shape = SubResource("BoxShape3D_a3uot")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Head" unique_id=1711269660]
-visible = false
+[node name="head_light" type="SpotLight3D" parent="Head" unique_id=1711269660]
 light_energy = 3.0
 spot_range = 22.89492
 spot_angle = 30.68195

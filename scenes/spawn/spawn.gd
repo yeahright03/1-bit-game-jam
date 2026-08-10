@@ -31,6 +31,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		elif Game.quests_done == 1:
 			Game.quest1_patch = false
 			Game.quest2_light_fuse = true
+			Game.head_light_enabled = true
 			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/Task1.dialogue"), "start")
 			return
 			print('activated quest 2')

@@ -7,6 +7,7 @@ var quest1_patch : bool = false
 var quest2_light_fuse : bool = false
 var quest3_kill_rats : bool = false
 var quest4_patch_and_rats : bool = false
+var head_light_enabled : bool = false
 
 var patches_killed : int = 0
 var light_fuse_turned_on : bool = false
