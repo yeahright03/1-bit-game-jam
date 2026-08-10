@@ -67,3 +67,11 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 func _on_proto_controller_player_died() -> void:
 	Game.reset_everything()
 	get_tree().change_scene_to_file('res://scenes/spawn/spawn.tscn')
+
+
+func _on_area_3d_3_body_entered(body: Node3D) -> void:
+	print('body detected')
+	if body.is_in_group('player'):
+		print('player detected')
+		Game.reset_everything()
+		get_tree().change_scene_to_file('res://scenes/spawn/spawn.tscn')

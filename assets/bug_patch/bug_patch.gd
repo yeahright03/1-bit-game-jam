@@ -16,15 +16,20 @@ var health : int
 var size : float
 var size_decrease_rate : float
 
+@export var disable_sound : bool = false
+
 # time enemy is invincible after being hit
 @export var invincibility_time : float = 0.9
 @onready var time_since_damage : Timer = $time_since_damage
 
 @onready var scaling_node : Node3D = $scaling_node
-@onready var bug_patch_sound : AudioStreamPlayer = $Bug_Patch_sound
+@onready var bug_patch_sound : AudioStreamPlayer = $Bug_Patch_Sound
+@onready var sound_effect_timer : Timer = $sound_effect_timer
 
 # establishes the values for the bug patch
 func _ready() -> void:
+	sound_effect_timer.wait_time = randf_range(2.5, 6.5)
+	sound_effect_timer.start()
 	time_since_damage.wait_time = invincibility_time
 	time_since_damage.one_shot = true
 	health = randi_range(max_health, min_health)
@@ -58,3 +63,9 @@ func swat():
 			died.emit(self.name)
 			if debug_text:
 				print('%s died!' % self.name)
+
+func _on_sound_effect_timer_timeout() -> void:
+	if not disable_sound:
+		bug_patch_sound.play()
+		sound_effect_timer.wait_time = randf_range(2.5, 6.5)
+		sound_effect_timer.start()

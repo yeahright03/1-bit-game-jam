@@ -40,6 +40,8 @@ var player_position : Vector3
 
 @export var disable_movement : bool = false
 
+@export var disable_sound : bool = false
+
 @onready var scaling_node : Node3D = $scaling_node
 @onready var bug_color : StandardMaterial3D = $scaling_node/bug.get_surface_override_material(0)
 @onready var nav_agent : NavigationAgent3D = $NavigationAgent3D
@@ -49,10 +51,15 @@ var player_position : Vector3
 @onready var vision_timer : Timer = $vision_mechanics/vision_timer
 @onready var marker : Marker3D = $Marker3D
 @onready var roam_timer : Timer = $roam_timer
+@onready var bug_rat_sound : AudioStreamPlayer = $Bug_Rat_Sound
+@onready var sound_effect_timer : Timer = $sound_effect_timer
+
 
 
 # establishes the values for the bug patch
 func _ready() -> void:
+	sound_effect_timer.wait_time = randf_range(2.5, 6.5)
+	sound_effect_timer.start()
 	roam_timer.wait_time = roam_timer_time
 	time_since_damage.wait_time = invincibility_time
 	time_since_damage.one_shot = true
@@ -164,3 +171,10 @@ func _on_roam_timer_timeout() -> void:
 	if state == agression_state.ROAMING:
 		has_target = true
 		target_pos = Vector3(random_locations.get(randi_range(0, location_array_range - 1)))
+
+
+func _on_sound_effect_timer_timeout() -> void:
+	if not disable_sound:
+		bug_rat_sound.play()
+		sound_effect_timer.wait_time = randf_range(2.5, 6.5)
+		sound_effect_timer.start()
