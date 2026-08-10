@@ -34,6 +34,9 @@ size = Vector3(1.5800781, 1, 2.1619873)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ngoxy"]
 size = Vector3(1, 4.468506, 1.8027954)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ui8hm"]
+size = Vector3(13, 11, 1)
+
 [node name="spawn" type="Node3D" unique_id=1324516433]
 script = ExtResource("1_husmh")
 
@@ -381,6 +384,14 @@ spot_angle = 30.380383
 
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("5_xqwp8")]
 
+[node name="Area3D3" type="Area3D" parent="SubViewportContainer/SubViewport" unique_id=882139394]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 38.951504)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Area3D3" unique_id=1354853130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+shape = SubResource("BoxShape3D_ui8hm")
+debug_color = Color(0.85882354, 0.29803923, 0.54901963, 0.9529412)
+
 [node name="Task_Light" type="Node3D" parent="." unique_id=1252466073]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.99600124, 2.4980984, -1.850601)
 
@@ -401,5 +412,6 @@ omni_range = 8.618648
 
 [connection signal="player_died" from="SubViewportContainer/SubViewport/ProtoController" to="." method="_on_proto_controller_player_died"]
 [connection signal="body_entered" from="SubViewportContainer/SubViewport/Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_entered" from="SubViewportContainer/SubViewport/Area3D3" to="." method="_on_area_3d_3_body_entered"]
 
 [editable path="SubViewportContainer/SubViewport/NavigationRegion3D/SpawnRoom"]
