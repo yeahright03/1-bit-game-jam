@@ -15,6 +15,10 @@ run/main_scene="uid://bighksran4wcg"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://bb8w0oxtb1btr"
+
 [autoload]
 
 TravelManager="*uid://kpeqq3o6uf1s"
@@ -88,7 +92,7 @@ quit={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialouge/quest1.dialogue", "res://dialouge/quest2.dialogue", "res://dialouge/quest3.dialogue", "res://dialouge/quest4.dialogue", "res://dialouge/quest5.dialogue", "res://dialouge/Task2.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialouge/quest1.dialogue", "res://dialouge/quest2.dialogue", "res://dialouge/quest3.dialogue", "res://dialouge/quest4.dialogue", "res://dialouge/quest5.dialogue", "res://dialouge/Task2.dialogue", "res://dialouge/Main_Dialouge.dialogue", "res://dialouge/Task1.dialogue", "res://dialouge/Task3.dialogue")
 
 [layer_names]
 

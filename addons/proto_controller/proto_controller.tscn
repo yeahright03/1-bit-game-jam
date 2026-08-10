@@ -227,6 +227,13 @@ _data = {
 &"idle": SubResource("Animation_5hfox")
 }
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_bwxui"]
+random_pitch = 1.0717734
+random_volume_offset_db = 1.0
+streams_count = 1
+stream_0/stream = ExtResource("3_5hfox")
+stream_0/weight = 5.0
+
 [node name="ProtoController" type="CharacterBody3D" unique_id=1883257602 groups=["player"]]
 collision_layer = 2
 collision_mask = 5
@@ -262,12 +269,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
 [node name="WeaponPivot" type="Node3D" parent="Head/Camera3D" unique_id=182316648]
 
 [node name="Flyswatter2" parent="Head/Camera3D/WeaponPivot" unique_id=654045013 instance=ExtResource("2_wr06p")]
-transform = Transform3D(0.99691665, -0.07844678, 0.0010765796, 0.016936231, 0.2017905, -0.9792809, 0.07660411, 0.97628355, 0.20249656, 0.92212844, -0.9288757, -1.0356334)
+transform = Transform3D(0.99691665, -0.07844678, 0.0010765794, 0.016936231, 0.2017905, -0.9792809, 0.07660411, 0.97628355, 0.20249654, 0.92212844, -0.9288757, -1.0356334)
 
-[node name="Plane_001" parent="Head/Camera3D/WeaponPivot/Flyswatter2" index="0" unique_id=886313795]
+[node name="Plane_001" parent="Head/Camera3D/WeaponPivot/Flyswatter2" index="0" unique_id=1489283347]
 mesh = SubResource("ArrayMesh_6dqce")
 
-[node name="Plane" parent="Head/Camera3D/WeaponPivot/Flyswatter2/Plane_001" index="0" unique_id=204877020]
+[node name="Plane" parent="Head/Camera3D/WeaponPivot/Flyswatter2/Plane_001" index="0" unique_id=546500912]
 mesh = SubResource("ArrayMesh_h60nn")
 
 [node name="Hitbox" type="Area3D" parent="Head/Camera3D/WeaponPivot/Flyswatter2" unique_id=831816292]
@@ -294,8 +301,8 @@ playback_default_blend_time = 0.1
 autostart = true
 
 [node name="hit_sound_effect" type="AudioStreamPlayer" parent="." unique_id=346299593]
-stream = ExtResource("3_5hfox")
-volume_db = -10.0
+stream = SubResource("AudioStreamRandomizer_bwxui")
+volume_db = -15.0
 pitch_scale = 1.5
 
 [connection signal="body_entered" from="Head/Camera3D/WeaponPivot/Flyswatter2/Hitbox" to="." method="_on_hitbox_body_entered"]
