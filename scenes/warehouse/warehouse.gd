@@ -48,8 +48,9 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		if Game.quests_done == 1:
 			lights.visible = true
 			Game.light_fuse_turned_on = true
-			Game.quest2_light_fuse = false
 			Game.head_light_enabled = false
+			await get_tree().create_timer(0.05).timeout
+			Game.quest2_light_fuse = false
 			Game.quest3_kill_rats = true
 			bug_rats.process_mode = Node.PROCESS_MODE_INHERIT
 			bug_rats.visible = true
