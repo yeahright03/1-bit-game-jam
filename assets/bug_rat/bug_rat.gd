@@ -5,6 +5,7 @@ signal died(bug_rat_name)
 
 enum agression_state {ROAMING, RETREAT, AGRESSIVE}
 var state : agression_state = agression_state.ROAMING
+@export var roam_timer_time : float = 5.0
 
 # enable to view the debug text
 @export var debug_text : bool = false
@@ -47,10 +48,12 @@ var player_position : Vector3
 @onready var vision_area : Area3D = $vision_mechanics/vision_area
 @onready var vision_timer : Timer = $vision_mechanics/vision_timer
 @onready var marker : Marker3D = $Marker3D
+@onready var roam_timer : Timer = $roam_timer
 
 
 # establishes the values for the bug patch
 func _ready() -> void:
+	roam_timer.wait_time = roam_timer_time
 	time_since_damage.wait_time = invincibility_time
 	time_since_damage.one_shot = true
 	vision_cone.scale *= vision_range

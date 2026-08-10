@@ -20,13 +20,19 @@ shader_parameter/u_contrast = 5.5
 shader_parameter/u_offset = 0.0
 shader_parameter/u_dither_size = 2
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_uu07n"]
+vertices = PackedVector3Array(-5.279133, 1.0009952, 2.3348083, -5.279133, 1.0009952, 32.33481, 5.470867, 1.0009952, 32.33481, 5.470867, 1.0009952, 2.3348083)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+cell_height = 0.01
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_g5u87"]
 size = Vector3(1.9785156, 1, 1.4315186)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uu07n"]
 size = Vector3(1.5800781, 1, 2.1619873)
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_uu07n"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_ngoxy"]
+size = Vector3(1, 4.468506, 1.8027954)
 
 [node name="spawn" type="Node3D" unique_id=1324516433]
 script = ExtResource("1_husmh")
@@ -47,8 +53,36 @@ render_target_update_mode = 4
 [node name="ProtoController" parent="SubViewportContainer/SubViewport" unique_id=1883257602 instance=ExtResource("6_nwhky")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.610844, 1.4434967, -0.3848232)
 
-[node name="SpawnRoom" parent="SubViewportContainer/SubViewport" unique_id=484448062 instance=ExtResource("7_rpbbo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029132366, -0.019004822, 0.0111989975)
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="SubViewportContainer/SubViewport" unique_id=1244371464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.926392)
+navigation_mesh = SubResource("NavigationMesh_uu07n")
+
+[node name="SpawnRoom" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=484448062 instance=ExtResource("7_rpbbo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.029132366, -0.019004822, -13.915193)
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=1743994542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -14)
+height = 14.6
+vertices = PackedVector3Array(18.223253, 0, -8.165682, -8.537611, 0, -8.136307, -8.537611, 0, 15.870728, 18.322483, 0, 15.673248)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle3D2" type="NavigationObstacle3D" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=1441477607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.6449375, 17.779514)
+height = 5.0
+vertices = PackedVector3Array(8.535601, 0, -15.682848, 8.861826, 0, 18.190662, -9.40703, 0, 17.864433, -9.352659, 0, -15.8459635)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle3D3" type="NavigationObstacle3D" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=327862844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.865927)
+height = 2.6
+vertices = PackedVector3Array(-7.8826814, 0, -13.628027, -5.9233546, 0, -13.641634, -6.0943336, 0, 16.900846, -7.9728107, 0, 16.900846)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle3D4" type="NavigationObstacle3D" parent="SubViewportContainer/SubViewport/NavigationRegion3D" unique_id=651188935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 15.865927)
+height = 2.6
+vertices = PackedVector3Array(-7.8826814, 0, -13.628027, -5.9233546, 0, -13.641634, -6.0943336, 0, 16.900846, -7.9728107, 0, 16.900846)
+affect_navigation_mesh = true
 
 [node name="change_area" parent="SubViewportContainer/SubViewport" unique_id=1581934678 instance=ExtResource("8_w3d1c")]
 change_area_type = 1
@@ -58,7 +92,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0106326, 1.5284872, -7.3078
 shape = SubResource("BoxShape3D_g5u87")
 
 [node name="Marker3D" type="Marker3D" parent="SubViewportContainer/SubViewport/change_area" unique_id=196727617]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.011, 1.0103073, -5.7358565)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 1.011, 1.0103073, -3.7358565)
 
 [node name="WorldEnvironment" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport" unique_id=1965215875]
 transform = Transform3D(-3.090862e-08, 0.70710677, -0.70710677, 3.090862e-08, 0.70710677, 0.70710677, 1, 0, -4.371139e-08, -21.31771, 18.414701, 0)
@@ -184,9 +218,119 @@ transform = Transform3D(0.86602527, 0, 0.5, 0, 1, 0, -0.5, 0, 0.86602527, -1.491
 nav_map = NodePath("../../NavigationRegion3D")
 disable_movement = true
 
-[node name="NavigationRegion3D" type="NavigationRegion3D" parent="SubViewportContainer/SubViewport" unique_id=1244371464]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.926392)
-navigation_mesh = SubResource("NavigationMesh_uu07n")
+[node name="Area3D2" type="Area3D" parent="SubViewportContainer/SubViewport" unique_id=1322482473]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.461341, 1, 0)
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Area3D2" unique_id=1157488406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7342529, -0.14102173)
+shape = SubResource("BoxShape3D_ngoxy")
+
+[node name="boss_room" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=2108157889]
+
+[node name="bug_patch" parent="SubViewportContainer/SubViewport/boss_room" unique_id=1816002285 instance=ExtResource("8_eia12")]
+transform = Transform3D(9.045, 0, 0, 0, 9.045, 0, 0, 0, 9.045, 12.7113285, 1.9727459, 0)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport/boss_room" unique_id=1325011217]
+transform = Transform3D(-2.1855687e-08, 0.86602557, -0.49999994, 3.7855173e-08, 0.49999994, 0.86602557, 1, 2.4903173e-15, -4.3711395e-08, 7, 6, 0)
+
+[node name="corridor enemies" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=1915312234]
+
+[node name="bug_patch" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=705604168 instance=ExtResource("8_eia12")]
+transform = Transform3D(3.76, 0, 0, 0, 3.76, 0, 0, 0, 3.76, 4.43997, 1.4809952, 44.242496)
+
+[node name="bug_patch2" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1627487818 instance=ExtResource("8_eia12")]
+transform = Transform3D(3.76, 0, 0, 0, 3.76, 0, 0, 0, 3.76, -4.769388, 1.4809961, 34.614883)
+
+[node name="bug_patch3" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1519612431 instance=ExtResource("8_eia12")]
+transform = Transform3D(5.6, 0, 0, 0, 5.6, 0, 0, 0, 5.6, -4.769388, 1.4809961, 29.484404)
+
+[node name="bug_patch4" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1439293036 instance=ExtResource("8_eia12")]
+transform = Transform3D(4.325, 0, 0, 0, 4.325, 0, 0, 0, 4.325, 5.230612, 1.4809961, 24.568651)
+
+[node name="bug_patch5" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=338076632 instance=ExtResource("8_eia12")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.641461, 1.4809961, 25.484404)
+
+[node name="bug_rat" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=470399421 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(0.79119223, 0, 0.61156756, 0, 1, 0, -0.61156756, 0, 0.79119223, 4.266585, 1.0970348, 39.429634)
+roam_timer_time = 0.3
+max_size = 5.0
+min_size = 2.0
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat2" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=19144578 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(0.38595328, 0, -0.9225184, 0, 1, 0, 0.9225184, 0, 0.38595328, -4.319225, 1.0970348, 22.30203)
+roam_timer_time = 0.3
+max_size = 5.0
+min_size = 2.0
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat7" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1220965471 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(0.99190104, 0, -0.1270138, 0, 1, 0, 0.1270138, 0, 0.99190104, -0.31922483, 1.0970348, 27.30203)
+roam_timer_time = 0.3
+max_size = 5.0
+min_size = 2.0
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat9" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1812181671 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(0.7911923, 0, 0.6115676, 0, 1, 0, -0.6115676, 0, 0.7911923, 3.6807752, 1.0970348, 29.30203)
+roam_timer_time = 0.3
+max_size = 5.0
+min_size = 2.0
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat8" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1971782820 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(0.7911923, 0, 0.6115676, 0, 1, 0, -0.6115676, 0, 0.7911923, 0.68077517, 1.0970348, 20.30203)
+roam_timer_time = 0.3
+max_size = 5.0
+min_size = 2.0
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat5" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=158435071 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(-0.6115676, 0, 0.79119223, 0, 1, 0, -0.79119223, 0, -0.6115676, 3.8833823, 1.0970348, 17.338057)
+roam_timer_time = 0.3
+max_size = 5.0
+min_size = 2.0
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat3" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1208177118 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(-0.3859532, 0, 0.92251843, 0, 1, 0, -0.92251843, 0, -0.3859532, 4.2229714, 1.0970348, 33.18863)
+roam_timer_time = 0.3
+max_size = 5.0
+min_size = 2.0
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat4" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1176713027 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(0.92522913, 0, -0.3794089, 0, 1, 0, 0.3794089, 0, 0.92522913, -4.343062, 1.0970348, 42.297413)
+roam_timer_time = 0.3
+max_size = 5.0
+min_size = 2.0
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="bug_rat6" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=301396289 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(0.9225184, 0, 0.3859532, 0, 1, 0, -0.3859532, 0, 0.9225184, -0.34306192, 1.0970348, 42.297413)
+roam_timer_time = 0.3
+max_size = 5.0
+min_size = 2.0
+nav_map = NodePath("../../NavigationRegion3D")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=1377771675]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 11, 16.10921)
+light_energy = 20.0
+spot_range = 12.179383
+spot_angle = 30.380383
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=462039685]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 11, 26.10921)
+light_energy = 20.0
+spot_range = 12.179383
+spot_angle = 30.380383
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="SubViewportContainer/SubViewport/corridor enemies" unique_id=361388549]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 11, 36.1)
+light_energy = 20.0
+spot_range = 12.179383
+spot_angle = 30.380383
 
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("5_xqwp8")]
 
@@ -210,3 +354,5 @@ omni_range = 8.618648
 
 [connection signal="player_died" from="SubViewportContainer/SubViewport/ProtoController" to="." method="_on_proto_controller_player_died"]
 [connection signal="body_entered" from="SubViewportContainer/SubViewport/Area3D" to="." method="_on_area_3d_body_entered"]
+
+[editable path="SubViewportContainer/SubViewport/NavigationRegion3D/SpawnRoom"]
