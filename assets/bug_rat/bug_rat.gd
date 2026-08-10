@@ -58,7 +58,7 @@ var player_position : Vector3
 
 # establishes the values for the bug patch
 func _ready() -> void:
-	sound_effect_timer.wait_time = randf_range(2.5, 6.5)
+	sound_effect_timer.wait_time = randf_range(8.5, 10.5)
 	sound_effect_timer.start()
 	roam_timer.wait_time = roam_timer_time
 	time_since_damage.wait_time = invincibility_time

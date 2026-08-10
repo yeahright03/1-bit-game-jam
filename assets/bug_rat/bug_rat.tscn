@@ -34,16 +34,16 @@ script = ExtResource("1_gx2me")
 
 [node name="scaling_node" parent="." unique_id=1467040500 instance=ExtResource("1_ngq20")]
 
-[node name="bug" parent="scaling_node" index="0" unique_id=13081606]
+[node name="bug" parent="scaling_node" index="0" unique_id=285121212]
 surface_material_override/0 = SubResource("StandardMaterial3D_xw16o")
 
-[node name="tail" parent="scaling_node/bug/tail_armature/Skeleton3D" parent_id_path=PackedInt32Array(1467040500, 2093825364) index="0" unique_id=2069075469]
+[node name="tail" parent="scaling_node/bug/tail_armature/Skeleton3D" parent_id_path=PackedInt32Array(1467040500, 1291994607) index="0" unique_id=710992468]
 surface_material_override/0 = SubResource("StandardMaterial3D_xw16o")
 
-[node name="antennas" parent="scaling_node" index="1" unique_id=839148784]
+[node name="antennas" parent="scaling_node" index="1" unique_id=1195593882]
 surface_material_override/0 = SubResource("StandardMaterial3D_xw16o")
 
-[node name="AnimationPlayer" parent="scaling_node" index="2" unique_id=2081516310]
+[node name="AnimationPlayer" parent="scaling_node" index="2" unique_id=1026308406]
 autoplay = &"tail_armatureAction"
 
 [node name="Node3D" type="Node3D" parent="." unique_id=1555381416]
@@ -91,7 +91,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 
 [node name="Bug_Rat_Sound" type="AudioStreamPlayer" parent="." unique_id=1509276661]
 stream = SubResource("AudioStreamRandomizer_yjtbe")
-volume_db = -7.0
+volume_db = -30.0
 
 [node name="sound_effect_timer" type="Timer" parent="." unique_id=1805114306]
 one_shot = true
