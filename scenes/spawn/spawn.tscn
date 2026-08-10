@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dxpwykxtuvf6o" path="res://scenes/quests/quests.tscn" id="5_xqwp8"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="6_nwhky"]
 [ext_resource type="PackedScene" uid="uid://kp8crwd0nlks" path="res://assets/SpawnRoom.glb" id="7_rpbbo"]
+[ext_resource type="PackedScene" uid="uid://ben3xs3ntv5qi" path="res://assets/bug_patch/bug_patch.tscn" id="8_eia12"]
 [ext_resource type="PackedScene" uid="uid://crq8c7obnscni" path="res://scenes/change_area/change_area.tscn" id="8_w3d1c"]
+[ext_resource type="PackedScene" uid="uid://v6epnmseyg5i" path="res://assets/bug_rat/bug_rat.tscn" id="9_htq4a"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_auw1c"]
 shader = ExtResource("2_qtpfl")
@@ -23,6 +25,8 @@ size = Vector3(1.9785156, 1, 1.4315186)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_uu07n"]
 size = Vector3(1.5800781, 1, 2.1619873)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_uu07n"]
 
 [node name="spawn" type="Node3D" unique_id=1324516433]
 script = ExtResource("1_husmh")
@@ -67,6 +71,122 @@ collision_mask = 2
 [node name="boss_act" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Area3D" unique_id=759139089]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29003906, 0, -0.0713501)
 shape = SubResource("BoxShape3D_uu07n")
+
+[node name="end_enemies" type="Node3D" parent="SubViewportContainer/SubViewport" unique_id=922510908]
+
+[node name="bug_patch" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=209888864 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5788391, 1.1850603, -6.1001296)
+invulnerability = true
+
+[node name="bug_patch2" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1789254092 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.42658722, 1.1850603, -6.1001296)
+invulnerability = true
+
+[node name="bug_patch3" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1173469513 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.009373, 1.1850598, -6.648872)
+invulnerability = true
+
+[node name="bug_patch4" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=2024595750 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.72744477, 1.690632, -6.77868)
+invulnerability = true
+
+[node name="bug_patch5" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=836264623 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5502903, 1.690632, -6.4276834)
+invulnerability = true
+
+[node name="bug_patch6" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1354418642 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.02957797, 1.690632, -6.4841003)
+invulnerability = true
+
+[node name="bug_patch7" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=939959944 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11619282, 2.2832417, -7.0413184)
+invulnerability = true
+
+[node name="bug_patch8" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=607675841 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1478205, 2.097309, -7.0043173)
+invulnerability = true
+
+[node name="bug_patch9" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1307000447 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7961724, 2.4252038, -7.1596055)
+invulnerability = true
+
+[node name="bug_patch10" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1390488583 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6919751, 2.1108997, -6.97319)
+invulnerability = true
+
+[node name="bug_patch11" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1392009977 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6919751, 2.7653048, -7.3627687)
+invulnerability = true
+
+[node name="bug_patch12" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=19867038 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89815426, 3.0311081, -7.516198)
+invulnerability = true
+
+[node name="bug_patch13" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=862308222 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.18842214, 2.9263551, -7.293654)
+invulnerability = true
+
+[node name="bug_patch14" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1634430218 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.193858, 2.3078976, -4.7643905)
+invulnerability = true
+
+[node name="bug_patch15" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1984716984 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.041647, 1.1850603, 2.290957)
+invulnerability = true
+
+[node name="bug_patch16" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1735198968 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.8113117, 1.1850603, 1.3433231)
+invulnerability = true
+
+[node name="bug_patch17" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1888461319 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.3161206, 1.1850601, 1.965305)
+invulnerability = true
+
+[node name="bug_patch18" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1834152417 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6717963, 1.6901397, 1.8514224)
+invulnerability = true
+
+[node name="bug_patch19" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=313243836 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.880107, 1.1850601, 4.1892743)
+invulnerability = true
+
+[node name="bug_patch20" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1522056714 instance=ExtResource("8_eia12")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.864341, 1.18506, 2.9978833)
+invulnerability = true
+
+[node name="bug_rat" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1900116657 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(-3.7855173e-08, 0.5, 0.8660254, 2.1855694e-08, 0.8660254, -0.5, -1, 0, -4.371139e-08, -2.6815405, 2.4048262, -4.954817)
+nav_map = NodePath("../../NavigationRegion3D")
+disable_movement = true
+
+[node name="bug_rat2" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1702286979 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(0.8660254, 0, 0.5, 0, 1, 0, -0.5, 0, 0.8660254, 2.7725947, 2.2945366, 4.801691)
+nav_map = NodePath("../../NavigationRegion3D")
+disable_movement = true
+
+[node name="bug_rat3" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1836157733 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(-0.70710677, 0, 0.7071067, 0, 1, 0, -0.7071067, 0, -0.70710677, 4.4880834, 1.1598831, -3.7582905)
+nav_map = NodePath("../../NavigationRegion3D")
+disable_movement = true
+
+[node name="bug_rat4" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=902611517 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(0.8660254, 0, -0.49999988, 0, 1, 0, 0.49999988, 0, 0.8660254, -3.4916978, 1.1598827, -2.9982324)
+nav_map = NodePath("../../NavigationRegion3D")
+disable_movement = true
+
+[node name="bug_rat5" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1323368380 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(0.99999994, 0, 5.9604645e-08, 0, 1, 0, -5.9604645e-08, 0, 0.99999994, -2.4916978, 1.1598827, -2.9982324)
+nav_map = NodePath("../../NavigationRegion3D")
+disable_movement = true
+
+[node name="bug_rat6" parent="SubViewportContainer/SubViewport/end_enemies" unique_id=1139303963 node_paths=PackedStringArray("nav_map") instance=ExtResource("9_htq4a")]
+transform = Transform3D(0.86602527, 0, 0.5, 0, 1, 0, -0.5, 0, 0.86602527, -1.4916978, 1.1598827, -2.9982324)
+nav_map = NodePath("../../NavigationRegion3D")
+disable_movement = true
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="SubViewportContainer/SubViewport" unique_id=1244371464]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13.926392)
+navigation_mesh = SubResource("NavigationMesh_uu07n")
 
 [node name="quests" parent="SubViewportContainer/SubViewport" unique_id=397769179 instance=ExtResource("5_xqwp8")]
 

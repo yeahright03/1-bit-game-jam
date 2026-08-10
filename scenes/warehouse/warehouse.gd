@@ -54,7 +54,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			Game.quest3_kill_rats = true
 			bug_rats.process_mode = Node.PROCESS_MODE_INHERIT
 			bug_rats.visible = true
-			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/Task2.dialogue"), "start")
+			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/quest3.dialogue"), "start")
 			return
 			print('activated quest 3')
 			print(Game.quest3_kill_rats)

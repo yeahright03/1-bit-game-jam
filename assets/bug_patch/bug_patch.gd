@@ -9,6 +9,7 @@ signal died(patch_name)
 @export var max_health : int = 5
 @export var min_health : int = 2
 var health : int
+@export var invulnerability : bool = false
 
 @export var max_size : float = 1.5
 @export var min_size : float = .75
@@ -42,7 +43,7 @@ func _unhandled_key_input(_event: InputEvent) -> void:
 
 # the function is used to damage the bug patch and to decrease its size whenever it takes damage
 func swat():
-	if time_since_damage.is_stopped():
+	if time_since_damage.is_stopped() and not invulnerability:
 		health -= 1
 		time_since_damage.start()
 		if debug_text:

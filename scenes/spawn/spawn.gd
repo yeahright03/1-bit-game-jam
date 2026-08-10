@@ -1,9 +1,13 @@
 extends Node3D
 
 @onready var subviewport_container : SubViewportContainer = $SubViewportContainer
+@onready var end_enemies : Node3D = $SubViewportContainer/SubViewport/end_enemies
 var player : CharacterBody3D
 
 func _ready() -> void:
+	if not Game.quest5_escape:
+		end_enemies.process_mode = Node.PROCESS_MODE_DISABLED
+		end_enemies.visible = false
 	player = get_tree().get_first_node_in_group('player')
 	if not Game.quest1_patch:
 		$Task_Light.visible = false
@@ -24,7 +28,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 		if Game.quests_done == 0:
 			Game.quest1_patch = true
 			$Task_Light.visible = true
-			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/Main_Dialouge.dialogue"), "start")
+			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/quest1.dialogue"), "start")
 			return
 			print('activated quest 1')
 			print(Game.quest1_patch)
@@ -32,7 +36,7 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			Game.quest1_patch = false
 			Game.quest2_light_fuse = true
 			Game.head_light_enabled = true
-			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/Task1.dialogue"), "start")
+			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/quest2.dialogue"), "start")
 			return
 			print('activated quest 2')
 			print(Game.quest2_light_fuse)
@@ -40,7 +44,14 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			Game.quest3_kill_rats = false
 			Game.reset_kills_for_quest4()
 			Game.quest4_patch_and_rats = true
-			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/Task3.dialogue"), "start")
+			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/quest4.dialogue"), "start")
 			return
 			print('activated quest 4')
 			print(Game.quest4_patch_and_rats)
+		elif Game.quests_done == 4:
+			Game.quest4_patch_and_rats = false
+			Game.quest5_escape = true
+			end_enemies.visible = true
+			end_enemies.process_mode = Node.PROCESS_MODE_INHERIT
+			DialogueManager.show_example_dialogue_balloon(load("res://dialouge/quest5.dialogue"), "start")
+			return

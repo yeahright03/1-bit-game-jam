@@ -31,6 +31,8 @@ func _process(_delta: float) -> void:
 		if Game.patches_killed == 3 and Game.bug_rats_killed == 3:
 			Game.quests_done = 4
 			quest_text.text = 'Current task:\nGet back to boss'
+	elif Game.quest5_escape:
+		quest_text.text = 'Current task:\nGET OUT'
 	else:
 		quest_text.text = 'Nothing to do at the moment.'
 
