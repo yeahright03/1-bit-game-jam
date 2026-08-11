@@ -4,6 +4,7 @@ extends Node3D
 var player : CharacterBody3D
 @onready var bug_rats : Node3D = $SubViewportContainer/SubViewport/rats
 @onready var rats_and_patches : Node3D = $SubViewportContainer/SubViewport/rats_and_patches
+@onready var fuse_box : Area3D = $SubViewportContainer/SubViewport/Area3D
 @onready var lights : Node3D = $Lights
 var rats : Array
 var rats_and_patches_collection : Array
@@ -68,6 +69,8 @@ func _on_area_3d_body_entered(body: Node3D) -> void:
 			return
 			print('activated quest 3')
 			print(Game.quest3_kill_rats)
+		else:
+			player_movement_modifier(true)
 
 
 func _on_bug_rat_died(bug_rat_name) -> void:

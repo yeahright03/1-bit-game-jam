@@ -134,6 +134,7 @@ size = Vector3(1, 2, 1)
 [node name="Area3D" type="Area3D" parent="SubViewportContainer/SubViewport" unique_id=850590700]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.787476, 8.880512, 8.255359)
 collision_mask = 2
+monitorable = false
 
 [node name="fuse_box" type="CollisionShape3D" parent="SubViewportContainer/SubViewport/Area3D" unique_id=1187653020]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.2921906, 1.214508, 5.8175497)
